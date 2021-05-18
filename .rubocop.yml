@@ -1,0 +1,13 @@
+require:
+  - rubocop-performance
+  - rubocop-rspec
+
+inherit_gem:
+  rubocop-shopify: rubocop.yml
+
+inherit_from:
+  - rubocop-factorybot.yml
+  - rubocop-ignore-layout.yml
+  - rubocop-ignore-lint.yml
+  - rubocop-ignore-style.yml
+  - rubocop-rspec.yml

@@ -1,0 +1,3579 @@
+# THIS FILE MUST BE PROGRESSIVELY REMOVED
+# SEE https://linear.app/livestorm/project/rubocop-to-shopify-e021e2b538b9/
+
+# Offense count: 853
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, IndentationWidth.
+# SupportedStyles: outdent, indent
+Layout/AccessModifierIndentation:
+  Enabled: false
+
+# Offense count: 123
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, IndentationWidth.
+# SupportedStyles: with_first_element, with_fixed_indentation
+Layout/ArrayAlignment:
+  Exclude:
+    - 'app/builders/period_builder.rb'
+    - 'app/services/crm_service/contact/base.rb'
+    - 'app/services/find_event_types_identities_service.rb'
+    - 'lib/scripts/glockapp_spam_test.rb'
+    - 'spec/controllers/public_api/v1/event_types_controller/show_spec.rb'
+    - 'spec/controllers/public_api/v1/event_types_identities_controller/show_with_event_type_spec.rb'
+    - 'spec/controllers/public_api/v1/periods_identities_controller/show_with_period_spec.rb'
+    - 'spec/e2e/features/dashboard/access/sign_in_spec.rb'
+    - 'spec/e2e/models/poll_model.rb'
+    - 'spec/lib/monkey_patch/rswag/specs/livestorm_swagger_formatter_spec.rb'
+    - 'spec/resources/public_api/v1/event_type_resource_spec.rb'
+    - 'spec/resources/public_api/v1/event_types_identity_resource_spec.rb'
+    - 'spec/resources/public_api/v1/identity_resource_spec.rb'
+    - 'spec/resources/public_api/v1/period_resource_spec.rb'
+
+# Offense count: 6
+# Cop supports --auto-correct.
+# Configuration parameters: IndentationWidth.
+Layout/AssignmentIndentation:
+  Exclude:
+    - 'app/controllers/concerns/set_resources_concern.rb'
+    - 'app/controllers/iframes_controller.rb'
+    - 'app/helpers/application_helper.rb'
+    - 'app/serializers/custom_pagination_links.rb'
+    - 'app/services/create_invites_service.rb'
+    - 'app/workers/migrations/fix_duplicated_participant_identities/merge_participants.rb'
+
+# Offense count: 10
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyleAlignWith.
+# SupportedStylesAlignWith: either, start_of_block, start_of_line
+Layout/BlockAlignment:
+  Exclude:
+    - 'app/admin/identities.rb'
+    - 'app/admin/periods_identity.rb'
+    - 'app/models/period.rb'
+    - 'spec/controllers/api/graphql/data_view/segments_controller_spec.rb'
+    - 'spec/controllers/pages_controller_spec.rb'
+    - 'spec/services/rate_limit_service/custom_headers_spec.rb'
+
+# Offense count: 99
+# Cop supports --auto-correct.
+Layout/BlockEndNewline:
+  Exclude:
+    - 'app/serializers/billing/scheduled_changes_serializer.rb'
+    - 'app/services/room_serializer_service/list_attendees.rb'
+    - 'spec/builders/account_builder_spec.rb'
+    - 'spec/builders/identity_builder/for_dashboard/destroy_team_member_spec.rb'
+    - 'spec/builders/identity_builder/for_dashboard/invite_team_member_spec.rb'
+    - 'spec/builders/identity_builder_spec.rb'
+    - 'spec/builders/period_builder/assign_guest_speaker_spec.rb'
+    - 'spec/channels/room_channel_spec.rb'
+    - 'spec/controllers/api/graphql/instant_meetings_controller_spec.rb'
+    - 'spec/controllers/api/v1/auth/weak/registrations_controller_spec.rb'
+    - 'spec/controllers/api/v1/auth/weak/sessions_controller_spec.rb'
+    - 'spec/controllers/api/v1/guest_speakers_controller_spec.rb'
+    - 'spec/controllers/api/v1/team_members_controller_spec.rb'
+    - 'spec/controllers/api/v1/webhooks_controller_spec.rb'
+    - 'spec/controllers/public_api/v1/event_types_controller/index_spec.rb'
+    - 'spec/controllers/public_api/v1/periods_identities_controller/destroy_from_period_spec.rb'
+    - 'spec/factories/data_view_field_config_factory.rb'
+    - 'spec/factories/data_view_segment_factory.rb'
+    - 'spec/features/dashboard/people_list_spec.rb'
+    - 'spec/features/registration/form_spec.rb'
+    - 'spec/features/registration/form_upcoming_sessions_spec.rb'
+    - 'spec/features/registration/webinar_page_spec.rb'
+    - 'spec/models/data_view/event_type_analytics_spec.rb'
+    - 'spec/models/data_view/people_event_type_spec.rb'
+    - 'spec/models/event_type_spec.rb'
+    - 'spec/models/flood_spec.rb'
+    - 'spec/models/identity_spec.rb'
+    - 'spec/models/organization_spec.rb'
+    - 'spec/models/tracking_spec.rb'
+    - 'spec/models/views/event_types_identities/all_sessions_view_spec.rb'
+    - 'spec/serializers/custom_pagination_links_spec.rb'
+    - 'spec/serializers/participant_full_serializer_spec.rb'
+    - 'spec/services/auth_service/previous_encrypted_passwords_spec.rb'
+    - 'spec/services/auth_service/register_participant_spec.rb'
+    - 'spec/services/calendly_service/api/v1/test_authentication_token_spec.rb'
+    - 'spec/services/create_invites_service_spec.rb'
+    - 'spec/services/export_list_service/adapters/csv_spec.rb'
+    - 'spec/services/flood_io_service/go_to_room/create_flood_spec.rb'
+    - 'spec/services/flood_io_service/go_to_room/update_seeds_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/period/utils/people_validator_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/period/utils/period_validator_spec.rb'
+    - 'spec/services/opentok_service/insights_spec.rb'
+    - 'spec/services/room_serializer_service/fast_list_spec.rb'
+    - 'spec/services/room_serializer_service/fast_questions_spec.rb'
+    - 'spec/services/zapier_service/create_registrant_spec.rb'
+    - 'spec/workers/destroy_organization/apply_worker_spec.rb'
+    - 'spec/workers/integrations/crm/create_hubspot_timeline_templates_worker_spec.rb'
+    - 'spec/workers/integrations/crm/update_salesforce_settings_spec.rb'
+    - 'spec/workers/migrations/generate_pin_code_for_created_periods_identities_spec.rb'
+    - 'spec/workers/migrations/refill_new_passwords_fields_account_users_spec.rb'
+
+# Offense count: 6
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, IndentOneStep, IndentationWidth.
+# SupportedStyles: case, end
+Layout/CaseIndentation:
+  Exclude:
+    - 'app/controllers/api/v1/webhooks/plivo_controller.rb'
+    - 'app/services/jsonapi_resource_service/v1/period/utils/period_validator.rb'
+    - 'lib/monkey_patch/jsonapi/resource_serializer.rb'
+
+# Offense count: 91
+# Cop supports --auto-correct.
+Layout/ClosingParenthesisIndentation:
+  Exclude:
+    - 'app/admin/event_types_identity.rb'
+    - 'app/admin/period.rb'
+    - 'app/admin/periods_identity.rb'
+    - 'app/controllers/api/v1/team_members_controller.rb'
+    - 'app/controllers/public_api/v1/resource_subscriptions_controller.rb'
+    - 'app/helpers/application_helper.rb'
+    - 'app/models/concerns/blob_concern.rb'
+    - 'app/services/auth_service/register_team_member/send_analytics.rb'
+    - 'app/workers/integrations/slack_worker.rb'
+    - 'spec/builders/identity_builder_spec.rb'
+    - 'spec/controllers/api/graphql/webinars/guest_speakers_controller_spec.rb'
+    - 'spec/controllers/api/v1/event_types_controller_spec.rb'
+    - 'spec/controllers/public_api/v1/event_types_controller/index_spec.rb'
+    - 'spec/controllers/public_api/v1/event_types_identities_controller/get_related_resources_with_sort_spec.rb'
+    - 'spec/e2e/features/instant_meeting/chat_instant_meeting_spec.rb'
+    - 'spec/e2e/features/instant_meeting/instant_meeting_limit_spec.rb'
+    - 'spec/e2e/features/instant_meeting/instant_meeting_spec.rb'
+    - 'spec/e2e/features/instant_meeting/request_access_spec.rb'
+    - 'spec/e2e/features/room/access/sign_in_spec.rb'
+    - 'spec/e2e/features/room/access/team_member_event_drafted_spec.rb'
+    - 'spec/e2e/features/room/access/team_member_event_ended_spec.rb'
+    - 'spec/e2e/features/room/event-controls/end_webinar_spec.rb'
+    - 'spec/e2e/features/room/event-controls/modal_start_spec.rb'
+    - 'spec/e2e/features/room/sidebar/polls_previous_spec.rb'
+    - 'spec/e2e/features/room/sidebar/polls_spec.rb'
+    - 'spec/e2e/features/room/sidebar/questions_spec.rb'
+    - 'spec/e2e/helpers/event_helpers.rb'
+    - 'spec/features/registration/form_upcoming_sessions_spec.rb'
+    - 'spec/features/registration/page_access_spec.rb'
+    - 'spec/mailers/attendees_mailer_spec.rb'
+    - 'spec/mailers/exports_mailer_spec.rb'
+    - 'spec/mailers/users_mailer_spec.rb'
+    - 'spec/models/invite_spec.rb'
+    - 'spec/models/tracking_spec.rb'
+    - 'spec/resources/public_api/v1/event_type_resource_spec.rb'
+    - 'spec/resources/public_api/v1/event_types_identity_resource_spec.rb'
+    - 'spec/resources/public_api/v1/identity_resource_spec.rb'
+    - 'spec/resources/public_api/v1/period_resource_spec.rb'
+    - 'spec/resources/public_api/v1/resource_subscription_resource_spec.rb'
+    - 'spec/serializers/event_type/show_serializer_spec.rb'
+    - 'spec/serializers/period_full_serializer_spec.rb'
+    - 'spec/services/charts_service/attendes_engagements_spec.rb'
+    - 'spec/services/crm_service/timeline/hubspot_spec.rb'
+    - 'spec/services/destroy_media_service.rb'
+    - 'spec/services/export_list_service/adapters/csv_spec.rb'
+    - 'spec/services/fetch_identity_service_spec.rb'
+    - 'spec/services/fields_adapter_service_spec.rb'
+    - 'spec/services/hook_service/identity/after_register_spec.rb'
+    - 'spec/services/integrations_service/pipedrive_service_spec.rb'
+    - 'spec/workers/youtube_worker_spec.rb'
+
+# Offense count: 1
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyleAlignWith, Severity.
+# SupportedStylesAlignWith: start_of_line, def
+Layout/DefEndAlignment:
+  Exclude:
+    - 'app/services/transfer_to_team_member_service.rb'
+
+# Offense count: 390
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: leading, trailing
+Layout/DotPosition:
+  Exclude:
+    - 'app/admin/dashboard.rb'
+    - 'app/channels/application_cable/concerns/instances.rb'
+    - 'app/controllers/api/graphql/data_view/segments_controller.rb'
+    - 'app/controllers/api/v1/polls_controller.rb'
+    - 'app/controllers/api/v1/utils_controller.rb'
+    - 'app/controllers/iframes_controller.rb'
+    - 'app/controllers/pages_controller.rb'
+    - 'app/models/concerns/emails_config_concern.rb'
+    - 'app/models/identity.rb'
+    - 'app/models/periods_identity.rb'
+    - 'app/models/poll.rb'
+    - 'app/models/tracking.rb'
+    - 'app/models/vote.rb'
+    - 'app/models/webinar.rb'
+    - 'app/presenters/emails_presenter/pregenerated/base.rb'
+    - 'app/services/charts_service/registered.rb'
+    - 'app/services/charts_service/webinar_visited_registered.rb'
+    - 'app/services/find_messages_service.rb'
+    - 'app/services/find_questions_service.rb'
+    - 'app/services/find_webinars_service.rb'
+    - 'app/services/flood_io_service/go_to_room/data.rb'
+    - 'app/services/hook_service/event_type/create.rb'
+    - 'app/services/room_serializer_service/list_questions.rb'
+    - 'app/services/subscription_service/remove_scheduled_changes.rb'
+    - 'app/services/subscription_service/update.rb'
+    - 'app/workers/attendance_rate_worker.rb'
+    - 'app/workers/automated_action/trigger_worker.rb'
+    - 'lib/rack_attack/policies/sendgrid_similar_payload.rb'
+    - 'spec/builders/identity_builder/for_event_type/create_registrant_spec.rb'
+    - 'spec/builders/identity_builder/for_event_type_spec.rb'
+    - 'spec/controllers/api/graphql/instant_meetings_controller_spec.rb'
+    - 'spec/controllers/api/v1/auth/weak/passwords_controller_spec.rb'
+    - 'spec/controllers/api/v1/auth/weak/registrations_controller_spec.rb'
+    - 'spec/controllers/api/v1/charts_controller_spec.rb'
+    - 'spec/controllers/api/v1/event_types_controller_spec.rb'
+    - 'spec/controllers/api/v1/invoices_controller_spec.rb'
+    - 'spec/controllers/api/v1/room/event_types/identities_controller_spec.rb'
+    - 'spec/controllers/api/v1/team_members_controller_spec.rb'
+    - 'spec/controllers/api/v1/utils_controller_spec.rb'
+    - 'spec/factories/event_types_identity_factory.rb'
+    - 'spec/helpers/pages_helper_spec.rb'
+    - 'spec/mailers/attendees_mailer_spec.rb'
+    - 'spec/mailers/exports_mailer_spec.rb'
+    - 'spec/mailers/users_mailer_spec.rb'
+    - 'spec/models/automated_action_spec.rb'
+    - 'spec/models/event_type_spec.rb'
+    - 'spec/models/event_types_identity_spec.rb'
+    - 'spec/models/identity_spec.rb'
+    - 'spec/models/media/video_media_spec.rb'
+    - 'spec/models/organization_spec.rb'
+    - 'spec/models/period_spec.rb'
+    - 'spec/models/periods_identity_spec.rb'
+    - 'spec/models/user_spec.rb'
+    - 'spec/rails_helper.rb'
+    - 'spec/services/automated_action_service/trigger/redirect_spec.rb'
+    - 'spec/services/automated_action_service/trigger/share_media_stage_spec.rb'
+    - 'spec/services/clearbit_service/fetch_avatar_spec.rb'
+    - 'spec/services/connection_mode_service_spec.rb'
+    - 'spec/services/crm_service/connection/hubspot_spec.rb'
+    - 'spec/services/export_list_service/dispatcher_spec.rb'
+    - 'spec/services/fetch_identity_service_spec.rb'
+    - 'spec/services/hook_service/event_type/delete_spec.rb'
+    - 'spec/services/hook_service/period/start_spec.rb'
+    - 'spec/services/hook_service/period/stop_after_rate_spec.rb'
+    - 'spec/services/hook_service/period/stop_spec.rb'
+    - 'spec/services/integrations_service/pipedrive_service_spec.rb'
+    - 'spec/services/opentok_service/room_spec.rb'
+    - 'spec/services/recorder_service/voxeet/auth/bearer_spec.rb'
+    - 'spec/services/recorder_service/voxeet/auth/jwt_spec.rb'
+    - 'spec/services/settings_webinars_consistency_service_spec.rb'
+    - 'spec/services/stream_recorder_service_spec.rb'
+    - 'spec/services/transfer_to_team_member_service_spec.rb'
+    - 'spec/services/update_email_service/confirm_change_spec.rb'
+    - 'spec/workers/clean_sidekiq_retries_worker_spec.rb'
+    - 'spec/workers/integrations/slack_worker_spec.rb'
+    - 'spec/workers/notification_worker/attendees_end_spec.rb'
+    - 'spec/workers/notification_worker/event_published_spec.rb'
+    - 'spec/workers/notification_worker/new_attendee_spec.rb'
+    - 'spec/workers/notification_worker/webinar_end_with_attendees_spec.rb'
+    - 'spec/workers/notification_worker/webinar_publish_spec.rb'
+    - 'spec/workers/notification_worker/webinar_start_spec.rb'
+
+# Offense count: 4
+# Cop supports --auto-correct.
+Layout/ElseAlignment:
+  Exclude:
+    - 'app/services/room_serializer_service/fast_questions.rb'
+    - 'lib/monkey_patch/jsonapi/resource_serializer.rb'
+    - 'lib/monkey_patch/rswag/add_headers.rb'
+
+# Offense count: 38
+# Cop supports --auto-correct.
+# Configuration parameters: EmptyLineBetweenMethodDefs, EmptyLineBetweenClassDefs, EmptyLineBetweenModuleDefs, AllowAdjacentOneLineDefs, NumberOfEmptyLines.
+Layout/EmptyLineBetweenDefs:
+  Exclude:
+    - 'app/models/concerns/emails_config_concern.rb'
+    - 'app/models/invite.rb'
+    - 'app/presenters/emails_presenter/pregenerated/base.rb'
+    - 'app/resources/public_api/v1/event_type_resource.rb'
+    - 'app/resources/public_api/v1/identity_resource.rb'
+    - 'app/services/auth_service/error/account_not_found.rb'
+    - 'app/services/auth_service/error/token_expired.rb'
+    - 'app/services/crm_service/hubspot/exeptions.rb'
+    - 'app/services/export_list_service/error.rb'
+    - 'app/services/find_periods_service.rb'
+    - 'app/services/find_tz_service.rb'
+    - 'app/services/flood_io_service/go_to_room/create_flood.rb'
+    - 'app/services/integrations_service/versions/change.rb'
+    - 'app/services/notification_service/public_api_body.rb'
+    - 'app/services/omniauth_service/callbacks/create_or_update_oauth.rb'
+    - 'app/services/recorder_service/voxeet/concerns/errors.rb'
+    - 'app/services/sockets_service/error.rb'
+    - 'app/services/sync_metadata_service/error.rb'
+    - 'app/services/update_email_service/request_change.rb'
+    - 'app/workers/notification_worker.rb'
+    - 'spec/e2e/helpers/label_helpers.rb'
+
+# Offense count: 99
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: around, only_before
+Layout/EmptyLinesAroundAccessModifier:
+  Exclude:
+    - 'app/builders/identity_builder/for_event_type/create_registrant_from_public_api.rb'
+    - 'app/builders/identity_builder/for_event_type/create_registrant_from_zapier.rb'
+    - 'app/builders/identity_builder/set_location_from.rb'
+    - 'app/channels/application_cable/connection.rb'
+    - 'app/channels/room_channel.rb'
+    - 'app/controllers/api/graphql/data_view/field_configs_controller.rb'
+    - 'app/controllers/api/graphql/data_view/segments_controller.rb'
+    - 'app/controllers/api/graphql/emails/actions_controller.rb'
+    - 'app/controllers/api/graphql/emails/templates_controller.rb'
+    - 'app/controllers/api/graphql/event_types/team_members_controller.rb'
+    - 'app/controllers/api/v1/auth/strong/passwords_controller.rb'
+    - 'app/controllers/api/v1/auth/strong/registrations_controller.rb'
+    - 'app/controllers/api/v1/auth/weak/passwords_controller.rb'
+    - 'app/controllers/api/v1/auth/weak/registrations_controller.rb'
+    - 'app/controllers/api/v1/auth/weak/sessions_controller.rb'
+    - 'app/controllers/api/v1/event_types_controller.rb'
+    - 'app/controllers/api/v1/messages_controller.rb'
+    - 'app/controllers/api/v1/questions_controller.rb'
+    - 'app/controllers/api/v1/room/event_types/identities_controller.rb'
+    - 'app/controllers/api/v1/room/event_types/questions_controller.rb'
+    - 'app/controllers/api/v1/webhooks_controller.rb'
+    - 'app/controllers/concerns/segment_analytics_concern.rb'
+    - 'app/controllers/pages_controller.rb'
+    - 'app/controllers/seed/seeds_controller.rb'
+    - 'app/mailers/users_mailer.rb'
+    - 'app/models/data_view/event/identity_handler.rb'
+    - 'app/models/participant.rb'
+    - 'app/services/auth_service/account_from/from_refresh_token.rb'
+    - 'app/services/auth_service/account_from/from_strong_token.rb'
+    - 'app/services/auth_service/account_from/from_token.rb'
+    - 'app/services/auth_service/bearer_decoder.rb'
+    - 'app/services/auth_service/find_access_provider.rb'
+    - 'app/services/auth_service/grant_access.rb'
+    - 'app/services/auth_service/grant_access/from_google.rb'
+    - 'app/services/auth_service/refresh_token_generator.rb'
+    - 'app/services/auth_service/register_participant.rb'
+    - 'app/services/auth_service/register_team_member/check_account_confirmation.rb'
+    - 'app/services/auth_service/register_team_member/check_provider_params.rb'
+    - 'app/services/auth_service/register_team_member/for_invited.rb'
+    - 'app/services/auth_service/register_team_member/for_non_invited.rb'
+    - 'app/services/auth_service/register_team_member/normalize_account_builder_params.rb'
+    - 'app/services/auth_service/register_team_member/normalize_identity_builder_params.rb'
+    - 'app/services/auth_service/register_team_member/send_analytics.rb'
+    - 'app/services/auth_service/register_team_member/sign_up_permitted_params.rb'
+    - 'app/services/auth_service/strong_token_generator.rb'
+    - 'app/services/auth_service/token_revoker.rb'
+    - 'app/services/auth_service/weak_token_generator.rb'
+    - 'app/services/dial_in_service/nexmo/actions/opentok_join_conversation.rb'
+    - 'app/services/emails_template_service/convert_i18n_variables.rb'
+    - 'app/services/enforce_paper_trail_service.rb'
+    - 'app/services/external_tool_deletion/pipedrive_service.rb'
+    - 'app/services/external_tool_deletion/satismeter_service.rb'
+    - 'app/services/external_tool_deletion/segment_service.rb'
+    - 'app/services/external_tool_deletion/zapier_service.rb'
+    - 'app/services/flood_io_service/go_to_room/create_period.rb'
+    - 'app/services/flood_io_service/go_to_room/prepare_period.rb'
+    - 'app/services/flood_io_service/go_to_room/random_participant_url.rb'
+    - 'app/services/flood_io_service/go_to_room/start.rb'
+    - 'app/services/integrations_service/custom_code_enabled_service.rb'
+    - 'app/services/jsonapi_resource_service/v1/period/utils/builder_params.rb'
+    - 'app/services/opentok_service/api/base.rb'
+    - 'app/services/opentok_service/base.rb'
+    - 'app/services/opentok_service/insights.rb'
+    - 'app/services/opentok_service/room.rb'
+    - 'app/services/room_serializer_service/list_questions.rb'
+    - 'app/services/sockets_service/connection/connection_payload.rb'
+    - 'app/services/subscription_service/resend_scheduled_changes.rb'
+    - 'app/services/take_team_member_service.rb'
+    - 'app/services/trim_referrer_service.rb'
+    - 'app/validators/url_validator.rb'
+    - 'app/workers/base_worker.rb'
+    - 'app/workers/cleans/data_view/people_event_type/restore_all_worker.rb'
+    - 'app/workers/cron/metrics/sidekiq_jobs_pending.rb'
+    - 'app/workers/cron/metrics/sidekiq_queues_latency.rb'
+    - 'app/workers/destroy_organization/apply_worker.rb'
+    - 'app/workers/migrations/fix_duplicate_organization_user_participant/merge_duplicate_user_participant.rb'
+    - 'app/workers/migrations/fix_duplicate_periods_identities/merge_periods_identities.rb'
+    - 'app/workers/migrations/fix_duplicated_participant_identities/merge_participant.rb'
+    - 'app/workers/migrations/fix_duplicated_participant_identities/merge_participants.rb'
+    - 'app/workers/migrations/fix_duplicated_participant_identities/transfer_event_types_identity.rb'
+    - 'app/workers/migrations/fix_event_types_identities_zapier_kind_register/fix_kind_register.rb'
+    - 'app/workers/migrations/fix_null_participant_account_id/fix_null_account_id.rb'
+    - 'app/workers/seeders/period_participant_worker.rb'
+    - 'app/workers/seeders/poll_worker.rb'
+    - 'app/workers/seeders/question_worker.rb'
+    - 'lib/seeders/instant_meeting.rb'
+    - 'lib/seeders/period_seeder.rb'
+    - 'lib/seeders/rpc.rb'
+    - 'lib/seeders/rpc/deep_underscore.rb'
+    - 'lib/seeders/rpc/hash_with_records.rb'
+    - 'lib/seeders/scheduled_meeting.rb'
+    - 'lib/seeders/webinar.rb'
+    - 'spec/controllers/api/v1/auth/strong/sessions_controller_spec.rb'
+    - 'spec/controllers/api/v1/auth/strong/token_controller_spec.rb'
+    - 'spec/e2e/components/room/sidebar/people/people_tab_component.rb'
+    - 'spec/features/dashboard/delete_organization_spec.rb'
+    - 'spec/features/dashboard/delete_team_member_spec.rb'
+    - 'spec/features/dashboard/user_profile_spec.rb'
+
+# Offense count: 286
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: empty_lines, no_empty_lines
+Layout/EmptyLinesAroundBlockBody:
+  Exclude:
+    - 'app/admin/event_type.rb'
+    - 'app/admin/event_types_identity.rb'
+    - 'app/admin/organization.rb'
+    - 'app/admin/room_flood.rb'
+    - 'app/models/concerns/blob_concern.rb'
+    - 'app/models/concerns/slugs_concern.rb'
+    - 'app/services/room_serializer_service/fast_list.rb'
+    - 'app/workers/migrations/fix_periods_identities_is_guest_speaker_worker.rb'
+    - 'spec/builders/account_builder_spec.rb'
+    - 'spec/builders/event_type_builder/update_or_assign_team_members_spec.rb'
+    - 'spec/builders/event_type_builder_spec.rb'
+    - 'spec/builders/identity_builder/for_event_type/create_registrant_from_zapier_spec.rb'
+    - 'spec/channels/connection_spec.rb'
+    - 'spec/channels/messages_channel_spec.rb'
+    - 'spec/channels/room_channel_spec.rb'
+    - 'spec/controllers/admin/accounts_controller_spec.rb'
+    - 'spec/controllers/api/graphql/api_keys_controller_spec.rb'
+    - 'spec/controllers/api/graphql/automated_actions_controller_spec.rb'
+    - 'spec/controllers/api/graphql/data_view/segments_controller_spec.rb'
+    - 'spec/controllers/api/graphql/emails/actions_controller_spec.rb'
+    - 'spec/controllers/api/graphql/instant_meetings_controller_spec.rb'
+    - 'spec/controllers/api/graphql/integrations_controller/show_spec.rb'
+    - 'spec/controllers/api/v1/auth/strong/passwords_controller_spec.rb'
+    - 'spec/controllers/api/v1/auth/strong/sessions_controller_spec.rb'
+    - 'spec/controllers/api/v1/auth/strong/token_controller_spec.rb'
+    - 'spec/controllers/api/v1/auth/weak/sessions_controller_spec.rb'
+    - 'spec/controllers/api/v1/event_types_controller_spec.rb'
+    - 'spec/controllers/api/v1/medias_controller_spec.rb'
+    - 'spec/controllers/api/v1/periods_controller_spec.rb'
+    - 'spec/controllers/api/v1/periods_identities_controller_spec.rb'
+    - 'spec/controllers/api/v1/subscriptions_controller_spec.rb'
+    - 'spec/controllers/api/v1/team_members_controller_spec.rb'
+    - 'spec/controllers/api/v1/utils_controller_spec.rb'
+    - 'spec/controllers/pages_controller_spec.rb'
+    - 'spec/controllers/public_api/v1/event_types_controller/index_spec.rb'
+    - 'spec/controllers/public_api/v1/periods_controller/index_spec.rb'
+    - 'spec/controllers/public_api/v1/periods_identities_controller/destroy_from_period_spec.rb'
+    - 'spec/controllers/public_api/v1/resource_subscriptions_controller/index_spec.rb'
+    - 'spec/e2e/components/room/stage/youtube_player_component.rb'
+    - 'spec/e2e/features/dashboard/access/authentication_redirect_spec.rb'
+    - 'spec/e2e/features/dashboard/access/authentication_spec.rb'
+    - 'spec/e2e/features/dashboard/access/sign_in_spec.rb'
+    - 'spec/e2e/features/dashboard/access/sign_up_spec.rb'
+    - 'spec/e2e/features/instant_meeting/chat_instant_meeting_spec.rb'
+    - 'spec/e2e/features/instant_meeting/instant_meeting_limit_spec.rb'
+    - 'spec/e2e/features/instant_meeting/instant_meeting_spec.rb'
+    - 'spec/e2e/features/instant_meeting/request_access_spec.rb'
+    - 'spec/e2e/features/room/access/authentication_spec.rb'
+    - 'spec/e2e/features/room/access/participant_spec.rb'
+    - 'spec/e2e/features/room/access/participant_webinar_spec.rb'
+    - 'spec/e2e/features/room/access/sign_in_spec.rb'
+    - 'spec/e2e/features/room/access/team_member_event_drafted_spec.rb'
+    - 'spec/e2e/features/room/access/team_member_event_published_spec.rb'
+    - 'spec/e2e/features/room/access/team_member_webinar_spec.rb'
+    - 'spec/e2e/features/room/event-controls/modal_start_spec.rb'
+    - 'spec/e2e/features/room/event-controls/start_end_spec.rb'
+    - 'spec/e2e/features/room/event-controls/start_team_members_spec.rb'
+    - 'spec/e2e/features/room/event-limits/limit_webrtc_spec.rb'
+    - 'spec/e2e/features/room/local-controls/fullscreen_spec.rb'
+    - 'spec/e2e/features/room/sharing/call_to_action_spec.rb'
+    - 'spec/e2e/features/room/sharing/slides_participant_spec.rb'
+    - 'spec/e2e/features/room/sharing/slides_upcoming_period_spec.rb'
+    - 'spec/e2e/features/room/sharing/youtube/upcoming_period_after_attendees_spec.rb'
+    - 'spec/e2e/features/room/sharing/youtube/upcoming_period_spec.rb'
+    - 'spec/e2e/features/room/sidebar/people_connection_status_spec.rb'
+    - 'spec/e2e/features/room/sidebar/people_search_spec.rb'
+    - 'spec/e2e/features/room/sidebar/polls_participants_spec.rb'
+    - 'spec/e2e/features/room/sidebar/privacy_spec.rb'
+    - 'spec/e2e/features/room/sidebar/private_chat_spec.rb'
+    - 'spec/e2e/features/room/stage/stage_layout_spec.rb'
+    - 'spec/features/admin/actions_spec.rb'
+    - 'spec/features/admin/event_types_spec.rb'
+    - 'spec/features/dashboard/settings/event_type_general_spec.rb'
+    - 'spec/features/dashboard/settings/event_type_publish_spec.rb'
+    - 'spec/features/dashboard/team_settings_emails.rb'
+    - 'spec/features/registration/form_email_spec.rb'
+    - 'spec/features/registration/page_access_spec.rb'
+    - 'spec/features/registration/page_info_spec.rb'
+    - 'spec/features/room/hls_real_device_spec.rb'
+    - 'spec/features/room/hls_spec.rb'
+    - 'spec/helpers/compatibility_helper_spec.rb'
+    - 'spec/helpers/mailer_helper_spec.rb'
+    - 'spec/lib/monkey_patch/rswag/add_headers_spec.rb'
+    - 'spec/mailers/template_mailer_spec/pregenerated_spec.rb'
+    - 'spec/models/data_view/session_spec.rb'
+    - 'spec/models/emails/tracking/resolvers/mapping_spec.rb'
+    - 'spec/models/emails/tracking/resolvers/reason_spec.rb'
+    - 'spec/models/event_type_spec.rb'
+    - 'spec/models/flood_spec.rb'
+    - 'spec/models/question_spec.rb'
+    - 'spec/models/views/event_types_identities/all_sessions_view_spec.rb'
+    - 'spec/rails_helper.rb'
+    - 'spec/serializers/custom_pagination_links_spec.rb'
+    - 'spec/serializers/guest_speaker_serializer_spec.rb'
+    - 'spec/serializers/invite_serializer_spec.rb'
+    - 'spec/serializers/user_serializer_spec.rb'
+    - 'spec/services/account_geo_service_spec.rb'
+    - 'spec/services/assign_integrations_service_spec.rb'
+    - 'spec/services/auth_service/grant_access_spec.rb'
+    - 'spec/services/auth_service/strong_token_generator_spec.rb'
+    - 'spec/services/automated_action_service/trigger/send_email_spec.rb'
+    - 'spec/services/clearbit_service/refresh_spec.rb'
+    - 'spec/services/connection_mode_service_spec.rb'
+    - 'spec/services/crm_service/company/hubspot_spec.rb'
+    - 'spec/services/crm_service/errors/webhooks/handle_invalid_url_spec.rb'
+    - 'spec/services/crm_service/note/hubspot_spec.rb'
+    - 'spec/services/dial_in_service/opentok_spec.rb'
+    - 'spec/services/emails_template_service/render_spec/default_pregenerated_template_spec.rb'
+    - 'spec/services/emails_template_service/utils/params_spec/mailer/pregenerated_spec.rb'
+    - 'spec/services/emails_template_service/utils/params_spec/render/pregenerated_spec.rb'
+    - 'spec/services/export_list_service/adapters/csv_spec.rb'
+    - 'spec/services/export_list_service/builders/datasets/periods_identities_view_export_spec.rb'
+    - 'spec/services/export_list_service/dispatcher_spec.rb'
+    - 'spec/services/find_webinars_service_spec.rb'
+    - 'spec/services/flood_io_service/go_to_room/create_flood_spec.rb'
+    - 'spec/services/flood_io_service/go_to_room/prepare_period_spec.rb'
+    - 'spec/services/flood_io_service/go_to_room/restore_period_spec.rb'
+    - 'spec/services/flood_io_service/go_to_room/update_seeds_spec.rb'
+    - 'spec/services/hook_service/period/start_async_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/event_type/filters/everyone_can_speak/apply_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/period/utils/event_type_validator_spec.rb'
+    - 'spec/services/opentok_service/api/rest/start_archive_spec.rb'
+    - 'spec/services/opentok_service/insights_spec.rb'
+    - 'spec/services/opentok_service/room_spec.rb'
+    - 'spec/services/recorder_service/voxeet/stop_spec.rb'
+    - 'spec/services/recorder_service/voxeet/upload_spec.rb'
+    - 'spec/services/room_limits_service_spec.rb'
+    - 'spec/services/room_serializer_service/fast_list_spec.rb'
+    - 'spec/services/room_serializer_service/fast_questions_spec.rb'
+    - 'spec/services/room_serializer_service/list_attendees_spec.rb'
+    - 'spec/services/room_serializer_service/list_questions_spec.rb'
+    - 'spec/services/s3/delete_folder_spec.rb'
+    - 'spec/services/s3/fetch_folder_spec.rb'
+    - 'spec/services/settings_webinars_consistency_service_spec.rb'
+    - 'spec/services/sidekiq_service/enqueued_spec.rb'
+    - 'spec/services/sidekiq_service/retries_spec.rb'
+    - 'spec/services/sidekiq_service/scheduled_spec.rb'
+    - 'spec/services/stream_recorder_service_spec.rb'
+    - 'spec/services/sync_metadata_service/event_types_identity_spec.rb'
+    - 'spec/services/take_team_member_service_spec.rb'
+    - 'spec/services/update_email_service/confirm_change_spec.rb'
+    - 'spec/services/update_email_service/request_change_spec.rb'
+    - 'spec/services/zapier_service/create_registrant_spec.rb'
+    - 'spec/workers/analytics_worker_spec.rb'
+    - 'spec/workers/automated_action/scheduler_worker_spec.rb'
+    - 'spec/workers/export_list_worker_spec.rb'
+    - 'spec/workers/migrations/fix_accounts_without_email_spec.rb'
+    - 'spec/workers/migrations/fix_null_participant_account_id_spec.rb'
+    - 'spec/workers/opentok/insights_organization_worker_spec.rb'
+    - 'spec/workers/sync_invite_participant_worker_spec.rb'
+    - 'spec/workers/sync_metadata_worker_spec.rb'
+    - 'spec/workers/uniq_worker_spec.rb'
+    - 'spec/workers/voxeet/start_worker_spec.rb'
+    - 'spec/workers/voxeet/stop_worker_spec.rb'
+    - 'spec/workers/voxeet/upload_worker_spec.rb'
+
+# Offense count: 237
+# Cop supports --auto-correct.
+# Configuration parameters: AllowForAlignment, AllowBeforeTrailingComments, ForceEqualSignAlignment.
+Layout/ExtraSpacing:
+  Exclude:
+    - 'app/admin/organization.rb'
+    - 'app/builders/identity_builder/for_event_type/base.rb'
+    - 'app/channels/room_channel.rb'
+    - 'app/controllers/api/graphql/event_types/periods_controler.rb'
+    - 'app/controllers/api/v1/auth/strong/passwords_controller.rb'
+    - 'app/controllers/api/v1/event_types_controller.rb'
+    - 'app/controllers/api/v1/event_types_identities_controller.rb'
+    - 'app/controllers/api/v1/medias_controller.rb'
+    - 'app/controllers/api/v1/organizations_controller.rb'
+    - 'app/controllers/api/v1/team_members_controller.rb'
+    - 'app/controllers/iframes_controller.rb'
+    - 'app/models/emails/additional_datum.rb'
+    - 'app/models/emails/template.rb'
+    - 'app/models/emails/tracking/computers/indicator_logic.rb'
+    - 'app/models/flood.rb'
+    - 'app/models/period.rb'
+    - 'app/services/flood_io_service/go_to_room/data.rb'
+    - 'app/services/flood_io_service/go_to_room/update_seeds.rb'
+    - 'app/services/media_convert_service.rb'
+    - 'app/services/sockets_service/polls/update.rb'
+    - 'app/workers/migrations/fix_duplicate_periods_identities/merge_periods_identities.rb'
+    - 'lib/seeders/utils.rb'
+    - 'spec/builders/event_type_builder/build_for_public_api_spec.rb'
+    - 'spec/builders/identity_builder/for_dashboard/destroy_team_member_spec.rb'
+    - 'spec/builders/identity_builder/for_event_type/create_registrant_from_zapier_spec.rb'
+    - 'spec/builders/integration_builder/create_for_organization_spec.rb'
+    - 'spec/builders/integration_builder/update_spec.rb'
+    - 'spec/builders/integrations_organization_builder/create_for_organization/create_integrations_organization_spec.rb'
+    - 'spec/builders/integrations_organization_builder/create_for_organization_spec.rb'
+    - 'spec/builders/integrations_organization_builder/update_spec.rb'
+    - 'spec/builders/period_builder/assign_guest_speaker_spec.rb'
+    - 'spec/controllers/api/graphql/authenticables_controller/show_spec.rb'
+    - 'spec/controllers/api/graphql/automated_actions_controller_spec.rb'
+    - 'spec/controllers/api/graphql/event_types/periods_controller_spec.rb'
+    - 'spec/controllers/api/graphql/event_types/registrants_controller_spec.rb'
+    - 'spec/controllers/api/v1/auth/weak/sessions_controller_spec.rb'
+    - 'spec/controllers/api/v1/identities_controller_spec.rb'
+    - 'spec/controllers/api/v1/invites_controller_spec.rb'
+    - 'spec/controllers/api/v1/messages_controller_spec.rb'
+    - 'spec/controllers/api/v1/omniauth_controller_spec.rb'
+    - 'spec/controllers/api/v1/opentok/sessions_controller_spec.rb'
+    - 'spec/controllers/api/v1/periods_controller_spec.rb'
+    - 'spec/controllers/api/v1/room/event_types/identities_controller_spec.rb'
+    - 'spec/controllers/api/v1/room/event_types/questions_controller_spec.rb'
+    - 'spec/controllers/pages_controller_spec.rb'
+    - 'spec/controllers/public_api/paginators/public_api_paginator_spec.rb'
+    - 'spec/controllers/public_api/v1/event_types_controller/create_spec.rb'
+    - 'spec/controllers/public_api/v1/event_types_controller/index_spec.rb'
+    - 'spec/controllers/public_api/v1/periods_controller/create_session_spec.rb'
+    - 'spec/controllers/public_api/v1/periods_controller/get_related_resources_spec.rb'
+    - 'spec/controllers/public_api/v1/periods_controller/index_spec.rb'
+    - 'spec/e2e/features/room/event-limits/limit_live_participant_spec.rb'
+    - 'spec/e2e/features/room/sidebar/questions_spec.rb'
+    - 'spec/factories/data_view_segment_factory.rb'
+    - 'spec/factories/identity_factory.rb'
+    - 'spec/factories/instant_meeting_factory.rb'
+    - 'spec/factories/participant_factory.rb'
+    - 'spec/factories/user_factory.rb'
+    - 'spec/factories/video_media_factory.rb'
+    - 'spec/features/admin/questions_spec.rb'
+    - 'spec/features/dashboard/people_list_subscription_spec.rb'
+    - 'spec/features/dashboard/settings/event_type_registration_spec.rb'
+    - 'spec/models/emails/tracking/tracker_spec.rb'
+    - 'spec/models/identity_spec.rb'
+    - 'spec/models/organization_spec.rb'
+    - 'spec/models/user_spec.rb'
+    - 'spec/presenters/emails_presenter/pregenerated/attended_spec.rb'
+    - 'spec/presenters/emails_presenter/pregenerated/not_attended_spec.rb'
+    - 'spec/presenters/emails_presenter/pregenerated/registered_on_demand_spec.rb'
+    - 'spec/presenters/emails_presenter/pregenerated/registered_spec.rb'
+    - 'spec/presenters/emails_presenter/pregenerated/reminder_spec.rb'
+    - 'spec/presenters/emails_presenter/pregenerated/starting_spec.rb'
+    - 'spec/serializers/user_serializer_spec.rb'
+    - 'spec/services/api_key_service/token_generator_spec.rb'
+    - 'spec/services/auth_service/grant_access_spec.rb'
+    - 'spec/services/auth_service/register_participant_spec.rb'
+    - 'spec/services/auth_service/register_team_member_spec.rb'
+    - 'spec/services/automated_action_service/after_registered_spec.rb'
+    - 'spec/services/automated_action_service/before_spec.rb'
+    - 'spec/services/crm_service/deal/hubspot_spec.rb'
+    - 'spec/services/crm_service/engagement/hubspot_spec.rb'
+    - 'spec/services/crm_service/note/hubspot_spec.rb'
+    - 'spec/services/crm_service/settings/hubspot_spec.rb'
+    - 'spec/services/crm_service/timeline/hubspot_spec.rb'
+    - 'spec/services/dial_in_service/opentok_spec.rb'
+    - 'spec/services/find_webinars_service_spec.rb'
+    - 'spec/services/flood_io_service/go_to_room/prepare_period_spec.rb'
+    - 'spec/services/full_name_splitter_service_spec.rb'
+    - 'spec/services/hook_service/organization/create_spec.rb'
+    - 'spec/services/integrations_service/crm/hubspot/rules_validation_spec.rb'
+    - 'spec/services/integrations_service/crm/pipedrive/item_search_spec.rb'
+    - 'spec/services/integrations_service/crm/pipedrive/rules_validation_spec.rb'
+    - 'spec/services/integrations_service/crm/salesforce/core_object/fetch_spec.rb'
+    - 'spec/services/integrations_service/crm/salesforce/core_object/save_spec.rb'
+    - 'spec/services/integrations_service/crm/salesforce/manage_settings_spec.rb'
+    - 'spec/services/integrations_service/versions/change_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/attributes_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/event_type/attributes/automated_emails_enabled_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/event_type/attributes/fields_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/event_type/attributes/kind_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/event_type/attributes/owner_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/event_type/create_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/event_type/filters/everyone_can_speak/apply_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/event_type/filters/everyone_can_speak/verify_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/event_type/filters/kind/apply_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/event_type/filters/kind/verify_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/event_type/filters/title/apply_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/event_type/filters/title/verify_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/identity/attributes/avatar_link_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/identity/attributes/role_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/identity/create_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/identity/filters/role/apply_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/identity/filters/role/verify_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/identity/utils/builder_params_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/identity/validators/params_validator_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/identity/validators/period/period_validator_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/period/attributes/status_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/period/filters/date_from/verify_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/period/filters/date_to/verify_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/period/filters/status/apply_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/period/filters/status/verify_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/period/utils/builder_params_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/period/utils/event_type_validator_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/period/utils/people_validator_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/period/utils/period_validator_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/resource_subscription/create_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/resource_subscription/filters/event/verify_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/resource_subscription/utils/builder_params_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/sort_options_spec.rb'
+    - 'spec/services/migrations_service/integrations/move_data_from_organization_spec.rb'
+    - 'spec/services/notification_service/public_api_body_spec.rb'
+    - 'spec/services/omniauth_service/callback_spec.rb'
+    - 'spec/services/omniauth_service/callbacks/create_or_update_oauth/hubspot_spec.rb'
+    - 'spec/services/omniauth_service/callbacks/create_or_update_oauth/salesforce.rb'
+    - 'spec/services/omniauth_service/callbacks/create_or_update_oauth/salesforce_spec.rb'
+    - 'spec/services/request_api_service_spec.rb'
+    - 'spec/services/room_serializer_service/list_attendees_spec.rb'
+    - 'spec/services/update_email_service/confirm_change_spec.rb'
+    - 'spec/workers/cleans/redis_counter_cache/period/restore_all_registrant_counters_worker_spec.rb'
+    - 'spec/workers/integrations/crm/create_hubspot_timeline_templates_worker_spec.rb'
+    - 'spec/workers/migrations/refill_new_passwords_fields_account_users_spec.rb'
+    - 'spec/workers/notification_worker/attendees_end_spec.rb'
+    - 'spec/workers/notification_worker/event_published_spec.rb'
+    - 'spec/workers/notification_worker/new_attendee_spec.rb'
+    - 'spec/workers/notification_worker/people_attended_spec.rb'
+    - 'spec/workers/notification_worker/people_not_attended_spec.rb'
+    - 'spec/workers/notification_worker/people_registered_spec.rb'
+    - 'spec/workers/notification_worker/session_ended_spec.rb'
+    - 'spec/workers/notification_worker/session_started_spec.rb'
+    - 'spec/workers/notification_worker/webinar_end_spec.rb'
+    - 'spec/workers/notification_worker/webinar_end_with_attendees_spec.rb'
+    - 'spec/workers/notification_worker/webinar_publish_spec.rb'
+    - 'spec/workers/notification_worker/webinar_start_spec.rb'
+    - 'spec/workers/sync_invite_participant_worker_spec.rb'
+
+# Offense count: 43
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, IndentationWidth.
+# SupportedStyles: consistent, consistent_relative_to_receiver, special_for_inner_method_call, special_for_inner_method_call_in_parentheses
+Layout/FirstArgumentIndentation:
+  Exclude:
+    - 'app/admin/period.rb'
+    - 'app/channels/application_cable/connection.rb'
+    - 'app/controllers/api/v1/event_types/permalink_controller.rb'
+    - 'app/controllers/api/v1/event_types_identities_controller.rb'
+    - 'app/controllers/api/v1/opentok/instant_meetings_controller.rb'
+    - 'app/controllers/api/v1/periods_identities_controller.rb'
+    - 'app/controllers/api/v1/utils_controller.rb'
+    - 'app/models/concerns/blob_concern.rb'
+    - 'app/services/calendar_service/ics.rb'
+    - 'app/workers/migrations/fix_duplicated_participant_identities/merge_participants.rb'
+    - 'spec/capybara_helper.rb'
+    - 'spec/controllers/api/v1/auth/strong/sessions_controller_spec.rb'
+    - 'spec/controllers/api/v1/event_types_controller_spec.rb'
+    - 'spec/controllers/api/v1/room/event_types/identities_controller_spec.rb'
+    - 'spec/controllers/api/v1/zapier_controller_spec.rb'
+    - 'spec/controllers/public_api/v1/event_types_controller/index_spec.rb'
+    - 'spec/e2e/features/room/access/sign_in_spec.rb'
+    - 'spec/e2e/features/room/event-controls/end_webinar_spec.rb'
+    - 'spec/e2e/features/room/sidebar/polls_spec.rb'
+    - 'spec/e2e/helpers/event_helpers.rb'
+    - 'spec/mailers/attendees_mailer_spec.rb'
+    - 'spec/serializers/event_type_settings_serializer_spec.rb'
+    - 'spec/services/charts_service/attendes_engagements_spec.rb'
+    - 'spec/services/fetch_identity_service_spec.rb'
+    - 'spec/workers/notification_worker/attendees_end_spec.rb'
+    - 'spec/workers/notification_worker/new_attendee_spec.rb'
+    - 'spec/workers/notification_worker/webinar_end_with_attendees_spec.rb'
+    - 'spec/workers/youtube_worker_spec.rb'
+
+# Offense count: 10
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, IndentationWidth.
+# SupportedStyles: special_inside_parentheses, consistent, align_brackets
+Layout/FirstArrayElementIndentation:
+  Exclude:
+    - 'spec/controllers/api/v1/organizations_controller/pipedrive_spec.rb'
+    - 'spec/serializers/custom_pagination_links_spec.rb'
+    - 'spec/serializers/event_type_settings_serializer_spec.rb'
+    - 'spec/serializers/period_full_serializer_spec.rb'
+    - 'spec/services/calendly_service/api/v1/user_event_types_spec.rb'
+    - 'spec/services/integrations_service/pipedrive_service_spec.rb'
+
+# Offense count: 77
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, IndentationWidth.
+# SupportedStyles: special_inside_parentheses, consistent, align_braces
+Layout/FirstHashElementIndentation:
+  Exclude:
+    - 'app/controllers/api/v1/messages_controller.rb'
+    - 'app/controllers/api/v1/team_members_controller.rb'
+    - 'app/controllers/concerns/authorization_concern.rb'
+    - 'app/controllers/public_api/v1/event_types_controller.rb'
+    - 'app/controllers/public_api/v1/periods_controller.rb'
+    - 'app/controllers/seed/seeds_controller.rb'
+    - 'app/services/charts_service/registered.rb'
+    - 'app/services/dial_in_service/nexmo/actions/join_conversation.rb'
+    - 'lib/monkey_patch/jsonapi/resource_serializer.rb'
+    - 'spec/controllers/api/graphql/emails/actions_controller_spec.rb'
+    - 'spec/controllers/api/graphql/event_types_controller_spec.rb'
+    - 'spec/controllers/api/v1/periods_identities_controller_spec.rb'
+    - 'spec/controllers/api/v1/room/event_types/identities_controller_spec.rb'
+    - 'spec/controllers/api/v1/webhooks/opentok_controller_spec.rb'
+    - 'spec/controllers/api/v1/zapier_controller_spec.rb'
+    - 'spec/controllers/public_api/v1/event_types_controller/show_spec.rb'
+    - 'spec/controllers/public_api/v1/periods_controller/create_session_spec.rb'
+    - 'spec/controllers/public_api/v1/resource_subscriptions_controller/create_spec.rb'
+    - 'spec/e2e/components/room/sidebar/poll/poll_items_component.rb'
+    - 'spec/requests/public_api/v1/events_spec.rb'
+    - 'spec/requests/public_api/v1/people_spec.rb'
+    - 'spec/requests/public_api/v1/sessions_spec.rb'
+    - 'spec/serializers/period_full_serializer_spec.rb'
+    - 'spec/serializers/webinar_serializer_spec.rb'
+    - 'spec/services/calendly_service/api/v1/user_event_types_spec.rb'
+    - 'spec/services/clearbit_service/url_check_spec.rb'
+    - 'spec/services/integrations_service/pipedrive_service_spec.rb'
+    - 'spec/services/opentok_service/insights_spec.rb'
+    - 'spec/services/rate_limit_service/custom_headers_spec.rb'
+    - 'spec/services/room_serializer_service/list_attendees_spec.rb'
+    - 'spec/swagger_helper.rb'
+
+# Offense count: 508
+# Cop supports --auto-correct.
+# Configuration parameters: AllowMultipleStyles, EnforcedHashRocketStyle, EnforcedColonStyle, EnforcedLastArgumentHashStyle.
+# SupportedHashRocketStyles: key, separator, table
+# SupportedColonStyles: key, separator, table
+# SupportedLastArgumentHashStyles: always_inspect, always_ignore, ignore_implicit, ignore_explicit
+Layout/HashAlignment:
+  Exclude:
+    - 'app/admin/organization.rb'
+    - 'app/builders/identity_builder/for_event_type/create_registrant_from_zapier.rb'
+    - 'app/controllers/concerns/segment_analytics_concern.rb'
+    - 'app/helpers/compatibility_helper.rb'
+    - 'app/mailers/application_mailer.rb'
+    - 'app/mailers/exports_mailer.rb'
+    - 'app/mailers/users_mailer.rb'
+    - 'app/models/concerns/integrations/for_organization.rb'
+    - 'app/serializers/custom_pagination_links.rb'
+    - 'app/serializers/event_type/base.rb'
+    - 'app/serializers/identity_settings_serializer.rb'
+    - 'app/serializers/media/replay_media_serializer.rb'
+    - 'app/serializers/organization_serializer.rb'
+    - 'app/serializers/period_serializer.rb'
+    - 'app/services/crm_service/hubspot/timeline_event_attributes.rb'
+    - 'app/services/external_tool_deletion/pipedrive_service.rb'
+    - 'app/services/jsonapi_resource_service/v1/identity/utils/builder_params.rb'
+    - 'app/services/notification_service/dashboard_body.rb'
+    - 'spec/builders/identity_builder/for_event_type/create_registrant_from_zapier_spec.rb'
+    - 'spec/builders/identity_builder/for_event_type_spec.rb'
+    - 'spec/controllers/api/graphql/integrations_controller/show_spec.rb'
+    - 'spec/controllers/api/v1/auth/weak/sessions_controller_spec.rb'
+    - 'spec/controllers/api/v1/identities_controller_spec.rb'
+    - 'spec/controllers/api/v1/zapier_controller_spec.rb'
+    - 'spec/controllers/public_api/v1/event_types_identities_controller/get_related_resources_spec.rb'
+    - 'spec/controllers/public_api/v1/event_types_identities_controller/get_related_resources_with_sort_spec.rb'
+    - 'spec/controllers/public_api/v1/periods_identities_controller/get_related_resources_spec.rb'
+    - 'spec/controllers/public_api/v1/periods_identities_controller/get_related_resources_with_sort_spec.rb'
+    - 'spec/lib/monkey_patch/rswag/add_headers_spec.rb'
+    - 'spec/lib/monkey_patch/rswag/specs/livestorm_swagger_formatter_spec.rb'
+    - 'spec/mailers/exports_mailer_spec.rb'
+    - 'spec/mailers/template_mailer_spec/default_spec.rb'
+    - 'spec/requests/public_api/v1/people_spec.rb'
+    - 'spec/requests/public_api/v1/sessions_spec.rb'
+    - 'spec/requests/public_api/v1/webhooks_spec.rb'
+    - 'spec/services/calendly_service/api/v1/user_event_types_spec.rb'
+    - 'spec/services/crm_service/timeline/timeline_event_attributes_spec.rb'
+    - 'spec/services/full_name_splitter_service_spec.rb'
+    - 'spec/services/rate_limit_service/custom_headers_spec.rb'
+    - 'spec/services/zapier_service/create_registrant_spec.rb'
+    - 'spec/workers/notification_worker/attendees_end_spec.rb'
+    - 'spec/workers/notification_worker/new_attendee_spec.rb'
+    - 'spec/workers/notification_worker/webinar_end_spec.rb'
+    - 'spec/workers/notification_worker/webinar_end_with_attendees_spec.rb'
+    - 'spec/workers/notification_worker/webinar_publish_spec.rb'
+    - 'spec/workers/notification_worker/webinar_start_spec.rb'
+
+# Offense count: 3
+# Cop supports --auto-correct.
+Layout/HeredocIndentation:
+  Exclude:
+    - 'app/serializers/custom_pagination_links.rb'
+    - 'app/services/crm_service/hubspot/connection.rb'
+    - 'app/workers/cleans/fix_stop_after_rate_worker.rb'
+
+# Offense count: 140
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: normal, indented_internal_methods
+Layout/IndentationConsistency:
+  Exclude:
+    - 'app/builders/identity_builder/for_event_type/create_registrant_from_public_api.rb'
+    - 'app/builders/identity_builder/for_event_type/create_registrant_from_zapier.rb'
+    - 'app/controllers/api/v1/invites_controller.rb'
+    - 'app/controllers/api/v1/opentok/base_controller.rb'
+    - 'app/models/integrations/beacon.rb'
+    - 'app/models/integrations/crm.rb'
+    - 'app/models/integrations/notification.rb'
+    - 'app/models/integrations/simple.rb'
+    - 'app/models/integrations/tag.rb'
+    - 'app/presenters/emails_presenter/pregenerated/concerns/follow_up.rb'
+    - 'app/services/auth_service/weak_token_generator.rb'
+    - 'app/services/create_invites_service.rb'
+    - 'app/services/crm_service/hubspot/config.rb'
+    - 'app/services/crm_service/hubspot/timeline_event_attributes.rb'
+    - 'app/services/emails_template_service/utils/button_links/additional_data.rb'
+    - 'app/services/emails_template_service/utils/button_links/base.rb'
+    - 'app/services/emails_template_service/utils/button_links/options.rb'
+    - 'app/services/emails_template_service/utils/button_links/template.rb'
+    - 'app/services/full_name_splitter_service/splitter.rb'
+    - 'app/services/integrations_service/crm/concerns/rules_validation.rb'
+    - 'app/services/jsonapi_resource_service/v1/event_type/filters/everyone_can_speak/verify.rb'
+    - 'app/services/jsonapi_resource_service/v1/event_type/filters/kind/concerns/values.rb'
+    - 'app/services/jsonapi_resource_service/v1/resource_subscription/filters/event/concerns/values.rb'
+    - 'app/services/opentok_service/base.rb'
+    - 'app/services/opentok_service/insights.rb'
+    - 'app/services/opentok_service/room.rb'
+    - 'app/services/s3/fetch_folder.rb'
+    - 'app/workers/base_worker.rb'
+    - 'app/workers/chargebee/replace_wrong_subscription_worker.rb'
+    - 'app/workers/cleans/data_view/people_event/sync_metadata_and_restore_by_date.rb'
+    - 'app/workers/cleans/data_view/people_event_type/delete_orphans/all.rb'
+    - 'app/workers/cron/metrics/sidekiq_jobs_pending.rb'
+    - 'app/workers/cron/metrics/sidekiq_queues_latency.rb'
+    - 'app/workers/migrations/fill_new_passwords_fields_to_account_users_worker.rb'
+    - 'app/workers/migrations/fix_duplicate_organization_user_participant/transfer_event_types_identity_to_user.rb'
+    - 'app/workers/migrations/refill_new_passwords_fields_account_users.rb'
+    - 'app/workers/notifications/people_attended_worker.rb'
+    - 'app/workers/notifications/people_not_attended_worker.rb'
+    - 'lib/active_admin/read_replica.rb'
+    - 'spec/e2e/components/admin_component.rb'
+    - 'spec/e2e/components/base/base_component.rb'
+    - 'spec/e2e/components/room/modals/modal_help_component.rb'
+    - 'spec/e2e/components/room/modals/share/modal_media_component.rb'
+    - 'spec/e2e/components/room/sidebar/poll/poll_item_component.rb'
+    - 'spec/e2e/components/room/sidebar/poll/polls_tab_component.rb'
+    - 'spec/e2e/components/room/stage/slides_component.rb'
+    - 'spec/e2e/components/room/stage/stage_component.rb'
+    - 'spec/e2e/components/room/stage/youtube_player_component.rb'
+    - 'spec/e2e/features/dashboard/access/sign_up_spec.rb'
+    - 'spec/features/room/hls_real_device_spec.rb'
+
+# Offense count: 132
+# Cop supports --auto-correct.
+# Configuration parameters: Width, IgnoredPatterns.
+Layout/IndentationWidth:
+  Exclude:
+    - 'app/builders/identity_builder/for_event_type/create_registrant_from_public_api.rb'
+    - 'app/builders/identity_builder/for_event_type/create_registrant_from_zapier.rb'
+    - 'app/controllers/api/v1/invites_controller.rb'
+    - 'app/controllers/api/v1/opentok/base_controller.rb'
+    - 'app/models/integrations/beacon.rb'
+    - 'app/models/integrations/crm.rb'
+    - 'app/models/integrations/notification.rb'
+    - 'app/models/integrations/simple.rb'
+    - 'app/models/integrations/tag.rb'
+    - 'app/services/auth_service/weak_token_generator.rb'
+    - 'app/services/create_invites_service.rb'
+    - 'app/services/crm_service/hubspot/config.rb'
+    - 'app/services/crm_service/hubspot/timeline_event_attributes.rb'
+    - 'app/services/emails_template_service/utils/button_links/additional_data.rb'
+    - 'app/services/emails_template_service/utils/button_links/base.rb'
+    - 'app/services/emails_template_service/utils/button_links/options.rb'
+    - 'app/services/emails_template_service/utils/button_links/template.rb'
+    - 'app/services/full_name_splitter_service/splitter.rb'
+    - 'app/services/jsonapi_resource_service/v1/event_type/filters/everyone_can_speak/verify.rb'
+    - 'app/services/opentok_service/base.rb'
+    - 'app/services/opentok_service/insights.rb'
+    - 'app/services/opentok_service/room.rb'
+    - 'app/services/s3/fetch_folder.rb'
+    - 'app/workers/base_worker.rb'
+    - 'app/workers/chargebee/replace_wrong_subscription_worker.rb'
+    - 'app/workers/cleans/data_view/people_event/sync_metadata_and_restore_by_date.rb'
+    - 'app/workers/cleans/data_view/people_event_type/delete_orphans/all.rb'
+    - 'app/workers/cron/metrics/sidekiq_jobs_pending.rb'
+    - 'app/workers/cron/metrics/sidekiq_queues_latency.rb'
+    - 'app/workers/migrations/fill_new_passwords_fields_to_account_users_worker.rb'
+    - 'app/workers/migrations/fix_duplicate_organization_user_participant/transfer_event_types_identity_to_user.rb'
+    - 'app/workers/migrations/refill_new_passwords_fields_account_users.rb'
+    - 'app/workers/notifications/people_attended_worker.rb'
+    - 'app/workers/notifications/people_not_attended_worker.rb'
+    - 'lib/active_admin/read_replica.rb'
+    - 'spec/e2e/components/admin_component.rb'
+    - 'spec/e2e/components/base/base_component.rb'
+    - 'spec/e2e/components/room/modals/modal_help_component.rb'
+    - 'spec/e2e/components/room/modals/share/modal_media_component.rb'
+    - 'spec/e2e/components/room/sidebar/poll/poll_item_component.rb'
+    - 'spec/e2e/components/room/sidebar/poll/polls_tab_component.rb'
+    - 'spec/e2e/components/room/stage/slides_component.rb'
+    - 'spec/e2e/components/room/stage/stage_component.rb'
+    - 'spec/e2e/components/room/stage/youtube_player_component.rb'
+
+# Offense count: 17
+# Cop supports --auto-correct.
+# Configuration parameters: AllowDoxygenCommentStyle, AllowGemfileRubyComment.
+Layout/LeadingCommentSpace:
+  Exclude:
+    - 'app/helpers/pages_helper.rb'
+    - 'app/models/concerns/emails_config_concern.rb'
+    - 'app/models/identity.rb'
+    - 'app/models/organization.rb'
+    - 'app/models/user.rb'
+    - 'app/serializers/period/media_serializer.rb'
+    - 'app/workers/cleans/base.rb'
+    - 'app/workers/emails/tracking/resolve_tracker_on_incoming_events_worker.rb'
+    - 'spec/controllers/api/v1/webhooks/opentok_controller_spec.rb'
+    - 'spec/e2e/components/room/modals/share/modal_media_component.rb'
+    - 'spec/features/admin/event_types_spec.rb'
+    - 'spec/models/user_spec.rb'
+    - 'spec/services/charts_service/attendes_connected_spec.rb'
+    - 'spec/workers/emails/tracking/resolve_tracker_on_incoming_events_worker_spec.rb'
+
+# Offense count: 10
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: symmetrical, new_line, same_line
+Layout/MultilineArrayBraceLayout:
+  Exclude:
+    - 'app/services/charts_service/registered.rb'
+    - 'app/services/crm_service/contact/base.rb'
+    - 'lib/scripts/glockapp_spam_test.rb'
+    - 'spec/controllers/api/v1/organizations_controller/pipedrive_spec.rb'
+    - 'spec/lib/monkey_patch/rswag/specs/livestorm_swagger_formatter_spec.rb'
+    - 'spec/models/event_type_spec.rb'
+    - 'spec/serializers/period_full_serializer_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/period/utils/builder_params_spec.rb'
+    - 'spec/services/opentok_service/room_spec.rb'
+
+# Offense count: 98
+# Cop supports --auto-correct.
+Layout/MultilineBlockLayout:
+  Exclude:
+    - 'app/models/media/media.rb'
+    - 'app/serializers/billing/scheduled_changes_serializer.rb'
+    - 'app/services/room_serializer_service/list_attendees.rb'
+    - 'spec/builders/account_builder_spec.rb'
+    - 'spec/builders/identity_builder/assign_period_spec.rb'
+    - 'spec/builders/identity_builder/for_dashboard/destroy_team_member_spec.rb'
+    - 'spec/builders/identity_builder/for_dashboard/invite_team_member_spec.rb'
+    - 'spec/builders/identity_builder_spec.rb'
+    - 'spec/builders/period_builder/assign_guest_speaker_spec.rb'
+    - 'spec/channels/room_channel_spec.rb'
+    - 'spec/controllers/api/graphql/instant_meetings_controller_spec.rb'
+    - 'spec/controllers/api/v1/auth/strong/sessions_controller_spec.rb'
+    - 'spec/controllers/api/v1/auth/weak/passwords_controller_spec.rb'
+    - 'spec/controllers/api/v1/auth/weak/registrations_controller_spec.rb'
+    - 'spec/controllers/api/v1/auth/weak/sessions_controller_spec.rb'
+    - 'spec/controllers/api/v1/guest_speakers_controller_spec.rb'
+    - 'spec/controllers/api/v1/team_members_controller_spec.rb'
+    - 'spec/controllers/api/v1/webhooks_controller_spec.rb'
+    - 'spec/controllers/public_api/v1/periods_identities_controller/destroy_from_period_spec.rb'
+    - 'spec/e2e/components/room/modals/share/modal_media_component.rb'
+    - 'spec/factories/data_view_field_config_factory.rb'
+    - 'spec/factories/data_view_segment_factory.rb'
+    - 'spec/features/registration/form_spec.rb'
+    - 'spec/features/registration/form_upcoming_sessions_spec.rb'
+    - 'spec/features/registration/page_access_spec.rb'
+    - 'spec/features/registration/webinar_page_spec.rb'
+    - 'spec/models/data_view/event_type_analytics_spec.rb'
+    - 'spec/models/data_view/people_event_type_spec.rb'
+    - 'spec/models/event_type_spec.rb'
+    - 'spec/models/flood_spec.rb'
+    - 'spec/models/identity_spec.rb'
+    - 'spec/models/organization_spec.rb'
+    - 'spec/models/tracking_spec.rb'
+    - 'spec/models/views/event_types_identities/all_sessions_view_spec.rb'
+    - 'spec/serializers/custom_pagination_links_spec.rb'
+    - 'spec/serializers/participant_full_serializer_spec.rb'
+    - 'spec/serializers/webinar_serializer_spec.rb'
+    - 'spec/services/auth_service/previous_encrypted_passwords_spec.rb'
+    - 'spec/services/auth_service/register_participant_spec.rb'
+    - 'spec/services/calendly_service/api/v1/test_authentication_token_spec.rb'
+    - 'spec/services/export_list_service/adapters/csv_spec.rb'
+    - 'spec/services/fetch_identity_service_spec.rb'
+    - 'spec/services/flood_io_service/go_to_room/create_flood_spec.rb'
+    - 'spec/services/flood_io_service/go_to_room/update_seeds_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/period/utils/people_validator_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/period/utils/period_validator_spec.rb'
+    - 'spec/services/opentok_service/insights_spec.rb'
+    - 'spec/services/room_serializer_service/fast_list_spec.rb'
+    - 'spec/services/room_serializer_service/fast_questions_spec.rb'
+    - 'spec/services/update_email_service/request_change_spec.rb'
+    - 'spec/services/zapier_service/create_registrant_spec.rb'
+    - 'spec/workers/destroy_organization/apply_worker_spec.rb'
+    - 'spec/workers/integrations/crm/create_hubspot_timeline_templates_worker_spec.rb'
+    - 'spec/workers/integrations/crm/update_salesforce_settings_spec.rb'
+    - 'spec/workers/migrations/generate_pin_code_for_created_periods_identities_spec.rb'
+    - 'spec/workers/migrations/refill_new_passwords_fields_account_users_spec.rb'
+
+# Offense count: 52
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: symmetrical, new_line, same_line
+Layout/MultilineHashBraceLayout:
+  Exclude:
+    - 'app/admin/event_types_identity.rb'
+    - 'app/admin/organization.rb'
+    - 'spec/controllers/api/graphql/integrations_controller/show_spec.rb'
+    - 'spec/controllers/api/v1/charts_controller_spec.rb'
+    - 'spec/controllers/api/v1/organizations_controller/pipedrive_spec.rb'
+    - 'spec/controllers/public_api/v1/event_types_controller/create_spec.rb'
+    - 'spec/lib/monkey_patch/rswag/specs/livestorm_swagger_formatter_spec.rb'
+    - 'spec/requests/public_api/v1/events_spec.rb'
+    - 'spec/requests/public_api/v1/people_spec.rb'
+    - 'spec/requests/public_api/v1/sessions_spec.rb'
+    - 'spec/requests/public_api/v1/webhooks_spec.rb'
+    - 'spec/services/opentok_service/room_spec.rb'
+    - 'spec/services/rate_limit_service/custom_headers_spec.rb'
+
+# Offense count: 443
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: symmetrical, new_line, same_line
+Layout/MultilineMethodCallBraceLayout:
+  Exclude:
+    - 'app/admin/action.rb'
+    - 'app/admin/event_types_identity.rb'
+    - 'app/admin/identities.rb'
+    - 'app/admin/organization.rb'
+    - 'app/admin/periods_identity.rb'
+    - 'app/admin/room_flood.rb'
+    - 'app/admin/user.rb'
+    - 'app/channels/questions_channel.rb'
+    - 'app/channels/room_channel.rb'
+    - 'app/controllers/api/v1/event_types_identities_controller.rb'
+    - 'app/controllers/api/v1/mailers_controller.rb'
+    - 'app/controllers/api/v1/opentok/sessions_controller.rb'
+    - 'app/controllers/api/v1/periods_identities_controller.rb'
+    - 'app/controllers/api/v1/webhooks/chargebee_controller.rb'
+    - 'app/controllers/pages_controller.rb'
+    - 'app/helpers/application_helper.rb'
+    - 'app/helpers/mailer_helper.rb'
+    - 'app/mailers/attendees_mailer.rb'
+    - 'app/models/media/replay_media.rb'
+    - 'app/models/period.rb'
+    - 'app/serializers/event_type/emails_config_serializer.rb'
+    - 'app/services/auth_service/register_team_member/send_analytics.rb'
+    - 'app/services/calendly_service/hook/invitee_created/period.rb'
+    - 'app/services/charts_service/registered.rb'
+    - 'app/services/charts_service/webinar_visited_registered.rb'
+    - 'app/services/crm_service/note/hubspot.rb'
+    - 'app/services/crm_service/timeline/hubspot.rb'
+    - 'app/services/export_list_service/builders/datasets/concerns/view_export_fields_overrides.rb'
+    - 'app/services/export_list_service/builders/datasets/event_types_identity.rb'
+    - 'app/services/export_list_service/builders/datasets/periods_identity.rb'
+    - 'app/services/flood_io_service/go_to_room/random_participant_url.rb'
+    - 'app/services/hook_service/period/start.rb'
+    - 'app/services/integrations_service/pipedrive_service.rb'
+    - 'app/services/partnerstack_service.rb'
+    - 'app/workers/attendance_rate_worker.rb'
+    - 'app/workers/cleans/medias_worker.rb'
+    - 'app/workers/integrations/hubspot_worker.rb'
+    - 'app/workers/integrations/slack_worker.rb'
+    - 'app/workers/seeders/period_participant_worker.rb'
+    - 'app/workers/seeders/poll_worker.rb'
+    - 'app/workers/seeders/question_worker.rb'
+    - 'app/workers/sync_chargebee_worker.rb'
+    - 'lib/seeders/period_seeder.rb'
+    - 'lib/seeders/stress/go_to_room.rb'
+    - 'lib/seeders/webinar.rb'
+    - 'spec/builders/identity_builder/for_event_type_spec.rb'
+    - 'spec/capybara_helper.rb'
+    - 'spec/controllers/api/graphql/calendly_controller_spec.rb'
+    - 'spec/controllers/api/v1/auth/strong/registrations_controller_spec.rb'
+    - 'spec/controllers/api/v1/auth/weak/registrations_controller_spec.rb'
+    - 'spec/controllers/api/v1/emails/tracking/trackers_controller_spec.rb'
+    - 'spec/controllers/api/v1/event_types_controller_spec.rb'
+    - 'spec/controllers/api/v1/event_types_identities_controller_spec.rb'
+    - 'spec/controllers/api/v1/medias_controller_spec.rb'
+    - 'spec/controllers/api/v1/messages_controller_spec.rb'
+    - 'spec/controllers/api/v1/polls_controller_spec.rb'
+    - 'spec/controllers/api/v1/questions_controller_spec.rb'
+    - 'spec/controllers/api/v1/resource_subscriptions_controller_spec.rb'
+    - 'spec/controllers/api/v1/room/event_types/polls_controller_spec.rb'
+    - 'spec/controllers/api/v1/room/event_types/questions_controller_spec.rb'
+    - 'spec/controllers/api/v1/webhooks/media_convert_controller_spec.rb'
+    - 'spec/controllers/api/v1/zapier_controller_spec.rb'
+    - 'spec/controllers/iframes_controller_spec.rb'
+    - 'spec/controllers/pages_controller_spec.rb'
+    - 'spec/e2e/components/room_component.rb'
+    - 'spec/e2e/features/instant_meeting/chat_instant_meeting_spec.rb'
+    - 'spec/e2e/features/instant_meeting/instant_meeting_limit_spec.rb'
+    - 'spec/e2e/features/instant_meeting/instant_meeting_spec.rb'
+    - 'spec/e2e/features/instant_meeting/request_access_spec.rb'
+    - 'spec/e2e/features/room/access/participant_spec.rb'
+    - 'spec/e2e/features/room/access/team_member_event_drafted_spec.rb'
+    - 'spec/e2e/features/room/access/team_member_event_ended_spec.rb'
+    - 'spec/e2e/features/room/access/team_member_event_published_spec.rb'
+    - 'spec/e2e/features/room/access/team_member_webinar_spec.rb'
+    - 'spec/e2e/features/room/event-controls/modal_start_spec.rb'
+    - 'spec/e2e/features/room/event-controls/start_end_spec.rb'
+    - 'spec/e2e/features/room/sidebar/polls_previous_spec.rb'
+    - 'spec/e2e/features/room/sidebar/polls_spec.rb'
+    - 'spec/e2e/features/room/sidebar/questions_private_spec.rb'
+    - 'spec/e2e/features/room/sidebar/questions_spec.rb'
+    - 'spec/factories/identity_factory.rb'
+    - 'spec/factories/instant_meeting_factory.rb'
+    - 'spec/factories/participant_factory.rb'
+    - 'spec/factories/user_factory.rb'
+    - 'spec/features/admin/ressources_subscriptions_spec.rb'
+    - 'spec/features/dashboard/people_list_single_people_view_spec.rb'
+    - 'spec/features/dashboard/people_list_spec.rb'
+    - 'spec/features/dashboard/people_list_subscription_spec.rb'
+    - 'spec/features/dashboard/people_view_spec.rb'
+    - 'spec/features/dashboard/period_contributors_guest-speakers_spec.rb'
+    - 'spec/features/dashboard/period_contributors_team-members_spec.rb'
+    - 'spec/features/dashboard/settings/event_type_design_spec.rb'
+    - 'spec/features/dashboard/team_members_spec.rb'
+    - 'spec/features/dashboard/team_profile_spec.rb'
+    - 'spec/features/dashboard/user_profile_spec.rb'
+    - 'spec/features/dashboard/user_settings_spec.rb'
+    - 'spec/features/dashboard/webinar_list_clicked_spec.rb'
+    - 'spec/features/dashboard/webinar_list_shown_spec.rb'
+    - 'spec/features/dashboard/webinar_sessions_spec.rb'
+    - 'spec/features/registration/design_spec.rb'
+    - 'spec/features/registration/form_spec.rb'
+    - 'spec/features/registration/form_upcoming_sessions_spec.rb'
+    - 'spec/features/registration/iframe_spec.rb'
+    - 'spec/features/registration/page_access_spec.rb'
+    - 'spec/features/registration/page_info_spec.rb'
+    - 'spec/features/registration/permalink_spec.rb'
+    - 'spec/features/registration/webinar_page_spec.rb'
+    - 'spec/features/room/display_spec.rb'
+    - 'spec/features/room/replay_sources_spec.rb'
+    - 'spec/features/room/stream_recorder_access_spec.rb'
+    - 'spec/helpers/mailer_helper_spec.rb'
+    - 'spec/helpers/pages_helper_spec.rb'
+    - 'spec/mailers/attendees_mailer_spec.rb'
+    - 'spec/mailers/exports_mailer_spec.rb'
+    - 'spec/mailers/users_mailer_spec.rb'
+    - 'spec/models/data_view/event_spec.rb'
+    - 'spec/models/data_view/people_event_type_spec.rb'
+    - 'spec/models/data_view/period_participation_spec.rb'
+    - 'spec/models/data_view/session_spec.rb'
+    - 'spec/models/emails/tracking/computers/tracker_meaningful_event_spec.rb'
+    - 'spec/models/emails/tracking/resolvers/tracker_spec.rb'
+    - 'spec/models/event_type_spec.rb'
+    - 'spec/models/invite_spec.rb'
+    - 'spec/models/periods_identity_spec.rb'
+    - 'spec/models/question_spec.rb'
+    - 'spec/models/tracking_spec.rb'
+    - 'spec/models/views/event_types_identities/all_sessions_view_spec.rb'
+    - 'spec/serializers/custom_collection_adapter_spec.rb'
+    - 'spec/serializers/custom_pagination_links_spec.rb'
+    - 'spec/serializers/event_type/show_serializer_spec.rb'
+    - 'spec/serializers/event_type_settings_serializer_spec.rb'
+    - 'spec/serializers/event_types_identity/show_serializer_spec.rb'
+    - 'spec/serializers/identity/show_serializer_spec.rb'
+    - 'spec/serializers/identity_settings_serializer_spec.rb'
+    - 'spec/serializers/message_serializer_spec.rb'
+    - 'spec/serializers/participant_full_serializer_spec.rb'
+    - 'spec/serializers/participant_zapier_serializer_spec.rb'
+    - 'spec/serializers/period/media_serializer_spec.rb'
+    - 'spec/serializers/periods_identity/show_serializer_spec.rb'
+    - 'spec/serializers/webinar_serializer_spec.rb'
+    - 'spec/services/account_geo_service_spec.rb'
+    - 'spec/services/auth_service/register_participant_spec.rb'
+    - 'spec/services/automated_action_service/trigger/send_email_spec.rb'
+    - 'spec/services/calendly_service/api/v1/user_event_types_spec.rb'
+    - 'spec/services/charts_service/attendes_connected_spec.rb'
+    - 'spec/services/connection_mode_service_spec.rb'
+    - 'spec/services/crm_service/errors/webhooks/handle_invalid_url_spec.rb'
+    - 'spec/services/crm_service/timeline/hubspot_spec.rb'
+    - 'spec/services/destroy_media_service.rb'
+    - 'spec/services/emails/tracking/process_incoming_event_service_spec.rb'
+    - 'spec/services/export_list_service/adapters/csv_spec.rb'
+    - 'spec/services/export_list_service/builders/datasets/periods_identities_view_export_spec.rb'
+    - 'spec/services/export_list_service/builders/spreadsheets_spec.rb'
+    - 'spec/services/export_list_service/dispatcher_spec.rb'
+    - 'spec/services/fetch_identity_service_spec.rb'
+    - 'spec/services/find_event_types_identities_service_spec.rb'
+    - 'spec/services/find_messages_service_spec.rb'
+    - 'spec/services/find_periods_service/participant_spec.rb'
+    - 'spec/services/find_periods_service/user_spec.rb'
+    - 'spec/services/find_webinars_service_spec.rb'
+    - 'spec/services/hook_service/event_type/delete_spec.rb'
+    - 'spec/services/hook_service/identity/after_register_spec.rb'
+    - 'spec/services/integrations_service/pipedrive_service_spec.rb'
+    - 'spec/services/opentok_service/instant_meeting_spec.rb'
+    - 'spec/services/opentok_service/room_spec.rb'
+    - 'spec/services/recorder_service/base_spec.rb'
+    - 'spec/services/recorder_service/voxeet/auth/bearer_spec.rb'
+    - 'spec/services/recorder_service/voxeet/auth/jwt_spec.rb'
+    - 'spec/services/recorder_service/voxeet/stop_spec.rb'
+    - 'spec/services/recorder_service/voxeet/upload_spec.rb'
+    - 'spec/services/replay_service_spec.rb'
+    - 'spec/services/room_serializer_service/fast_questions_spec.rb'
+    - 'spec/services/sockets_service/connection/disconnect/event_spec.rb'
+    - 'spec/services/sync_metadata_service/event_types_identity_spec.rb'
+    - 'spec/workers/attendance_rate_worker_spec.rb'
+    - 'spec/workers/cleans/data_view/field_config/update_all_webinars_and_scheduled_meetings_to_events_worker_spec.rb'
+    - 'spec/workers/emails/tracking/resolve_tracker_on_incoming_events_worker_spec.rb'
+    - 'spec/workers/integrations/slack_worker_spec.rb'
+    - 'spec/workers/sync_invite_participant_worker_spec.rb'
+
+# Offense count: 317
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, IndentationWidth.
+# SupportedStyles: aligned, indented, indented_relative_to_receiver
+Layout/MultilineMethodCallIndentation:
+  Exclude:
+    - 'app/admin/emails_templates.rb'
+    - 'app/channels/application_cable/connection.rb'
+    - 'app/controllers/api/graphql/data_view/segments_controller.rb'
+    - 'app/controllers/api/v1/polls_controller.rb'
+    - 'app/controllers/api/v1/replays_controller.rb'
+    - 'app/controllers/api/v1/room/event_types/identities_controller.rb'
+    - 'app/controllers/api/v1/utils_controller.rb'
+    - 'app/controllers/iframes_controller.rb'
+    - 'app/controllers/pages_controller.rb'
+    - 'app/helpers/workers/find_each_day.rb'
+    - 'app/models/emails/template.rb'
+    - 'app/models/emails/tracking/tracker.rb'
+    - 'app/models/identity.rb'
+    - 'app/models/media/media.rb'
+    - 'app/models/period.rb'
+    - 'app/models/periods_identity.rb'
+    - 'app/models/vote.rb'
+    - 'app/models/webinar.rb'
+    - 'app/presenters/emails_presenter/pregenerated/base.rb'
+    - 'app/services/auth_service/refresh_token_generator.rb'
+    - 'app/services/automated_action_service/trigger/send_email.rb'
+    - 'app/services/dial_in_service/nexmo/actions/hang_up.rb'
+    - 'app/services/dial_in_service/nexmo/actions/user_join_conversation.rb'
+    - 'app/services/find_messages_service.rb'
+    - 'app/services/find_periods_identities_service.rb'
+    - 'app/services/find_questions_service.rb'
+    - 'app/services/find_webinars_service.rb'
+    - 'app/services/hook_service/event_type/create.rb'
+    - 'app/services/integrations_service/crm/salesforce/core_objects/save.rb'
+    - 'app/services/jsonapi_resource_service/v1/periods_identity/attributes/registrant_detail.rb'
+    - 'app/services/update_email_service/request_change.rb'
+    - 'app/workers/attendance_rate_worker.rb'
+    - 'app/workers/migrations/fix_duplicated_participant_identities/merge_participants.rb'
+    - 'app/workers/migrations/fix_identities_names_whitespaces/trim_chunk_worker.rb'
+    - 'app/workers/migrations/refill_new_passwords_fields_account_users.rb'
+    - 'lib/seeders/webinar.rb'
+    - 'spec/builders/identity_builder/for_event_type/create_registrant_spec.rb'
+    - 'spec/builders/identity_builder/for_event_type_spec.rb'
+    - 'spec/builders/integration_builder/update_spec.rb'
+    - 'spec/controllers/api/graphql/automated_actions_controller_spec.rb'
+    - 'spec/controllers/api/graphql/instant_meetings_controller_spec.rb'
+    - 'spec/controllers/api/v1/auth/weak/registrations_controller_spec.rb'
+    - 'spec/controllers/api/v1/event_types_controller_spec.rb'
+    - 'spec/controllers/api/v1/room/event_types/identities_controller_spec.rb'
+    - 'spec/controllers/api/v1/team_members_controller_spec.rb'
+    - 'spec/controllers/api/v1/utils_controller_spec.rb'
+    - 'spec/controllers/api/v1/webhooks/nexmo_controller_spec.rb'
+    - 'spec/e2e/components/room/sidebar/poll/poll_form_component.rb'
+    - 'spec/e2e/features/room/sidebar/questions_private_spec.rb'
+    - 'spec/factories/event_types_identity_factory.rb'
+    - 'spec/helpers/pages_helper_spec.rb'
+    - 'spec/mailers/attendees_mailer_spec.rb'
+    - 'spec/mailers/template_mailer_spec/pregenerated_spec.rb'
+    - 'spec/models/event_type_spec.rb'
+    - 'spec/models/identity_spec.rb'
+    - 'spec/models/period_spec.rb'
+    - 'spec/models/periods_identity_spec.rb'
+    - 'spec/services/auth_service/register_participant_spec.rb'
+    - 'spec/services/auth_service/register_team_member_spec.rb'
+    - 'spec/services/clearbit_service/fetch_avatar_spec.rb'
+    - 'spec/services/connection_mode_service_spec.rb'
+    - 'spec/services/emails_template_service/utils/params_spec/mailer/pregenerated_spec.rb'
+    - 'spec/services/emails_template_service/utils/params_spec/render/pregenerated_spec.rb'
+    - 'spec/services/export_list_service/dispatcher_spec.rb'
+    - 'spec/services/hook_service/event_type/delete_spec.rb'
+    - 'spec/services/hook_service/period/start_spec.rb'
+    - 'spec/services/hook_service/period/stop_after_rate_spec.rb'
+    - 'spec/services/hook_service/period/stop_spec.rb'
+    - 'spec/services/integrations_service/pipedrive_service_spec.rb'
+    - 'spec/services/integrations_service/versions/change_spec.rb'
+    - 'spec/services/opentok_service/room_spec.rb'
+    - 'spec/services/period_service/reset_spec.rb'
+    - 'spec/services/room_serializer_service/list_attendees_spec.rb'
+    - 'spec/services/settings_webinars_consistency_service_spec.rb'
+    - 'spec/services/stream_recorder_service_spec.rb'
+    - 'spec/services/transfer_to_team_member_service_spec.rb'
+    - 'spec/services/update_email_service/confirm_change_spec.rb'
+    - 'spec/workers/clean_sidekiq_retries_worker_spec.rb'
+    - 'spec/workers/destroy_organization/apply_worker_spec.rb'
+    - 'spec/workers/integrations/crm/create_hubspot_timeline_templates_worker_spec.rb'
+    - 'spec/workers/integrations/crm/update_salesforce_settings_spec.rb'
+    - 'spec/workers/integrations/slack_worker_spec.rb'
+    - 'spec/workers/notification_worker/attendees_end_spec.rb'
+    - 'spec/workers/notification_worker/event_published_spec.rb'
+    - 'spec/workers/notification_worker/new_attendee_spec.rb'
+    - 'spec/workers/notification_worker/webinar_end_with_attendees_spec.rb'
+    - 'spec/workers/notification_worker/webinar_publish_spec.rb'
+    - 'spec/workers/notification_worker/webinar_start_spec.rb'
+
+# Offense count: 1
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: symmetrical, new_line, same_line
+Layout/MultilineMethodDefinitionBraceLayout:
+  Exclude:
+    - 'app/services/emails_template_service/utils/button_links/default.rb'
+
+# Offense count: 14
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, IndentationWidth.
+# SupportedStyles: with_first_parameter, with_fixed_indentation
+Layout/ParameterAlignment:
+  Exclude:
+    - 'spec/e2e/components/room/modals/modal_no_seat_component.rb'
+    - 'spec/e2e/components/room/sidebar/poll/poll_items_component.rb'
+    - 'spec/e2e/components/room/sidebar/poll/polls_tab_component.rb'
+    - 'spec/e2e/models/poll_model.rb'
+
+# Offense count: 7
+# Cop supports --auto-correct.
+Layout/RescueEnsureAlignment:
+  Exclude:
+    - 'app/controllers/concerns/authentication_concern.rb'
+    - 'app/services/crm_service/hubspot/timeline_event_attributes.rb'
+    - 'app/services/integrations_service/crm/salesforce/core_objects/fetch.rb'
+    - 'app/services/opentok_service/instant_meeting.rb'
+    - 'app/services/request_api_service.rb'
+
+# Offense count: 13
+# Cop supports --auto-correct.
+Layout/SpaceAfterMethodName:
+  Exclude:
+    - 'spec/features/connectivity_test_spec.rb'
+    - 'spec/features/dashboard/help_module_spec.rb'
+    - 'spec/features/dashboard/integrations/public_api_spec.rb'
+    - 'spec/features/dashboard/invite_list_spec.rb'
+    - 'spec/features/dashboard/people_list_spec.rb'
+    - 'spec/features/dashboard/team_settings_emails.rb'
+    - 'spec/features/room/automated_media_specs.rb'
+    - 'spec/features/room/screen_sharing_spec.rb'
+
+# Offense count: 5
+# Cop supports --auto-correct.
+Layout/SpaceAfterSemicolon:
+  Exclude:
+    - 'app/services/omniauth_service/callbacks/create_or_update_oauth.rb'
+
+# Offense count: 5
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyleInsidePipes.
+# SupportedStylesInsidePipes: space, no_space
+Layout/SpaceAroundBlockParameters:
+  Exclude:
+    - 'lib/seeders/utils.rb'
+    - 'spec/e2e/components/room/sidebar/question/questions_tab_component.rb'
+
+# Offense count: 6
+# Cop supports --auto-correct.
+Layout/SpaceBeforeComma:
+  Exclude:
+    - 'app/admin/api_keys.rb'
+    - 'app/admin/room_flood.rb'
+    - 'spec/services/opentok_service/room_spec.rb'
+
+# Offense count: 1
+# Cop supports --auto-correct.
+Layout/SpaceBeforeComment:
+  Exclude:
+    - 'app/serializers/period/media_serializer.rb'
+
+# Offense count: 76
+# Cop supports --auto-correct.
+Layout/SpaceBeforeSemicolon:
+  Exclude:
+    - 'app/builders/account_builder.rb'
+    - 'app/builders/identity_builder/assign_event_type.rb'
+    - 'app/builders/identity_builder/assign_period.rb'
+    - 'app/builders/identity_builder/set_location_from.rb'
+    - 'app/builders/identity_builder/set_technical_with.rb'
+    - 'app/builders/identity_builder/update.rb'
+    - 'app/channels/application_cable/connection.rb'
+    - 'app/models/concerns/emails_config_concern.rb'
+    - 'app/services/export_list_service/error.rb'
+    - 'app/services/fetch_identity_service/error.rb'
+    - 'app/services/fetch_identity_service/error/not_found.rb'
+    - 'app/services/find_periods_service.rb'
+    - 'app/services/find_tz_service.rb'
+    - 'app/services/flood_io_service/go_to_room/create_flood.rb'
+    - 'app/services/omniauth_service/callbacks/create_or_update_oauth.rb'
+    - 'app/services/s3/base.rb'
+    - 'app/services/sockets_service/error.rb'
+    - 'app/services/sync_metadata_service/error.rb'
+    - 'app/workers/automated_action/scheduler_worker.rb'
+    - 'app/workers/cleans/integrations/create_zapier_api_key/apply_worker.rb'
+    - 'app/workers/cleans/integrations/undiscard_zapier_api_key/apply_worker.rb'
+    - 'app/workers/hooks/organization/create_worker.rb'
+    - 'app/workers/integrations/v2_compatibility/update_organization_worker.rb'
+    - 'app/workers/migrations/fix_duplicate_organization_user_participant/merge_duplicate_user_participant.rb'
+
+# Offense count: 100
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, EnforcedStyleForEmptyBrackets.
+# SupportedStyles: space, no_space, compact
+# SupportedStylesForEmptyBrackets: space, no_space
+Layout/SpaceInsideArrayLiteralBrackets:
+  Exclude:
+    - 'app/workers/integrations/v2_compatibility/update_organization_worker.rb'
+    - 'lib/monkey_patch/rswag/add_headers.rb'
+    - 'spec/controllers/api/v1/organizations_controller/pipedrive_spec.rb'
+    - 'spec/features/connectivity_test_spec.rb'
+    - 'spec/lib/monkey_patch/rswag/expand_parameters_spec.rb'
+    - 'spec/models/event_type_spec.rb'
+    - 'spec/requests/public_api/v1/auth_spec.rb'
+    - 'spec/requests/public_api/v1/events_spec.rb'
+    - 'spec/requests/public_api/v1/people_spec.rb'
+    - 'spec/requests/public_api/v1/sessions_spec.rb'
+    - 'spec/requests/public_api/v1/webhooks_spec.rb'
+    - 'spec/services/full_name_splitter_service_spec.rb'
+    - 'spec/services/room_serializer_service/fast_questions_spec.rb'
+
+# Offense count: 3
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: space, no_space
+Layout/SpaceInsideStringInterpolation:
+  Exclude:
+    - 'app/admin/organization.rb'
+    - 'app/models/room_flood.rb'
+
+# Offense count: 39
+# Cop supports --auto-correct.
+Lint/AmbiguousOperator:
+  Exclude:
+    - 'app/admin/api_keys.rb'
+    - 'app/admin/auths_api_key.rb'
+    - 'app/admin/organization.rb'
+    - 'app/admin/user.rb'
+    - 'app/builders/identity_builder/utils/params_from.rb'
+    - 'app/builders/period_builder.rb'
+    - 'app/controllers/api/v1/event_types_identities_controller.rb'
+    - 'app/controllers/api/v1/messages_controller.rb'
+    - 'app/controllers/api/v1/periods_controller.rb'
+    - 'app/controllers/api/v1/periods_identities_controller.rb'
+    - 'app/controllers/api/v1/questions_controller.rb'
+    - 'app/helpers/pages_helper.rb'
+    - 'app/models/concerns/fields_concern.rb'
+    - 'app/serializers/event_types_identity/index_serializer.rb'
+    - 'app/serializers/event_types_identity/show_serializer.rb'
+    - 'app/serializers/identity/show_serializer.rb'
+    - 'app/serializers/periods_identity/show_serializer.rb'
+    - 'app/serializers/periods_identity_serializer.rb'
+    - 'app/services/crm_service/hubspot/config.rb'
+    - 'app/services/flood_io_service/go_to_room/create_period.rb'
+    - 'app/services/request_api_service.rb'
+    - 'app/services/sync_metadata_service/base.rb'
+    - 'app/utils/catch_errors.rb'
+    - 'app/utils/catch_errors_with_code.rb'
+    - 'app/utils/perform_callbacks.rb'
+    - 'app/workers/migrations/fix_duplicate_periods_identities/merge_periods_identities.rb'
+    - 'lib/seeders/instant_meeting.rb'
+    - 'lib/seeders/period_seeder.rb'
+    - 'lib/seeders/stress/go_to_room.rb'
+    - 'lib/seeders/user.rb'
+    - 'lib/seeders/webinar.rb'
+
+# Offense count: 25
+# Configuration parameters: AllowSafeAssignment.
+Lint/AssignmentInCondition:
+  Exclude:
+    - 'app/controllers/api/v1/resource_subscriptions_controller.rb'
+    - 'app/controllers/api/v1/webhooks/chargebee_controller.rb'
+    - 'app/controllers/api/v1/zapier_controller.rb'
+    - 'app/controllers/concerns/authorization_concern.rb'
+    - 'app/helpers/pages_helper.rb'
+    - 'app/models/webinar.rb'
+    - 'app/serializers/period_serializer.rb'
+    - 'app/services/find_tz_service.rb'
+    - 'app/services/full_name_splitter_service/splitter.rb'
+    - 'app/services/hook_service/period/cancel.rb'
+    - 'app/services/hook_service/period/stop_async.rb'
+    - 'app/workers/sync_invite_participant_worker.rb'
+    - 'spec/factories/event_types_identity_factory.rb'
+
+# Offense count: 3
+Lint/BinaryOperatorWithIdenticalOperands:
+  Exclude:
+    - 'app/admin/organization.rb'
+    - 'app/admin/user.rb'
+
+# Offense count: 12
+Lint/DuplicateMethods:
+  Exclude:
+    - 'app/builders/identity_builder/for_dashboard/invite_team_member.rb'
+    - 'app/controllers/api/v1/opentok/broadcasts_controller.rb'
+    - 'app/models/period.rb'
+    - 'app/services/hook_service/identity/after_register.rb'
+    - 'app/services/integrations_service/crm/hubspot/rules_validation.rb'
+    - 'app/services/integrations_service/crm/salesforce/core_objects/fetch.rb'
+    - 'app/services/opentok_service/insights.rb'
+    - 'app/services/recorder_service/voxeet/auth/base.rb'
+    - 'app/workers/base_worker.rb'
+    - 'app/workers/integrations/hubspot_worker.rb'
+    - 'app/workers/youtube_worker.rb'
+    - 'lib/monkey_patch/rswag/add_headers.rb'
+
+# Offense count: 32
+Lint/ImplicitStringConcatenation:
+  Exclude:
+    - 'app/admin/period.rb'
+    - 'app/models/periods_identity.rb'
+    - 'app/services/room_serializer_service/fast_polls.rb'
+    - 'app/workers/cleans/invalid_timezone_fix_worker.rb'
+    - 'app/workers/migrations/fix_accounts_without_email.rb'
+    - 'app/workers/migrations/fix_duplicate_organization_user_participant.rb'
+    - 'app/workers/migrations/fix_duplicate_periods_identities.rb'
+    - 'app/workers/migrations/fix_duplicated_participant_identities.rb'
+    - 'app/workers/migrations/fix_event_types_identities_zapier_kind_register.rb'
+    - 'app/workers/migrations/fix_identities_names_worker.rb'
+    - 'app/workers/migrations/fix_invite_accepted_at_worker.rb'
+    - 'app/workers/migrations/fix_null_participant_account_id.rb'
+    - 'app/workers/migrations/fix_opentok_insights_worker.rb'
+    - 'app/workers/migrations/fix_periods_identities_is_guest_speaker_worker.rb'
+    - 'app/workers/migrations/remove_orphan_event_types_identities.rb'
+
+# Offense count: 17
+Lint/IneffectiveAccessModifier:
+  Exclude:
+    - 'app/presenters/emails_presenter/pregenerated/base.rb'
+    - 'app/resources/base_resource.rb'
+    - 'app/services/emails_template_service/base.rb'
+    - 'lib/rack_attack/policies/public_api/base.rb'
+    - 'lib/seeders/base.rb'
+    - 'lib/seeders/utils.rb'
+
+# Offense count: 3
+# Cop supports --auto-correct.
+Lint/Loop:
+  Exclude:
+    - 'lib/tasks/chargebee.rake'
+    - 'spec/controllers/api/graphql/automated_actions_controller_spec.rb'
+
+# Offense count: 38
+Lint/MissingSuper:
+  Exclude:
+    - 'app/builders/event_type_builder/build_for_dashboard/create_scheduled_meeting.rb'
+    - 'app/builders/event_type_builder/build_for_dashboard/create_webinar.rb'
+    - 'app/builders/identity_builder/for_dashboard/create_team_member.rb'
+    - 'app/builders/identity_builder/for_dashboard/invite_team_member.rb'
+    - 'app/builders/identity_builder/for_event_type/assign_invitee.rb'
+    - 'app/builders/identity_builder/for_event_type/assign_team_member.rb'
+    - 'app/builders/identity_builder/for_event_type/create_guest_speaker.rb'
+    - 'app/builders/identity_builder/for_event_type/create_registrant.rb'
+    - 'app/controllers/public_api/paginators/public_api_paginator.rb'
+    - 'app/presenters/emails_presenter/pregenerated/meeting_confirmation.rb'
+    - 'app/presenters/emails_presenter/pregenerated/registered.rb'
+    - 'app/presenters/emails_presenter/pregenerated/registered_guest_speaker.rb'
+    - 'app/serializers/custom_pagination_links.rb'
+    - 'app/services/auth_service/register_team_member/for_invited.rb'
+    - 'app/services/auth_service/register_team_member/for_non_invited.rb'
+    - 'app/services/calendly_service/api/v1/about_me.rb'
+    - 'app/services/calendly_service/api/v1/create_webhook_subscription.rb'
+    - 'app/services/calendly_service/api/v1/delete_webhook_subscription.rb'
+    - 'app/services/calendly_service/api/v1/list_webhook_subscriptions.rb'
+    - 'app/services/calendly_service/api/v1/test_authentication_token.rb'
+    - 'app/services/calendly_service/api/v1/user_event_types.rb'
+    - 'app/services/calendly_service/api/v2/user_events.rb'
+    - 'app/services/calendly_service/hook/invitee_canceled.rb'
+    - 'app/services/calendly_service/hook/invitee_created.rb'
+    - 'app/services/emails_template_service/convert_i18n_variables.rb'
+    - 'app/services/flood_io_service/go_to_room/create_period.rb'
+    - 'app/services/opentok_service/insights.rb'
+    - 'app/services/opentok_service/instant_meeting.rb'
+    - 'app/services/opentok_service/room.rb'
+    - 'app/services/recorder_service/voxeet/auth/bearer.rb'
+    - 'app/services/recorder_service/voxeet/auth/jwt.rb'
+    - 'app/services/recorder_service/voxeet/auth/recording_token.rb'
+    - 'app/services/recorder_service/voxeet/retrieve.rb'
+    - 'app/services/recorder_service/voxeet/stop_deleted_period.rb'
+    - 'app/services/s3/bucket_move.rb'
+    - 'app/services/s3/delete_folder.rb'
+    - 'app/services/s3/fetch_folder.rb'
+    - 'lib/rswag/specs/livestorm_swagger_formatter.rb'
+
+# Offense count: 2
+Lint/NonLocalExitFromIterator:
+  Exclude:
+    - 'app/builders/identity_builder/for_event_type/concerns/with_participant.rb'
+    - 'app/services/calendly_service/sync_event_types.rb'
+
+# Offense count: 95
+# Cop supports --auto-correct.
+Lint/ParenthesesAsGroupedExpression:
+  Exclude:
+    - 'spec/e2e/features/room/sidebar/questions_private_spec.rb'
+    - 'spec/helpers/asset_helper_spec.rb'
+    - 'spec/models/concerns/event_sourcing_concern_spec.rb'
+    - 'spec/models/concerns/redis_counter_cache_spec.rb'
+    - 'spec/models/concerns/text_search_concern_spec.rb'
+    - 'spec/models/data_view/people_event_type_spec.rb'
+    - 'spec/models/event_type_spec.rb'
+    - 'spec/models/media/media_spec.rb'
+    - 'spec/models/periods_media_spec.rb'
+    - 'spec/services/asset_service/file_urls_spec.rb'
+    - 'spec/services/asset_service/load_configuration_spec.rb'
+    - 'spec/services/asset_service/load_manifest_spec.rb'
+    - 'spec/services/crm_service/errors/webhooks/handle_invalid_url_spec.rb'
+    - 'spec/services/find_periods_identities_service_spec.rb'
+    - 'spec/services/find_webinars_service_spec.rb'
+    - 'spec/services/postgresql_services/incoming_autovacuum_watcher_spec.rb'
+    - 'spec/services/postgresql_services/last_autovacuum_watcher_spec.rb'
+    - 'spec/services/postgresql_services/locks_watcher_service_spec.rb'
+    - 'spec/services/postgresql_services/wal_file_watcher_spec.rb'
+    - 'spec/services/redis_asset_cache_service/fetch_spec.rb'
+    - 'spec/services/redis_asset_cache_service/sbuscribe_for_clear_spec.rb'
+    - 'spec/services/s3/delete_folder_spec.rb'
+    - 'spec/services/s3/fetch_folder_spec.rb'
+    - 'spec/workers/cleans/data_view/event/restore_worker_spec.rb'
+    - 'spec/workers/cleans/data_view/event_type_analytics/restore_worker_spec.rb'
+    - 'spec/workers/destroy_media_worker_spec.rb'
+    - 'spec/workers/emails/tracking/process_incoming_event_worker_spec.rb'
+    - 'spec/workers/redis_counter_cache_event_checkpoint_worker_spec.rb'
+
+# Offense count: 36
+# Cop supports --auto-correct.
+Lint/RedundantCopDisableDirective:
+  Exclude:
+    - 'app/builders/identity_builder/assign_period.rb'
+    - 'app/controllers/api/graphql/event_types/registrants_controller.rb'
+    - 'app/controllers/api/graphql/periods/guest_speakers_controller.rb'
+    - 'app/controllers/api/graphql/webinars/guest_speakers_controller.rb'
+    - 'app/controllers/api/v1/event_types_controller.rb'
+    - 'app/controllers/api/v1/organizations_controller.rb'
+    - 'app/controllers/api/v1/team_members_controller.rb'
+    - 'app/controllers/concerns/segment_analytics_concern.rb'
+    - 'app/models/concerns/integrations/for_organization.rb'
+    - 'app/resources/base_resource.rb'
+    - 'app/services/charts_service/attendes_connected.rb'
+    - 'app/services/charts_service/attendes_engagements.rb'
+    - 'app/services/export_list_service/builders/datasets/base_view.rb'
+    - 'app/services/finders_service/event_types_identities_view_export.rb'
+    - 'app/services/finders_service/people_view_export.rb'
+    - 'app/services/finders_service/periods_identities_view_export.rb'
+    - 'app/services/flood_io_service/go_to_room/data.rb'
+    - 'app/services/integrations_service/crm/pipedrive/item_search.rb'
+    - 'app/services/integrations_service/pipedrive_service.rb'
+    - 'app/services/jsonapi_resource_service/v1/apply_sort.rb'
+    - 'app/services/jsonapi_resource_service/v1/cached_resources_for.rb'
+    - 'app/services/jsonapi_resource_service/v1/preload_included_fragments.rb'
+    - 'app/services/room_serializer_service/fast_list.rb'
+    - 'app/services/room_serializer_service/fast_questions.rb'
+    - 'app/services/sockets_service/connection/connection_payload.rb'
+    - 'lib/monkey_patch/jsonapi/resource_serializer.rb'
+    - 'lib/monkey_patch/rswag/add_headers.rb'
+    - 'lib/monkey_patch/rswag/expand_parameters.rb'
+    - 'lib/rswag/specs/livestorm_swagger_formatter.rb'
+    - 'lib/sidekiq/throttling.rb'
+    - 'spec/e2e/components/room/modals/modal_call_to_action_component.rb'
+    - 'spec/e2e/components/room/stage/stage_component.rb'
+    - 'spec/e2e/features/room/sharing/youtube/upcoming_period_after_attendees_spec.rb'
+
+# Offense count: 2
+# Cop supports --auto-correct.
+# Configuration parameters: AllowPercentLiteralArrayArgument.
+Lint/RedundantSplatExpansion:
+  Exclude:
+    - 'spec/builders/identity_builder/utils/params_to_spec.rb'
+    - 'spec/models/event_type_spec.rb'
+
+# Offense count: 2
+# Cop supports --auto-correct.
+Lint/RedundantStringCoercion:
+  Exclude:
+    - 'app/models/integrations/organization.rb'
+    - 'app/models/integrations/version.rb'
+
+# Offense count: 14
+Lint/RescueException:
+  Exclude:
+    - 'app/controllers/api/v1/invoices_controller.rb'
+    - 'app/controllers/api/v1/utils_controller.rb'
+    - 'app/models/concerns/blob_concern.rb'
+    - 'app/models/validations/auths/api_key_validation.rb'
+    - 'app/models/validations/integrations_validation.rb'
+    - 'app/services/clearbit_service/refresh.rb'
+    - 'app/services/hook_service/period/stop.rb'
+    - 'app/services/opentok_service/upload_archive.rb'
+    - 'app/services/sidekiq_service/scheduled/recreate_all/job.rb'
+    - 'app/workers/destroy_organization/delete_room_interactions_worker.rb'
+    - 'app/workers/destroy_organization/destroy_event_type_worker.rb'
+    - 'app/workers/destroy_organization/destroy_event_types_identities_worker.rb'
+    - 'app/workers/destroy_organization/destroy_period_worker.rb'
+    - 'app/workers/destroy_organization/destroy_periods_identities_worker.rb'
+
+# Offense count: 5
+# Configuration parameters: AllowedMethods.
+# AllowedMethods: present?, blank?, presence, try, try!, in?
+Lint/SafeNavigationChain:
+  Exclude:
+    - 'app/mailers/template_mailer.rb'
+    - 'app/serializers/participant_full_serializer.rb'
+    - 'app/services/media_convert_service.rb'
+    - 'spec/services/crm_service/company/hubspot_spec.rb'
+
+# Offense count: 1
+Lint/ShadowedException:
+  Exclude:
+    - 'app/controllers/api/v1/invoices_controller.rb'
+
+# Offense count: 10
+Lint/ShadowingOuterLocalVariable:
+  Exclude:
+    - 'app/builders/api_key_builder/base.rb'
+    - 'app/builders/event_type_builder/build_for_dashboard/base.rb'
+    - 'app/helpers/pages_helper.rb'
+    - 'app/services/dial_in_service/nexmo/params/user_join_conversation.rb'
+    - 'app/services/redis_counter_cache_service/checkpoint.rb'
+    - 'app/services/redis_counter_cache_service/compute_change.rb'
+    - 'app/services/sidekiq_service/metrics/counters.rb'
+    - 'app/services/sync_metadata_service/base.rb'
+    - 'lib/monkey_patch/jsonapi/response_document.rb'
+    - 'lib/seeders/base.rb'
+
+# Offense count: 11
+# Configuration parameters: AllowComments.
+Lint/SuppressedException:
+  Exclude:
+    - 'app/controllers/concerns/authentication_concern.rb'
+    - 'app/services/hook_service/period/stop.rb'
+    - 'lib/seeders/organization.rb'
+    - 'lib/seeders/organizations.rb'
+    - 'lib/seeders/scheduled_meeting.rb'
+    - 'lib/seeders/stress/go_to_room.rb'
+    - 'lib/seeders/user.rb'
+    - 'lib/seeders/webinar.rb'
+    - 'spec/services/update_email_service/confirm_change_spec.rb'
+
+# Offense count: 336
+# Configuration parameters: AllowKeywordBlockArguments.
+Lint/UnderscorePrefixedVariableName:
+  Exclude:
+    - 'app/admin/api_keys.rb'
+    - 'app/builders/event_type_builder/copy_webinar.rb'
+    - 'app/builders/integrations_organization_builder/update.rb'
+    - 'app/channels/questions_channel.rb'
+    - 'app/channels/room_channel.rb'
+    - 'app/controllers/api/v1/base_controller.rb'
+    - 'app/controllers/api/v1/event_types_controller.rb'
+    - 'app/controllers/api/v1/invoices_controller.rb'
+    - 'app/controllers/api/v1/medias_controller.rb'
+    - 'app/controllers/api/v1/omniauth_controller.rb'
+    - 'app/controllers/api/v1/opentok/broadcasts_controller.rb'
+    - 'app/controllers/api/v1/opentok/instant_meetings_controller.rb'
+    - 'app/controllers/api/v1/opentok/sessions_controller.rb'
+    - 'app/controllers/api/v1/opentok/streams_controller.rb'
+    - 'app/controllers/api/v1/periods_controller.rb'
+    - 'app/controllers/api/v1/subscriptions_controller.rb'
+    - 'app/controllers/api/v1/utils_controller.rb'
+    - 'app/controllers/api/v1/webhooks/chargebee_controller.rb'
+    - 'app/controllers/concerns/current_resources_concern.rb'
+    - 'app/controllers/concerns/permitted_parameters_concern.rb'
+    - 'app/controllers/concerns/segment_analytics_concern.rb'
+    - 'app/controllers/concerns/set_resources_concern.rb'
+    - 'app/controllers/public_api/paginators/public_api_paginator.rb'
+    - 'app/controllers/public_api/request_parsers/event_types.rb'
+    - 'app/controllers/public_api/serializers/zapier_resource_serializer.rb'
+    - 'app/controllers/public_api/v1/event_types_controller.rb'
+    - 'app/controllers/public_api/v1/identities_controller.rb'
+    - 'app/controllers/public_api/v1/periods_controller.rb'
+    - 'app/controllers/public_api/v1/resource_subscriptions_controller.rb'
+    - 'app/helpers/pages_helper.rb'
+    - 'app/mailers/attendees_mailer.rb'
+    - 'app/mailers/exports_mailer.rb'
+    - 'app/mailers/template_mailer.rb'
+    - 'app/mailers/users_mailer.rb'
+    - 'app/models/auths/oauths/hubspot.rb'
+    - 'app/models/auths/oauths/salesforce.rb'
+    - 'app/models/concerns/blob_concern.rb'
+    - 'app/models/concerns/emails_config_concern.rb'
+    - 'app/models/concerns/emails_for_devise_concern.rb'
+    - 'app/models/concerns/integrations/for_organization.rb'
+    - 'app/models/concerns/polls_concern.rb'
+    - 'app/models/event_type.rb'
+    - 'app/models/integrations/organization.rb'
+    - 'app/models/organization.rb'
+    - 'app/models/period.rb'
+    - 'app/models/periods_identity.rb'
+    - 'app/models/webinar.rb'
+    - 'app/resources/public_api/v1/concerns/custom_filter.rb'
+    - 'app/resources/public_api/v1/event_type_resource.rb'
+    - 'app/serializers/billing/invoice_serializer.rb'
+    - 'app/serializers/billing/scheduled_changes_serializer.rb'
+    - 'app/serializers/media/slides_media_serializer.rb'
+    - 'app/serializers/period_serializer.rb'
+    - 'app/services/automated_action_service/base.rb'
+    - 'app/services/calendar_service/base.rb'
+    - 'app/services/calendar_service/ics.rb'
+    - 'app/services/calendly_service/hook/invitee_created/invitee.rb'
+    - 'app/services/charts_service/attendes_engagements.rb'
+    - 'app/services/charts_service/registered.rb'
+    - 'app/services/charts_service/webinar_visited_registered.rb'
+    - 'app/services/clearbit_service/refresh/fetch_avatar.rb'
+    - 'app/services/cookies_service.rb'
+    - 'app/services/crm_service/hubspot/engagement.rb'
+    - 'app/services/dial_in_service/nexmo.rb'
+    - 'app/services/dial_in_service/plivo.rb'
+    - 'app/services/emails_template_service/utils/params.rb'
+    - 'app/services/find_event_types_identities_service.rb'
+    - 'app/services/find_periods_identities_service.rb'
+    - 'app/services/find_periods_service.rb'
+    - 'app/services/find_tz_service.rb'
+    - 'app/services/find_webinars_service.rb'
+    - 'app/services/finders_service/event_types_identities_view_export.rb'
+    - 'app/services/hook_service/event_type/publish.rb'
+    - 'app/services/hook_service/period/stop_after_rate.rb'
+    - 'app/services/integrations_service/crm/pipedrive/pipelines.rb'
+    - 'app/services/integrations_service/pipedrive_service.rb'
+    - 'app/services/integrations_service/v2_compatibility/update_organization/from_authenticable.rb'
+    - 'app/services/integrations_service/v2_compatibility/update_organization/from_integrations_organization.rb'
+    - 'app/services/integrations_service/v2_compatibility/update_organization/sync_for_integration.rb'
+    - 'app/services/jsonapi_resource_service/v1/concerns/errors_manager.rb'
+    - 'app/services/jsonapi_resource_service/v1/event_type/create.rb'
+    - 'app/services/jsonapi_resource_service/v1/event_types_identity/attributes/registrant_detail.rb'
+    - 'app/services/jsonapi_resource_service/v1/event_types_identity/serializers/find_included_datum.rb'
+    - 'app/services/jsonapi_resource_service/v1/identity/create.rb'
+    - 'app/services/jsonapi_resource_service/v1/identity/utils/builder_params.rb'
+    - 'app/services/jsonapi_resource_service/v1/identity/validators/params.rb'
+    - 'app/services/jsonapi_resource_service/v1/period/create.rb'
+    - 'app/services/jsonapi_resource_service/v1/period/utils/people_validator.rb'
+    - 'app/services/jsonapi_resource_service/v1/period/utils/period_validator.rb'
+    - 'app/services/jsonapi_resource_service/v1/periods_identity/attributes/registrant_detail.rb'
+    - 'app/services/jsonapi_resource_service/v1/periods_identity/filters/attended/verify.rb'
+    - 'app/services/jsonapi_resource_service/v1/periods_identity/serializers/find_included_datum.rb'
+    - 'app/services/jsonapi_resource_service/v1/resource_subscription/utils/builder_params.rb'
+    - 'app/services/jsonapi_resource_service/v1/utils/serializers/attributes_hash.rb'
+    - 'app/services/jsonapi_resource_service/v1/utils/serializers/find_included_datum.rb'
+    - 'app/services/jsonapi_resource_service/v1/utils/serializers/supplying_attribute_fields.rb'
+    - 'app/services/media_convert_service.rb'
+    - 'app/services/notification_service/dashboard_body.rb'
+    - 'app/services/notification_service/public_api_body.rb'
+    - 'app/services/redis_class_mover_service.rb'
+    - 'app/services/request_api_service.rb'
+    - 'app/services/sockets_service/polls/update.rb'
+    - 'app/services/stream_recorder_service.rb'
+    - 'app/services/subscription_service/base.rb'
+    - 'app/services/subscription_service/sync.rb'
+    - 'app/services/subscription_service/update.rb'
+    - 'app/services/subscription_service/utils.rb'
+    - 'app/services/sync_metadata_service/base.rb'
+    - 'app/services/sync_metadata_service/event_types_identity.rb'
+    - 'app/services/utils_service/clearbit.rb'
+    - 'app/workers/attendance_rate_worker.rb'
+    - 'app/workers/automated_action/destroy_worker.rb'
+    - 'app/workers/media_pdf_worker.rb'
+    - 'app/workers/partnerstack_worker.rb'
+    - 'app/workers/replay_worker.rb'
+    - 'app/workers/trash_worker.rb'
+    - 'lib/generators/jsonapi/swagger/utils/field.rb'
+    - 'lib/generators/jsonapi/swagger/utils/resource.rb'
+    - 'lib/monkey_patch/omni_auth/strategies/o_auth2.rb'
+    - 'lib/seeders/base.rb'
+    - 'spec/carrierwave_helper.rb'
+    - 'spec/controllers/api/v1/messages_controller_spec.rb'
+    - 'spec/controllers/api/v1/periods_controller_spec.rb'
+    - 'spec/controllers/api/v1/questions_controller_spec.rb'
+    - 'spec/controllers/public_api/v1/event_types_identities_controller/show_with_event_type_spec.rb'
+    - 'spec/controllers/public_api/v1/identities_controller/index_spec.rb'
+    - 'spec/controllers/public_api/v1/periods_controller/get_related_resources_spec.rb'
+    - 'spec/e2e/components/room/modals/share/modal_media_component.rb'
+    - 'spec/factories/instant_meeting_factory.rb'
+    - 'spec/factories/periods_identity_factory.rb'
+    - 'spec/features/company/page_as_viewers_spec.rb'
+    - 'spec/features/connectivity_test_spec.rb'
+    - 'spec/features/dashboard/billing/cancel_spec.rb'
+    - 'spec/features/dashboard/billing/create_spec.rb'
+    - 'spec/features/dashboard/billing/display_spec.rb'
+    - 'spec/features/dashboard/billing/infos_spec.rb'
+    - 'spec/features/dashboard/billing/update_spec.rb'
+    - 'spec/features/dashboard/create_meeting_spec.rb'
+    - 'spec/features/dashboard/create_webinar_spec.rb'
+    - 'spec/features/dashboard/integrations/public_api_spec.rb'
+    - 'spec/features/dashboard/integrations/webhooks_spec.rb'
+    - 'spec/features/dashboard/meet_instant_crud_spec.rb'
+    - 'spec/features/dashboard/people_list_subscription_spec.rb'
+    - 'spec/features/dashboard/period_contributors_team-members_spec.rb'
+    - 'spec/features/dashboard/settings/event_type_publish_spec.rb'
+    - 'spec/features/dashboard/settings/event_type_recording_spec.rb'
+    - 'spec/features/dashboard/webinar_list_clicked_spec.rb'
+    - 'spec/features/dashboard/webinar_list_shown_spec.rb'
+    - 'spec/features/dashboard/webinar_sessions_spec.rb'
+    - 'spec/features/room/automated_media_specs.rb'
+    - 'spec/features/room/medias/videos/live_period_host_spec.rb'
+    - 'spec/features/room/medias/videos/live_period_spec.rb'
+    - 'spec/features/room/medias/videos/upcoming_period_spec.rb'
+    - 'spec/features/room/replay_sources_spec.rb'
+    - 'spec/features/room/stream_recorder_access_spec.rb'
+    - 'spec/models/integration_spec.rb'
+    - 'spec/models/integrations/organization_spec.rb'
+    - 'spec/models/integrations/version_spec.rb'
+    - 'spec/services/export_list_service/adapters/csv_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/identity/utils/builder_params_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/identity/validators/params_validator_spec.rb'
+    - 'spec/services/sync_metadata_service/event_types_identity_spec.rb'
+    - 'spec/services/sync_metadata_service/identity_spec.rb'
+
+# Offense count: 1
+Lint/UnreachableCode:
+  Exclude:
+    - 'app/controllers/api/v1/utils_controller.rb'
+
+# Offense count: 99
+# Cop supports --auto-correct.
+# Configuration parameters: IgnoreEmptyBlocks, AllowUnusedKeywordArguments.
+Lint/UnusedBlockArgument:
+  Exclude:
+    - 'app/admin/event_type.rb'
+    - 'app/admin/instant_meeting.rb'
+    - 'app/admin/integrations_organization.rb'
+    - 'app/admin/invite.rb'
+    - 'app/admin/organization.rb'
+    - 'app/admin/period.rb'
+    - 'app/admin/user.rb'
+    - 'app/builders/event_type_builder/create_multiple_periods.rb'
+    - 'app/builders/identity_builder/set_technical_with.rb'
+    - 'app/builders/organization_builder/event_type/build_scheduled_meeting.rb'
+    - 'app/builders/organization_builder/event_type/build_webinar.rb'
+    - 'app/controllers/api/v1/team_members_controller.rb'
+    - 'app/mailers/attendees_mailer.rb'
+    - 'app/mailers/exports_mailer.rb'
+    - 'app/mailers/template_mailer.rb'
+    - 'app/mailers/users_mailer.rb'
+    - 'app/models/concerns/event_sourcing_concern.rb'
+    - 'app/serializers/concerns/column_attributes.rb'
+    - 'app/serializers/identity_settings_serializer.rb'
+    - 'app/services/charts_service/registered.rb'
+    - 'app/services/crm_service/note/hubspot.rb'
+    - 'app/services/export_list_service/builders/datasets/base_view.rb'
+    - 'app/services/flood_io_service/base_data.rb'
+    - 'app/services/jsonapi_resource_service/v1/event_type/attributes/fields.rb'
+    - 'app/services/jsonapi_resource_service/v1/event_types_identity/attributes/registrant_detail.rb'
+    - 'app/services/jsonapi_resource_service/v1/sort_options.rb'
+    - 'app/services/request_api_service.rb'
+    - 'app/services/sidekiq_service/metrics/counters.rb'
+    - 'app/services/utils_service/base.rb'
+    - 'app/uploaders/pdf_media_uploader.rb'
+    - 'app/workers/destroy_team_member_worker.rb'
+    - 'app/workers/integrations/pipedrive_worker.rb'
+    - 'app/workers/voxeet/start_worker.rb'
+    - 'lib/generators/jsonapi/swagger/utils/model.rb'
+    - 'lib/monkey_patch/jsonapi/resource_serializer.rb'
+    - 'lib/seeders/base.rb'
+    - 'lib/seeders/organizations.rb'
+    - 'lib/tasks/steep.rake'
+    - 'spec/builders/event_type_builder/build_for_dashboard/create_webinar_spec.rb'
+    - 'spec/builders/event_type_builder/copy_webinar_spec.rb'
+    - 'spec/controllers/api/graphql/api_keys_controller_spec.rb'
+    - 'spec/controllers/public_api/shared_examples/throttle.rb'
+    - 'spec/factories/account_factory.rb'
+    - 'spec/factories/auths/oauth_factory.rb'
+    - 'spec/factories/automated_actions_event_type_factory.rb'
+    - 'spec/factories/event_types_identity_factory.rb'
+    - 'spec/factories/identity_factory.rb'
+    - 'spec/factories/media_factory.rb'
+    - 'spec/factories/organization_factory.rb'
+    - 'spec/factories/participant_factory.rb'
+    - 'spec/factories/period_factory.rb'
+    - 'spec/factories/user_factory.rb'
+    - 'spec/features/dashboard/people_list_spec.rb'
+    - 'spec/features/dashboard/people_list_subscription_spec.rb'
+    - 'spec/rails_helper.rb'
+    - 'spec/services/integrations_service/versions/change_spec.rb'
+
+# Offense count: 56
+# Cop supports --auto-correct.
+# Configuration parameters: AllowUnusedKeywordArguments, IgnoreEmptyMethods, IgnoreNotImplementedMethods.
+Lint/UnusedMethodArgument:
+  Exclude:
+    - 'app/builders/account_builder.rb'
+    - 'app/builders/period_builder.rb'
+    - 'app/controllers/api/v1/auth/strong/confirmations_controller.rb'
+    - 'app/controllers/api/v1/webhooks/calendly_controller.rb'
+    - 'app/controllers/concerns/rate_limit_concern.rb'
+    - 'app/controllers/public_api/concerns/jsonapi/errors.rb'
+    - 'app/models/concerns/emails_config_concern.rb'
+    - 'app/models/concerns/integrations/authenticable.rb'
+    - 'app/models/scheduled_meeting.rb'
+    - 'app/serializers/concerns/process_attributes.rb'
+    - 'app/services/automated_action_service/base.rb'
+    - 'app/services/crm_service/hubspot/connection.rb'
+    - 'app/services/crm_service/utils/call_hubspot.rb'
+    - 'app/services/export_list_service/builders/datasets/base.rb'
+    - 'app/services/external_tool_deletion/segment_service.rb'
+    - 'app/services/flood_io_service/base_data.rb'
+    - 'app/services/integrations_service/crm/hubspot/rules_validation.rb'
+    - 'app/services/jsonapi_resource_service/v1/concerns/catch_errors.rb'
+    - 'app/services/recorder_service/voxeet/concerns/status.rb'
+    - 'app/services/sidekiq_service/scheduled/recreate_all/job.rb'
+    - 'app/services/throttling_service/freeze_migration_with.rb'
+    - 'app/services/update_email_service/confirm_change.rb'
+    - 'app/uploaders/avatar_uploader.rb'
+    - 'app/uploaders/replay_uploader.rb'
+    - 'app/utils/catch_errors.rb'
+    - 'app/utils/catch_errors_with.rb'
+    - 'app/utils/catch_errors_with_code.rb'
+    - 'app/utils/transaction_with.rb'
+    - 'app/validators/voxeet_status_uniq_validator.rb'
+    - 'app/workers/cleans/data_view/session/restore_all_worker.rb'
+    - 'app/workers/cleans/restore_webinar_worker.rb'
+    - 'app/workers/data_view/event_type_analytics/schedule_checkpoint_worker.rb'
+    - 'app/workers/destroy_organization/apply_worker.rb'
+    - 'app/workers/seeders/base_worker.rb'
+    - 'app/workers/unsubscribe/apply_destroy_worker.rb'
+    - 'lib/generators/jsonapi/swagger/utils/model.rb'
+    - 'lib/infrastructure/utils/console.rb'
+    - 'lib/monkey_patch/pipedrive/organization.rb'
+    - 'lib/seeders/data_view_event_type.rb'
+    - 'lib/sidekiq/livestorm_logger.rb'
+    - 'lib/sidekiq/retry_count.rb'
+    - 'lib/sidekiq/sentry_tags.rb'
+    - 'lib/sidekiq/throttling.rb'
+    - 'spec/e2e/helpers/capybara_helpers.rb'
+    - 'spec/features/dashboard/billing/create_spec.rb'
+    - 'spec/helpers/api_helper_spec.rb'
+
+# Offense count: 10
+# Cop supports --auto-correct.
+# Configuration parameters: ContextCreatingMethods, MethodCreatingMethods.
+Lint/UselessAccessModifier:
+  Exclude:
+    - 'app/controllers/api/v1/room/event_types/identities_controller.rb'
+    - 'app/controllers/api/v1/trackings_controller.rb'
+    - 'app/controllers/concerns/authorization_concern.rb'
+    - 'app/helpers/mailer_helper.rb'
+    - 'app/services/auth_service/refresh_token_generator.rb'
+    - 'app/services/hook_service/period/stop.rb'
+    - 'lib/seeders/instant_meeting.rb'
+    - 'lib/seeders/utils.rb'
+    - 'spec/e2e/components/base/base_component.rb'
+    - 'spec/e2e/components/room/sidebar/people/people_tab_component.rb'
+
+# Offense count: 63
+Lint/UselessAssignment:
+  Exclude:
+    - 'app/channels/room_channel.rb'
+    - 'app/controllers/api/v1/base_controller.rb'
+    - 'app/controllers/api/v1/medias_controller.rb'
+    - 'app/controllers/api/v1/periods_controller.rb'
+    - 'app/controllers/api/v1/polls_controller.rb'
+    - 'app/controllers/api/v1/subscriptions_controller.rb'
+    - 'app/controllers/concerns/error_handler.rb'
+    - 'app/helpers/asset_helper.rb'
+    - 'app/models/api_key.rb'
+    - 'app/models/concerns/blob_concern.rb'
+    - 'app/models/validations/auths/api_key_validation.rb'
+    - 'app/models/validations/integrations_validation.rb'
+    - 'app/previews/template_preview.rb'
+    - 'app/serializers/custom_pagination_links.rb'
+    - 'app/services/auth_service/bearer_decoder.rb'
+    - 'app/services/automated_action_service/trigger/share_media_stage.rb'
+    - 'app/services/dial_in_service/plivo.rb'
+    - 'app/services/fields_adapter_service.rb'
+    - 'app/services/find_tz_service.rb'
+    - 'app/services/hook_service/identity/after_destroy.rb'
+    - 'app/services/hook_service/period/stop.rb'
+    - 'app/services/integrations_service/crm/hubspot/pipelines.rb'
+    - 'app/services/integrations_service/crm/pipedrive/pipelines.rb'
+    - 'app/services/opentok_service/create_session.rb'
+    - 'app/services/redis_counter_cache_service/compute_change.rb'
+    - 'app/services/s3/delete_folder.rb'
+    - 'app/services/sidekiq_service/scheduled/recreate_all/job.rb'
+    - 'app/services/update_email_service/confirm_change.rb'
+    - 'app/workers/cleans/integrations/disable_calendly_worker.rb'
+    - 'app/workers/cleans/redis_counter_cache/fix_existing_worker.rb'
+    - 'app/workers/cron/metrics/sidekiq_jobs_pending.rb'
+    - 'app/workers/cron/metrics/sidekiq_queues_latency.rb'
+    - 'app/workers/hooks/organization/create_worker.rb'
+    - 'app/workers/integrations/v2_compatibility/update_organization_worker.rb'
+    - 'lib/seeders/organization.rb'
+    - 'lib/seeders/organizations.rb'
+    - 'lib/seeders/period_seeder.rb'
+    - 'lib/seeders/scheduled_meeting.rb'
+    - 'lib/seeders/stress/go_to_room.rb'
+    - 'lib/seeders/user.rb'
+    - 'lib/seeders/webinar.rb'
+    - 'lib/tasks/chargebee.rake'
+    - 'spec/factories/event_types_identity_factory.rb'
+    - 'spec/features/dashboard/settings/event_type_emails_spec.rb'
+    - 'spec/features/registration/form_upcoming_sessions_spec.rb'
+    - 'spec/models/emails/tracking/tracker_spec.rb'
+    - 'spec/services/export_list_service/builders/datasets/shared_examples/complex_webinar.rb'
+    - 'spec/workers/partnerstack_worker_spec.rb'
+    - 'spec/workers/sync_invite_participant_worker_spec.rb'
+
+# Offense count: 15
+# Configuration parameters: CheckForMethodsWithNoSideEffects.
+Lint/Void:
+  Exclude:
+    - 'app/services/calendly_service/hook.rb'
+    - 'app/services/crm_service/hubspot/exeptions.rb'
+    - 'app/services/jsonapi_resource_service/v1/event_type/filters/everyone_can_speak/verify.rb'
+    - 'app/services/jsonapi_resource_service/v1/event_type/filters/kind/verify.rb'
+    - 'app/services/jsonapi_resource_service/v1/filters/ilike/verify.rb'
+    - 'app/services/jsonapi_resource_service/v1/filters/verify.rb'
+    - 'app/services/jsonapi_resource_service/v1/identity/filters/role/verify.rb'
+    - 'app/services/jsonapi_resource_service/v1/period/filters/date_from/verify.rb'
+    - 'app/services/jsonapi_resource_service/v1/period/filters/date_to/verify.rb'
+    - 'app/services/jsonapi_resource_service/v1/period/filters/status/verify.rb'
+    - 'app/services/jsonapi_resource_service/v1/periods_identity/filters/attended/verify.rb'
+    - 'app/services/jsonapi_resource_service/v1/resource_subscription/filters/event/verify.rb'
+    - 'spec/carrierwave_helper.rb'
+    - 'spec/e2e/features/dashboard/access/sign_up_spec.rb'
+
+# Offense count: 1
+# Configuration parameters: CountBlocks.
+Metrics/BlockNesting:
+  Max: 4
+
+# Offense count: 1
+# Configuration parameters: CountKeywordArgs, MaxOptionalParameters.
+Metrics/ParameterLists:
+  Max: 7
+
+# Offense count: 28
+Naming/AccessorMethodName:
+  Exclude:
+    - 'app/builders/identity_builder.rb'
+    - 'app/controllers/api/v1/auth/strong/passwords_controller.rb'
+    - 'app/controllers/api/v1/webhooks/plivo_controller.rb'
+    - 'app/controllers/api/v1/zapier_controller.rb'
+    - 'app/controllers/concerns/rate_limit_concern.rb'
+    - 'app/controllers/concerns/set_resources_concern.rb'
+    - 'app/models/data_view/event_type_analytics/period_handler.rb'
+    - 'app/models/data_view/event_type_participation/event_types_identity_handler.rb'
+    - 'app/models/data_view/people_event_type/event_types_identity_handler.rb'
+    - 'app/models/media/youtube_media.rb'
+    - 'app/services/assign_integrations_service.rb'
+    - 'app/services/auth_service/register_team_member/base.rb'
+    - 'app/services/crm_service/company/hubspot.rb'
+    - 'app/services/crm_service/deal/hubspot.rb'
+    - 'app/services/dial_in_service/nexmo/answer.rb'
+    - 'app/services/find_tz_service.rb'
+    - 'app/services/opentok_service/base.rb'
+    - 'app/services/request_api_service.rb'
+    - 'app/services/subscription_service/base.rb'
+    - 'app/uploaders/replay_uploader.rb'
+    - 'lib/rack/host_based_tld_length.rb'
+
+# Offense count: 2
+# Configuration parameters: ExpectMatchingDefinition, CheckDefinitionPathHierarchy, Regex, IgnoreExecutableScripts, AllowedAcronyms.
+# AllowedAcronyms: CLI, DSL, ACL, API, ASCII, CPU, CSS, DNS, EOF, GUID, HTML, HTTP, HTTPS, ID, IP, JSON, LHS, QPS, RAM, RHS, RPC, SLA, SMTP, SQL, SSH, TCP, TLS, TTL, UDP, UI, UID, UUID, URI, URL, UTF8, VM, XML, XMPP, XSRF, XSS
+Naming/FileName:
+  Exclude:
+    - 'spec/features/dashboard/period_contributors_guest-speakers_spec.rb'
+    - 'spec/features/dashboard/period_contributors_team-members_spec.rb'
+
+# Offense count: 96
+# Configuration parameters: NamePrefix, ForbiddenPrefixes, AllowedMethods, MethodDefinitionMacros.
+# NamePrefix: is_, has_, have_
+# ForbiddenPrefixes: is_, has_, have_
+# AllowedMethods: is_a?
+# MethodDefinitionMacros: define_method, define_singleton_method
+Naming/PredicateName:
+  Exclude:
+    - 'spec/**/*'
+    - 'app/controllers/api/v1/event_types_controller.rb'
+    - 'app/controllers/api/v1/periods_identities_controller.rb'
+    - 'app/models/data_view/period_participation/checks_callback.rb'
+    - 'app/models/invite.rb'
+    - 'app/models/metadata/attendance.rb'
+    - 'app/models/organization.rb'
+    - 'app/models/period.rb'
+    - 'app/models/periods_identity.rb'
+    - 'app/models/scheduled_meeting.rb'
+    - 'app/models/tracking.rb'
+    - 'app/models/views/people.rb'
+    - 'app/models/webinar.rb'
+    - 'app/serializers/event_type/base.rb'
+    - 'app/serializers/event_type/show_serializer.rb'
+    - 'app/serializers/event_types_identity/base.rb'
+    - 'app/serializers/event_types_identity/show_serializer.rb'
+    - 'app/serializers/guest_speaker_serializer.rb'
+    - 'app/serializers/identity/base.rb'
+    - 'app/serializers/identity/show_serializer.rb'
+    - 'app/serializers/participant_full_serializer.rb'
+    - 'app/serializers/participant_zapier_serializer.rb'
+    - 'app/serializers/period_full_serializer.rb'
+    - 'app/serializers/periods_identity/base.rb'
+    - 'app/serializers/periods_identity/show_serializer.rb'
+    - 'app/serializers/periods_identity_serializer.rb'
+    - 'app/serializers/poll/base.rb'
+    - 'app/serializers/user_serializer.rb'
+    - 'app/serializers/webinar_serializer.rb'
+    - 'app/services/export_list_service/builders/datasets/base.rb'
+    - 'app/services/export_list_service/builders/datasets/concerns/view_export_fields_overrides.rb'
+    - 'app/services/export_list_service/builders/datasets/event_types_identity.rb'
+    - 'app/services/export_list_service/builders/datasets/periods_identity.rb'
+    - 'app/services/jsonapi_resource_service/v1/resource_subscription/utils/builder_params.rb'
+    - 'app/services/opentok_service/upload_archive.rb'
+    - 'app/services/recorder_service/base.rb'
+    - 'app/services/recorder_service/voxeet/base.rb'
+    - 'app/services/redis_cache_service/period/is_live_concurrent.rb'
+    - 'app/services/redis_cache_service/period/is_next_upcoming.rb'
+    - 'app/services/sockets_service/polls/create.rb'
+    - 'app/services/sockets_service/polls/update.rb'
+    - 'app/services/user_agent_service.rb'
+    - 'app/services/zapier_service/create_registrant.rb'
+    - 'app/workers/dial_in/generate_pin_code_worker.rb'
+    - 'lib/monkey_patch/rswag/expand_parameters.rb'
+
+# Offense count: 13
+# Configuration parameters: EnforcedStyle, AllowedIdentifiers.
+# SupportedStyles: snake_case, camelCase
+Naming/VariableName:
+  Exclude:
+    - 'app/controllers/api/v1/webhooks/media_convert_controller.rb'
+    - 'spec/features/connectivity_test_spec.rb'
+    - 'spec/features/dashboard/billing/infos_spec.rb'
+
+# Offense count: 1
+Security/Eval:
+  Exclude:
+    - 'app/workers/media_pdf_worker.rb'
+
+# Offense count: 7
+Security/Open:
+  Exclude:
+    - 'app/models/concerns/blob_concern.rb'
+    - 'app/workers/media_pdf_worker.rb'
+
+# Offense count: 13
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: prefer_alias, prefer_alias_method
+Style/Alias:
+  Exclude:
+    - 'app/serializers/event_types_identity/show_serializer.rb'
+    - 'app/serializers/periods_identity_serializer.rb'
+    - 'app/services/emails_template_service/render.rb'
+    - 'app/services/integrations_service/beacon/drift/script_tag_validation.rb'
+    - 'app/services/integrations_service/beacon/helpscout/script_tag_validation.rb'
+    - 'app/services/integrations_service/beacon/intercom/script_tag_validation.rb'
+    - 'app/services/integrations_service/crm/hubspot/rules_validation.rb'
+    - 'app/services/integrations_service/crm/pipedrive/rules_validation.rb'
+    - 'app/services/integrations_service/notification/slack/webhook_validation.rb'
+    - 'app/services/integrations_service/tag/custom/script_tag_validation.rb'
+    - 'app/services/integrations_service/tag/ganalytics/ua_code_validation.rb'
+    - 'spec/serializers/poll/duplication_serializer_spec.rb'
+
+# Offense count: 3
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: always, conditionals
+Style/AndOr:
+  Exclude:
+    - 'app/services/jsonapi_resource_service/v1/period/utils/people_validator.rb'
+    - 'lib/infrastructure/run/sidekiq/config/queues.rb'
+
+# Offense count: 1
+# Cop supports --auto-correct.
+Style/BlockComments:
+  Exclude:
+    - 'spec/services/take_team_member_service_spec.rb'
+
+# Offense count: 174
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, ProceduralMethods, FunctionalMethods, IgnoredMethods, AllowBracesOnProceduralOneLiners, BracesRequiredMethods.
+# SupportedStyles: line_count_based, semantic, braces_for_chaining, always_braces
+# ProceduralMethods: benchmark, bm, bmbm, create, each_with_object, measure, new, realtime, tap, with_object
+# FunctionalMethods: let, let!, subject, watch
+# IgnoredMethods: lambda, proc, it
+Style/BlockDelimiters:
+  Exclude:
+    - 'app/admin/api_keys.rb'
+    - 'app/admin/event_type.rb'
+    - 'app/admin/organization.rb'
+    - 'app/admin/period.rb'
+    - 'app/builders/period_builder/build_for_dashboard/update_period.rb'
+    - 'app/controllers/api/v1/auth/strong/confirmations_controller.rb'
+    - 'app/helpers/mailer_helper.rb'
+    - 'app/models/concerns/emails_config_concern.rb'
+    - 'app/models/concerns/fields_concern.rb'
+    - 'app/models/concerns/text_search_concern.rb'
+    - 'app/models/media/media.rb'
+    - 'app/presenters/emails_presenter/pregenerated/base.rb'
+    - 'app/serializers/event_types_identity/show_serializer.rb'
+    - 'app/serializers/periods_identity/show_serializer.rb'
+    - 'app/services/calendly_service/hook/utils/params.rb'
+    - 'app/services/crm_service/hubspot/connection.rb'
+    - 'app/services/emails_template_service/send.rb'
+    - 'app/services/export_list_service/builders/datasets/base.rb'
+    - 'app/services/export_list_service/builders/datasets/periods_identity.rb'
+    - 'app/services/fields_adapter_service.rb'
+    - 'app/services/find_periods_service.rb'
+    - 'app/services/flood_io_service/go_to_room/data.rb'
+    - 'app/services/integrations_service/crm/pipedrive/pipelines.rb'
+    - 'app/services/jsonapi_resource_service/v1/cached_resources_for.rb'
+    - 'app/services/period_service/reschedule.rb'
+    - 'app/services/request_api_service.rb'
+    - 'app/services/room_serializer_service/fast_polls.rb'
+    - 'app/services/room_serializer_service/list_attendees.rb'
+    - 'app/services/sidekiq_service/busy.rb'
+    - 'app/services/sidekiq_service/enqueued.rb'
+    - 'app/services/sidekiq_service/scheduled.rb'
+    - 'app/services/traits_adapter_service.rb'
+    - 'app/utils/perform_callbacks.rb'
+    - 'app/validators/email_blacklist_validator.rb'
+    - 'app/workers/clean_sidekiq_retries_worker.rb'
+    - 'app/workers/media_pdf_worker.rb'
+    - 'lib/generators/jsonapi/swagger/utils/model.rb'
+    - 'lib/infrastructure/run/sidekiq/config.rb'
+    - 'lib/infrastructure/run/sidekiq/config/queues.rb'
+    - 'lib/infrastructure/utils/console.rb'
+    - 'lib/scripts/glockapp_spam_test.rb'
+    - 'spec/builders/account_builder_spec.rb'
+    - 'spec/builders/automated_action_builder/create_automated_actions_period_spec.rb'
+    - 'spec/builders/integration_builder/update_spec.rb'
+    - 'spec/builders/organization_builder/event_type/build_scheduled_meeting_spec.rb'
+    - 'spec/controllers/api/graphql/api_keys_controller_spec.rb'
+    - 'spec/controllers/api/graphql/automated_actions_controller_spec.rb'
+    - 'spec/controllers/api/graphql/emails/event_types_controller_spec.rb'
+    - 'spec/controllers/api/graphql/emails/templates_controller_spec.rb'
+    - 'spec/controllers/api/v1/auth/weak/registrations_controller_spec.rb'
+    - 'spec/controllers/api/v1/organizations_controller/update_spec.rb'
+    - 'spec/controllers/api/v1/webhooks/nexmo_controller_spec.rb'
+    - 'spec/controllers/api/v1/webhooks/sendgrid_controller_spec.rb'
+    - 'spec/controllers/public_api/v1/event_types_controller/index_spec.rb'
+    - 'spec/e2e/components/room/sidebar/poll/poll_item_component.rb'
+    - 'spec/models/automated_action_spec.rb'
+    - 'spec/models/data_view/event_type_analytics_spec.rb'
+    - 'spec/models/event_type_spec.rb'
+    - 'spec/models/integration_spec.rb'
+    - 'spec/models/invite_spec.rb'
+    - 'spec/models/organization_spec.rb'
+    - 'spec/models/period_spec.rb'
+    - 'spec/models/periods_identity_spec.rb'
+    - 'spec/serializers/event_types_identity/show_serializer_spec.rb'
+    - 'spec/serializers/periods_identity/show_serializer_spec.rb'
+    - 'spec/services/auth_service/previous_encrypted_passwords_spec.rb'
+    - 'spec/services/automated_action_service/base_spec.rb'
+    - 'spec/services/automated_action_service/trigger/send_email_spec.rb'
+    - 'spec/services/dial_in_service/nexmo/actions/transfer_spec.rb'
+    - 'spec/services/export_list_service/builders/datasets/event_types_identities_view_export_spec.rb'
+    - 'spec/services/export_list_service/builders/datasets/periods_identities_view_export_spec.rb'
+    - 'spec/services/hook_service/automated_actions_period/destroy_spec.rb'
+    - 'spec/services/hook_service/event_type/publish_spec.rb'
+    - 'spec/services/hook_service/identity/after_register_spec.rb'
+    - 'spec/services/hook_service/period/stop_async_spec.rb'
+    - 'spec/services/integrations_service/v2_compatibility/update_organization/custom_spec.rb'
+    - 'spec/services/integrations_service/v2_compatibility/update_organization/drift_spec.rb'
+    - 'spec/services/integrations_service/v2_compatibility/update_organization/ganalytics_spec.rb'
+    - 'spec/services/integrations_service/v2_compatibility/update_organization/helpscout_spec.rb'
+    - 'spec/services/integrations_service/v2_compatibility/update_organization/hubspot_spec.rb'
+    - 'spec/services/integrations_service/v2_compatibility/update_organization/intercom_spec.rb'
+    - 'spec/services/integrations_service/v2_compatibility/update_organization/pipedrive_spec.rb'
+    - 'spec/services/integrations_service/v2_compatibility/update_organization/slack_spec.rb'
+    - 'spec/services/integrations_service/versions/change_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/event_type/filters/everyone_can_speak/verify_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/event_type/filters/kind/verify_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/event_type/filters/title/verify_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/identity/filters/role/verify_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/period/filters/date_from/verify_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/period/filters/date_to/verify_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/period/filters/status/verify_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/resource_subscription/filters/event/verify_spec.rb'
+    - 'spec/services/period_service/reset_spec.rb'
+    - 'spec/services/recorder_service/voxeet/retrieve_spec.rb'
+    - 'spec/services/request_api_service_spec.rb'
+    - 'spec/services/throttling_service/freeze_migration_with_spec.rb'
+    - 'spec/workers/automated_action/destroy_worker_spec.rb'
+    - 'spec/workers/replay_worker_spec.rb'
+
+# Offense count: 8
+# Cop supports --auto-correct.
+# Configuration parameters: AllowOnConstant.
+Style/CaseEquality:
+  Exclude:
+    - 'app/admin/account.rb'
+    - 'app/services/auth_service/token.rb'
+    - 'app/validators/url_validator.rb'
+    - 'spec/features/room/autoreconnect_spec.rb'
+    - 'spec/services/zapier_service/create_registrant_spec.rb'
+
+# Offense count: 939
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: nested, compact
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+# Offense count: 11
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: is_a?, kind_of?
+Style/ClassCheck:
+  Exclude:
+    - 'app/controllers/api/graphql/instant_meetings_controller.rb'
+    - 'app/services/auth_service/refresh_token_generator.rb'
+    - 'app/services/auth_service/token_decoder.rb'
+    - 'app/services/calendar_service/base.rb'
+    - 'app/services/calendar_service/ics.rb'
+    - 'app/services/clearbit_service/refresh/fetch_avatar/url_check.rb'
+    - 'app/services/find_periods_service.rb'
+    - 'app/services/find_tz_service.rb'
+    - 'app/services/integrations_service/crm/salesforce/core_objects/fetch.rb'
+
+# Offense count: 48
+# Cop supports --auto-correct.
+Style/ColonMethodCall:
+  Exclude:
+    - 'app/builders/identity_builder/utils/params_from.rb'
+    - 'app/helpers/application_helper.rb'
+    - 'app/models/resource_subscription.rb'
+    - 'app/services/auth_service/refresh_token_generator.rb'
+    - 'app/services/auth_service/strong_token_generator.rb'
+    - 'app/services/auth_service/weak_token_generator.rb'
+    - 'app/services/export_list_service/storage.rb'
+    - 'app/services/s3/bucket_move.rb'
+    - 'app/workers/sync_metadata_worker.rb'
+    - 'lib/uri_validator.rb'
+    - 'spec/e2e/components/room/sidebar/chat_message_component.rb'
+    - 'spec/e2e/components/room/sidebar/people/people_component.rb'
+    - 'spec/e2e/components/room/sidebar/poll/poll_items_component.rb'
+    - 'spec/e2e/components/room/stage/youtube_player_component.rb'
+    - 'spec/e2e/components/room_component.rb'
+    - 'spec/e2e/features/dashboard/access/sign_up_spec.rb'
+    - 'spec/e2e/features/room/event-controls/start_end_spec.rb'
+    - 'spec/e2e/features/room/event-controls/start_team_members_spec.rb'
+    - 'spec/e2e/features/room/event-limits/max_streams_spec.rb'
+    - 'spec/e2e/features/room/sidebar/chat_spec.rb'
+    - 'spec/e2e/features/room/sidebar/invite_on_stage_spec.rb'
+    - 'spec/e2e/helpers/capybara_helpers.rb'
+    - 'spec/e2e/helpers/polls_helpers.rb'
+    - 'spec/factories/auths/oauth_factory.rb'
+
+# Offense count: 46
+# Cop supports --auto-correct.
+# Configuration parameters: Keywords.
+# Keywords: TODO, FIXME, OPTIMIZE, HACK, REVIEW, NOTE
+Style/CommentAnnotation:
+  Exclude:
+    - 'app/channels/questions_channel.rb'
+    - 'app/channels/room_channel.rb'
+    - 'app/controllers/api/v1/mailers_controller.rb'
+    - 'app/controllers/api/v1/utils_controller.rb'
+    - 'app/controllers/api/v1/webhooks/chargebee_controller.rb'
+    - 'app/controllers/api/v1/webinars_controller.rb'
+    - 'app/controllers/public_api/concerns/authentication/api_key.rb'
+    - 'app/helpers/application_helper.rb'
+    - 'app/helpers/billing_helper.rb'
+    - 'app/models/data_view/event_type_participation.rb'
+    - 'app/models/event_type.rb'
+    - 'app/models/period.rb'
+    - 'app/models/periods_identity.rb'
+    - 'app/models/webinar.rb'
+    - 'app/serializers/event_type/lite_serializer.rb'
+    - 'app/services/flood_io_service/base_scenario.rb'
+    - 'app/services/flood_io_service/go_to_room/data.rb'
+    - 'app/services/flood_io_service/go_to_room/start_worker.rb'
+    - 'app/services/flood_io_service/go_to_room/update_seeds.rb'
+    - 'app/services/sockets_service/connection/connect/content/shared.rb'
+    - 'app/services/sockets_service/polls/base.rb'
+    - 'app/services/sockets_service/polls/create.rb'
+    - 'app/workers/emails/tracking/resolve_tracker_on_incoming_events_worker.rb'
+    - 'spec/builders/account_builder_spec.rb'
+    - 'spec/controllers/api/v1/mailers_controller_spec.rb'
+    - 'spec/controllers/api/v1/webhooks/plivo_controller_spec.rb'
+    - 'spec/e2e/components/room/sidebar/poll/polls_tab_component.rb'
+    - 'spec/e2e/features/room/access/team_member_event_published_spec.rb'
+    - 'spec/features/admin/event_types_spec.rb'
+    - 'spec/features/dashboard/integrations/hubspot_spec.rb'
+    - 'spec/features/dashboard/integrations/pipedrive_spec.rb'
+    - 'spec/features/dashboard/webinar_list_shown_spec.rb'
+    - 'spec/models/integrations/organization_spec.rb'
+    - 'spec/services/integrations_service/pipedrive_service_spec.rb'
+    - 'spec/workers/emails/tracking/resolve_tracker_on_incoming_events_worker_spec.rb'
+
+# Offense count: 13
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, SingleLineConditionsOnly, IncludeTernaryExpressions.
+# SupportedStyles: assign_to_condition, assign_inside_condition
+Style/ConditionalAssignment:
+  Exclude:
+    - 'app/models/concerns/blob_concern.rb'
+    - 'app/models/concerns/slugs_concern.rb'
+    - 'app/models/data_view/event/average_duration_callback.rb'
+    - 'app/models/data_view/event/compute_status/find_last_session.rb'
+    - 'app/models/data_view/event/compute_status/find_next_session.rb'
+    - 'app/models/data_view/handler/base.rb'
+    - 'app/models/organization.rb'
+    - 'app/services/charts_service/attendes_connected.rb'
+    - 'app/services/data_view/event/average_attendance_rate_service.rb'
+    - 'spec/e2e/components/room/sidebar/question/questions_tab_component.rb'
+    - 'spec/rails_helper.rb'
+
+# Offense count: 78
+# Cop supports --auto-correct.
+# Configuration parameters: AllowCoercion.
+Style/DateTime:
+  Exclude:
+    - 'app/controllers/concerns/segment_analytics_concern.rb'
+    - 'app/helpers/date_time_helper.rb'
+    - 'app/helpers/mailer_helper.rb'
+    - 'app/services/auth_service/token.rb'
+    - 'app/services/crm_service/hubspot/timeline_event_attributes.rb'
+    - 'app/services/jsonapi_resource_service/v1/period/utils/period_validator.rb'
+    - 'app/services/postgresql_services/wal_file_watcher.rb'
+    - 'app/services/room_serializer_service/fast_list.rb'
+    - 'app/services/sidekiq_service/scheduled/recreate_all/job.rb'
+    - 'app/workers/chargebee/resync_chargebee_worker.rb'
+    - 'app/workers/cleans/redefine_connection_mode_worker.rb'
+    - 'app/workers/cleans/reprocess_pdf_worker.rb'
+    - 'app/workers/cleans/revert_disable_registration_page_calendly_worker.rb'
+    - 'app/workers/identity_deletion_propagation_worker.rb'
+    - 'spec/controllers/api/v1/auth/strong/sessions_controller_spec.rb'
+    - 'spec/controllers/api/v1/identities_controller_spec.rb'
+    - 'spec/controllers/api/v1/webhooks/nexmo_controller_spec.rb'
+    - 'spec/controllers/public_api/v1/event_types_controller/create_spec.rb'
+    - 'spec/controllers/public_api/v1/periods_controller/create_session_spec.rb'
+    - 'spec/controllers/public_api/v1/periods_controller/get_related_resources_spec.rb'
+    - 'spec/controllers/public_api/v1/periods_controller/index_spec.rb'
+    - 'spec/helpers/date_time_helper_spec.rb'
+    - 'spec/helpers/pages_helper_spec.rb'
+    - 'spec/models/event_type_spec.rb'
+    - 'spec/requests/public_api/v1/sessions_spec.rb'
+    - 'spec/services/charts_service/webinar_visited_registered_spec.rb'
+    - 'spec/services/export_list_service/builders/datasets/shared_examples/old_and_new_datasets_have_same_value.rb'
+    - 'spec/services/integrations_service/custom_code_enabled_service_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/event_type/create_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/period/filters/date_from/apply_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/period/filters/date_from/verify_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/period/filters/date_to/apply_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/period/filters/date_to/verify_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/period/utils/builder_params_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/period/utils/period_validator_spec.rb'
+
+# Offense count: 2
+# Cop supports --auto-correct.
+Style/DefWithParentheses:
+  Exclude:
+    - 'app/services/opentok_service/base.rb'
+    - 'spec/features/registration/design_spec.rb'
+
+# Offense count: 11
+# Cop supports --auto-correct.
+Style/EachWithObject:
+  Exclude:
+    - 'app/builders/identity_builder/utils/params_to.rb'
+    - 'app/models/data_view/event_type_analytics/compute_counters.rb'
+    - 'app/services/export_list_service/builders/datasets/base_view.rb'
+    - 'app/services/export_list_service/builders/datasets/event_types_identity.rb'
+    - 'app/services/export_list_service/builders/datasets/periods_identity.rb'
+    - 'app/services/room_serializer_service/fast_polls.rb'
+    - 'app/services/sync_metadata_service/base.rb'
+    - 'app/services/sync_metadata_service/event_types_identity.rb'
+    - 'app/services/sync_metadata_service/periods_identity.rb'
+
+# Offense count: 1
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: empty, nil, both
+Style/EmptyElse:
+  Exclude:
+    - 'app/helpers/pages_helper.rb'
+
+# Offense count: 32
+# Cop supports --auto-correct.
+Style/EmptyLiteral:
+  Exclude:
+    - 'spec/services/flood_io_service/base_scenario_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/event_type/filters/everyone_can_speak/apply_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/event_type/filters/everyone_can_speak/verify_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/event_type/filters/kind/apply_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/event_type/filters/kind/verify_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/event_type/filters/title/apply_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/event_type/filters/title/verify_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/filters/apply_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/filters/verify_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/identity/filters/role/apply_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/identity/filters/role/verify_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/period/filters/date_from/apply_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/period/filters/date_from/verify_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/period/filters/date_to/apply_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/period/filters/date_to/verify_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/period/filters/status/apply_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/period/filters/status/verify_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/resource_subscription/filters/event/apply_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/resource_subscription/filters/event/verify_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/sort_options_spec.rb'
+
+# Offense count: 3
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: each, for
+Style/For:
+  Exclude:
+    - 'app/workers/cron/metrics/sidekiq_jobs_pending.rb'
+    - 'app/workers/cron/metrics/sidekiq_queues_latency.rb'
+    - 'spec/e2e/components/room/sidebar/poll/poll_form_component.rb'
+
+# Offense count: 24
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: format, sprintf, percent
+Style/FormatString:
+  Exclude:
+    - 'app/builders/organization_builder/event_type/base.rb'
+    - 'app/models/period.rb'
+    - 'app/workers/dial_in/generate_pin_code_worker.rb'
+    - 'app/workers/media_pdf_worker.rb'
+    - 'spec/e2e/components/room/modals/modal_block_component.rb'
+    - 'spec/e2e/components/room/modals/modal_live_reply_component.rb'
+    - 'spec/e2e/components/room/modals/modal_no_seat_component.rb'
+    - 'spec/e2e/components/room/sidebar/poll/poll_form_component.rb'
+    - 'spec/e2e/components/room/stage/stage_component.rb'
+    - 'spec/e2e/features/dashboard/access/sign_in_spec.rb'
+    - 'spec/e2e/features/room/event-controls/modal_start_spec.rb'
+    - 'spec/e2e/features/room/sidebar/questions_livereply_spec.rb'
+    - 'spec/services/hook_service/period/stop_async_spec.rb'
+
+# Offense count: 2462
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: always, always_true, never
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+# Offense count: 4
+# Cop supports --auto-correct.
+# Configuration parameters: AllowIfModifier.
+Style/IfInsideElse:
+  Exclude:
+    - 'app/models/invite.rb'
+    - 'app/services/subscription_service/utils.rb'
+    - 'lib/monkey_patch/jsonapi/resource_serializer.rb'
+
+# Offense count: 1
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: call, braces
+Style/LambdaCall:
+  Exclude:
+    - 'app/admin/organization.rb'
+
+# Offense count: 50
+# Cop supports --auto-correct.
+Style/LineEndConcatenation:
+  Exclude:
+    - 'app/admin/period.rb'
+    - 'app/controllers/api/v1/auth/strong/registrations_controller.rb'
+    - 'app/workers/integrations/slack_worker.rb'
+    - 'spec/capybara_helper.rb'
+    - 'spec/features/connectivity_test_spec.rb'
+    - 'spec/features/dashboard/billing/cancel_spec.rb'
+    - 'spec/features/dashboard/create_webinar_spec.rb'
+    - 'spec/features/dashboard/integrations/public_api_spec.rb'
+    - 'spec/features/dashboard/invite_list_spec.rb'
+    - 'spec/features/dashboard/period_contributors_guest-speakers_spec.rb'
+    - 'spec/features/dashboard/settings/event_type_emails_spec.rb'
+    - 'spec/features/dashboard/settings/event_type_integrations_spec.rb'
+    - 'spec/features/dashboard/settings/event_type_registration_spec.rb'
+    - 'spec/features/dashboard/team_members_spec.rb'
+    - 'spec/features/dashboard/team_settings_emails.rb'
+    - 'spec/features/dashboard/webinar_sessions_spec.rb'
+    - 'spec/features/registration/form_email_spec.rb'
+    - 'spec/features/registration/form_spec.rb'
+    - 'spec/features/registration/iframe_spec.rb'
+    - 'spec/features/registration/webinar_page_spec.rb'
+    - 'spec/services/integrations_service/pipedrive_service_spec.rb'
+
+# Offense count: 14292
+# Cop supports --auto-correct.
+# Configuration parameters: IgnoreMacros, IgnoredMethods, IgnoredPatterns, IncludedMacros, AllowParenthesesInMultilineCall, AllowParenthesesInChaining, AllowParenthesesInCamelCaseMethod, EnforcedStyle.
+# SupportedStyles: require_parentheses, omit_parentheses
+Style/MethodCallWithArgsParentheses:
+  Enabled: false
+
+# Offense count: 13
+# Cop supports --auto-correct.
+# Configuration parameters: IgnoredMethods.
+Style/MethodCallWithoutArgsParentheses:
+  Exclude:
+    - 'app/controllers/api/v1/medias_controller.rb'
+    - 'app/controllers/api/v1/team_members_controller.rb'
+    - 'app/controllers/api/v1/utils_controller.rb'
+    - 'app/models/periods_identity.rb'
+    - 'app/services/aws_service/s3_resource/read_bucket_object.rb'
+    - 'app/services/s3/base.rb'
+    - 'spec/controllers/api/v1/auth/strong/sessions_controller_spec.rb'
+    - 'spec/features/dashboard/integrations/custom_code_spec.rb'
+    - 'spec/features/registration/form_upcoming_sessions_spec.rb'
+    - 'spec/features/registration/iframe_spec.rb'
+
+# Offense count: 3
+Style/MissingRespondToMissing:
+  Exclude:
+    - 'app/presenters/emails_presenter/default_value.rb'
+    - 'lib/infrastructure/utils/console.rb'
+    - 'spec/helpers/api_helper_spec.rb'
+
+# Offense count: 22
+# Cop supports --auto-correct.
+Style/MultilineIfThen:
+  Exclude:
+    - 'app/admin/periods_identity.rb'
+    - 'app/channels/room_channel.rb'
+    - 'app/controllers/api/v1/resource_subscriptions_controller.rb'
+    - 'app/mailers/template_mailer.rb'
+    - 'app/models/concerns/blob_concern.rb'
+    - 'app/models/concerns/polls_concern.rb'
+    - 'app/models/organization.rb'
+    - 'app/serializers/period/media_serializer.rb'
+    - 'app/services/full_name_splitter_service/splitter.rb'
+    - 'spec/features/dashboard/settings/event_type_automated_spec.rb'
+    - 'spec/features/dashboard/settings/event_type_emails_spec.rb'
+    - 'spec/features/dashboard/settings/event_type_recording_spec.rb'
+    - 'spec/features/dashboard/settings/event_type_registration_spec.rb'
+    - 'spec/features/dashboard/team_members_spec.rb'
+    - 'spec/features/dashboard/team_settings_emails.rb'
+    - 'spec/services/sync_metadata_service/event_types_identity_spec.rb'
+
+# Offense count: 2
+# Cop supports --auto-correct.
+Style/MultilineTernaryOperator:
+  Exclude:
+    - 'app/services/subscription_service/utils.rb'
+    - 'spec/e2e/components/room/stage/stage_component.rb'
+
+# Offense count: 16
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: both, prefix, postfix
+Style/NegatedIf:
+  Exclude:
+    - 'app/controllers/api/v1/auth/weak/passwords_controller.rb'
+    - 'app/controllers/api/v1/periods_identities_controller.rb'
+    - 'app/models/concerns/counters/choice_votes_count_concern.rb'
+    - 'app/models/concerns/counters/event_types_identity_votes_count_concern.rb'
+    - 'app/models/concerns/counters/poll_votes_count_concern.rb'
+    - 'app/models/concerns/timezone_concern.rb'
+    - 'app/models/data_view/handler/base.rb'
+    - 'app/services/dial_in_service/nexmo/actions/user_join_conversation.rb'
+    - 'app/services/hook_service/period/stop_async.rb'
+    - 'app/services/integrations_service/custom_code_enabled_service.rb'
+    - 'app/services/media_convert_service.rb'
+    - 'lib/benchers/vacuum.rb'
+    - 'spec/rails_helper.rb'
+
+# Offense count: 6
+# Cop supports --auto-correct.
+# Configuration parameters: AllowedMethods.
+# AllowedMethods: be, be_a, be_an, be_between, be_falsey, be_kind_of, be_instance_of, be_truthy, be_within, eq, eql, end_with, include, match, raise_error, respond_to, start_with
+Style/NestedParenthesizedCalls:
+  Exclude:
+    - 'spec/services/account_geo_service_spec.rb'
+    - 'spec/services/dial_in_service/opentok_spec.rb'
+    - 'spec/workers/enrichments/geoip_worker_spec.rb'
+    - 'spec/workers/youtube_worker_spec.rb'
+
+# Offense count: 1
+# Cop supports --auto-correct.
+Style/NestedTernaryOperator:
+  Exclude:
+    - 'spec/rails_helper.rb'
+
+# Offense count: 11
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, MinBodyLength.
+# SupportedStyles: skip_modifier_ifs, always
+Style/Next:
+  Exclude:
+    - 'app/models/concerns/integrations/for_organization.rb'
+    - 'app/models/concerns/polls_concern.rb'
+    - 'app/models/webinar.rb'
+    - 'app/workers/notifications/base_worker.rb'
+    - 'lib/monkey_patch/jsonapi/resource_serializer.rb'
+    - 'lib/tasks/chargebee.rake'
+    - 'spec/controllers/public_api/shared_examples/throttle.rb'
+    - 'spec/services/sync_metadata_service/event_types_identity_spec.rb'
+
+# Offense count: 1
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: predicate, comparison
+Style/NilComparison:
+  Exclude:
+    - 'spec/features/connectivity_test_spec.rb'
+
+# Offense count: 8
+# Cop supports --auto-correct.
+# Configuration parameters: IncludeSemanticChanges.
+Style/NonNilCheck:
+  Exclude:
+    - 'spec/features/connectivity_test_spec.rb'
+    - 'spec/features/dashboard/create_webinar_spec.rb'
+    - 'spec/features/dashboard/people_list_subscription_spec.rb'
+    - 'spec/features/dashboard/settings/event_type_automated_spec.rb'
+    - 'spec/features/dashboard/settings/event_type_emails_spec.rb'
+
+# Offense count: 5
+# Cop supports --auto-correct.
+Style/Not:
+  Exclude:
+    - 'app/services/full_name_splitter_service/splitter.rb'
+    - 'spec/e2e/components/base/base_component.rb'
+    - 'spec/e2e/components/room/sidebar/poll/poll_item_component.rb'
+    - 'spec/e2e/components/room/sidebar/poll/polls_tab_component.rb'
+
+# Offense count: 2
+Style/OptionalArguments:
+  Exclude:
+    - 'lib/generators/jsonapi/swagger/utils/model.rb'
+
+# Offense count: 1
+# Cop supports --auto-correct.
+Style/ParallelAssignment:
+  Exclude:
+    - 'app/services/create_invites_service.rb'
+
+# Offense count: 8
+# Cop supports --auto-correct.
+# Configuration parameters: AllowSafeAssignment, AllowInMultilineConditions.
+Style/ParenthesesAroundCondition:
+  Exclude:
+    - 'app/controllers/api/v1/event_types/permalink_controller.rb'
+    - 'app/models/concerns/account_confirmable.rb'
+    - 'app/models/concerns/blob_concern.rb'
+    - 'app/services/find_tz_service.rb'
+    - 'spec/features/dashboard/create_webinar_spec.rb'
+    - 'spec/features/dashboard/settings/event_type_registration_spec.rb'
+
+# Offense count: 1
+# Cop supports --auto-correct.
+Style/PerlBackrefs:
+  Exclude:
+    - 'app/services/crm_service/hubspot/connection.rb'
+
+# Offense count: 27
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: short, verbose
+Style/PreferredHashMethods:
+  Exclude:
+    - 'app/builders/event_type_builder/update_event_type.rb'
+    - 'app/builders/identity_builder/utils/params_to.rb'
+    - 'app/models/data_view/record_event.rb'
+    - 'app/models/data_view/session/period_handler.rb'
+    - 'app/models/organization.rb'
+    - 'app/models/period.rb'
+    - 'app/services/flood_io_service/base_data.rb'
+    - 'app/services/hook_service/event_type/update.rb'
+    - 'app/services/jsonapi_resource_service/v1/preload_included_fragments.rb'
+    - 'app/services/jsonapi_resource_service/v1/utils/serializers/supplying_attribute_fields.rb'
+    - 'lib/monkey_patch/jsonapi/resource_serializer.rb'
+    - 'spec/helpers/pages_helper_spec.rb'
+
+# Offense count: 3
+# Cop supports --auto-correct.
+Style/Proc:
+  Exclude:
+    - 'app/models/concerns/slugs_concern.rb'
+    - 'spec/rails_helper.rb'
+
+# Offense count: 49
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, AllowedCompactTypes.
+# SupportedStyles: compact, exploded
+Style/RaiseArgs:
+  Exclude:
+    - 'app/controllers/public_api/paginators/public_api_paginator.rb'
+    - 'app/resources/public_api/v1/organization_resource.rb'
+    - 'app/resources/public_api/v1/resource_subscription_resource.rb'
+    - 'app/services/crm_service/hubspot/config.rb'
+    - 'app/services/crm_service/hubspot/connection.rb'
+    - 'app/services/emails_template_service/mailer.rb'
+    - 'app/services/jsonapi_resource_service/v1/event_type/utils/event_type_validator.rb'
+    - 'app/services/jsonapi_resource_service/v1/identity/create.rb'
+    - 'app/services/jsonapi_resource_service/v1/identity/validators/identities/identity.rb'
+    - 'app/services/jsonapi_resource_service/v1/identity/validators/params.rb'
+    - 'app/services/jsonapi_resource_service/v1/identity/validators/periods/create.rb'
+    - 'app/services/jsonapi_resource_service/v1/identity/validators/periods/period.rb'
+    - 'app/services/jsonapi_resource_service/v1/period/utils/event_type_validator.rb'
+    - 'app/services/jsonapi_resource_service/v1/period/utils/people_validator.rb'
+    - 'app/services/jsonapi_resource_service/v1/period/utils/period_validator.rb'
+    - 'app/services/jsonapi_resource_service/v1/periods_identity/delete.rb'
+    - 'app/services/jsonapi_resource_service/v1/resource_subscription/create.rb'
+    - 'app/workers/cleans/integrations/create_zapier_api_key/apply_worker.rb'
+    - 'spec/e2e/components/base/base_component.rb'
+    - 'spec/e2e/components/room/modals/share/modal_media_component.rb'
+    - 'spec/e2e/components/room/sidebar/chat_tab_component.rb'
+    - 'spec/e2e/components/room/sidebar/people/people_tab_component.rb'
+    - 'spec/e2e/components/room_component.rb'
+
+# Offense count: 3
+# Cop supports --auto-correct.
+Style/RedundantBegin:
+  Exclude:
+    - 'app/services/clearbit_service/refresh.rb'
+    - 'app/services/crm_service/hubspot/engagement.rb'
+    - 'app/services/redis_asset_cache_service/subscribe_for_clear.rb'
+
+# Offense count: 1
+# Cop supports --auto-correct.
+Style/RedundantCapitalW:
+  Exclude:
+    - 'app/services/find_periods_service.rb'
+
+# Offense count: 6
+# Cop supports --auto-correct.
+Style/RedundantFreeze:
+  Exclude:
+    - 'app/models/resource_subscription.rb'
+    - 'app/services/charts_service/webinar_visited_registered.rb'
+    - 'app/services/export_list_service/builders/spreadsheets.rb'
+    - 'app/services/s3/base.rb'
+    - 'app/validators/max_instant_meetings_rooms_validator.rb'
+
+# Offense count: 24
+# Cop supports --auto-correct.
+Style/RedundantInterpolation:
+  Exclude:
+    - 'app/admin/dashboard.rb'
+    - 'app/admin/participant.rb'
+    - 'app/admin/period.rb'
+    - 'app/builders/identity_builder/utils/params_to.rb'
+    - 'app/helpers/pages_helper.rb'
+    - 'app/models/concerns/blob_concern.rb'
+    - 'app/serializers/concerns/fieldable.rb'
+    - 'app/serializers/concerns/pollable.rb'
+    - 'app/services/calendar_service/google_calendar.rb'
+    - 'app/services/crm_service/company/hubspot.rb'
+    - 'app/services/crm_service/contact/hubspot.rb'
+    - 'app/services/crm_service/deal/hubspot.rb'
+    - 'app/services/export_list_service/builders/datasets/period.rb'
+    - 'app/services/flood_io_service/go_to_room/start.rb'
+    - 'spec/features/dashboard/team_members_spec.rb'
+    - 'spec/mailers/attendees_mailer_spec.rb'
+    - 'spec/mailers/exports_mailer_spec.rb'
+    - 'spec/mailers/users_mailer_spec.rb'
+    - 'spec/services/auth_service/previous_encrypted_passwords_spec.rb'
+
+# Offense count: 10
+# Cop supports --auto-correct.
+Style/RedundantParentheses:
+  Exclude:
+    - 'app/admin/periods_identity.rb'
+    - 'app/models/period.rb'
+    - 'app/serializers/event_type/emails_config_serializer.rb'
+    - 'app/services/calendar_service/google_calendar.rb'
+    - 'spec/controllers/public_api/v1/event_types_controller/index_spec.rb'
+    - 'spec/e2e/components/room/sidebar/poll/poll_form_component.rb'
+    - 'spec/features/room/medias/videos/live_period_host_spec.rb'
+    - 'spec/models/periods_identity_spec.rb'
+    - 'spec/services/sync_metadata_service/event_types_identity_spec.rb'
+
+# Offense count: 30
+# Cop supports --auto-correct.
+# Configuration parameters: AllowMultipleReturnValues.
+Style/RedundantReturn:
+  Exclude:
+    - 'app/channels/room_channel.rb'
+    - 'app/controllers/api/graphql/emails/event_types_controller.rb'
+    - 'app/controllers/api/v1/auth/strong/passwords_controller.rb'
+    - 'app/controllers/api/v1/charts_controller.rb'
+    - 'app/controllers/api/v1/event_types/permalink_controller.rb'
+    - 'app/controllers/api/v1/identities_controller.rb'
+    - 'app/controllers/api/v1/organizations_controller.rb'
+    - 'app/controllers/api/v1/resource_subscriptions_controller.rb'
+    - 'app/controllers/api/v1/room/event_types/identities_controller.rb'
+    - 'app/controllers/api/v1/room/event_types/polls_controller.rb'
+    - 'app/controllers/api/v1/subscriptions_controller.rb'
+    - 'app/controllers/api/v1/team_members_controller.rb'
+    - 'app/controllers/api/v1/zapier_controller.rb'
+    - 'app/controllers/concerns/auth_errors_concern.rb'
+    - 'app/controllers/concerns/authentication_concern.rb'
+    - 'app/helpers/pages_helper.rb'
+    - 'app/models/data_view/event_type_participation/period_participation_handler.rb'
+    - 'app/services/auth_service/refresh_token_generator.rb'
+    - 'app/services/find_tz_service.rb'
+    - 'app/services/period_service/reschedule.rb'
+    - 'app/services/s3/delete_folder.rb'
+    - 'app/services/subscription_service/utils.rb'
+    - 'app/services/zapier_service/create_registrant.rb'
+    - 'spec/services/redis_class_mover_service_spec.rb'
+
+# Offense count: 125
+# Cop supports --auto-correct.
+Style/RedundantSelf:
+  Exclude:
+    - 'app/models/concerns/account_confirmable.rb'
+    - 'app/models/concerns/blob_concern.rb'
+    - 'app/models/concerns/event_sourcing_concern.rb'
+    - 'app/models/concerns/integrations/for_organization.rb'
+    - 'app/models/concerns/migration_mechanics_concern.rb'
+    - 'app/models/concerns/publisher_concern.rb'
+    - 'app/models/concerns/slugs_concern.rb'
+    - 'app/models/concerns/text_search_concern.rb'
+    - 'app/models/concerns/timezone_concern.rb'
+    - 'app/models/data_view/event.rb'
+    - 'app/models/identity.rb'
+    - 'app/models/integrations/version.rb'
+    - 'app/models/invite.rb'
+    - 'app/models/organization.rb'
+    - 'app/models/period.rb'
+    - 'app/models/periods_identity.rb'
+    - 'app/models/validations/integrations_validation.rb'
+    - 'app/models/webinar.rb'
+    - 'app/resources/public_api/v1/concerns/custom_filter.rb'
+    - 'app/serializers/concerns/column_attributes.rb'
+    - 'app/serializers/concerns/private_attributes.rb'
+    - 'app/serializers/concerns/process_attributes.rb'
+    - 'app/uploaders/replay_uploader.rb'
+    - 'app/utils/perform_callbacks.rb'
+    - 'spec/e2e/components/room/sidebar/question/question_component.rb'
+
+# Offense count: 33
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, AllowInnerSlashes.
+# SupportedStyles: slashes, percent_r, mixed
+Style/RegexpLiteral:
+  Exclude:
+    - 'app/admin/api_keys.rb'
+    - 'app/controllers/api/v1/utils_controller.rb'
+    - 'app/controllers/api/v1/webhooks/media_convert_controller.rb'
+    - 'app/controllers/application_controller.rb'
+    - 'app/helpers/api_helper.rb'
+    - 'app/models/concerns/timezone_concern.rb'
+    - 'app/services/find_tz_service.rb'
+    - 'app/services/integrations_service/notification/slack/webhook_validation.rb'
+    - 'app/services/jsonapi_resource_service/v1/period/utils/period_validator.rb'
+    - 'app/services/s3/fetch_folder.rb'
+    - 'app/workers/youtube_worker.rb'
+    - 'lib/rack_attack/policies/public_api/base.rb'
+    - 'spec/builders/api_key_builder/create_spec.rb'
+    - 'spec/builders/api_key_builder/update_spec.rb'
+    - 'spec/controllers/api/v1/opentok/broadcasts_controller_spec.rb'
+    - 'spec/features/dashboard/billing/create_spec.rb'
+    - 'spec/models/media/video_media_spec.rb'
+    - 'spec/rails_helper.rb'
+    - 'spec/services/api_key_service/token_generator_spec.rb'
+    - 'spec/services/export_list_service/dispatcher_spec.rb'
+    - 'spec/services/hook_service/period/requested_start_spec.rb'
+
+# Offense count: 24
+# Cop supports --auto-correct.
+Style/RescueModifier:
+  Exclude:
+    - 'app/admin/organization.rb'
+    - 'app/services/crm_service/company/hubspot.rb'
+    - 'app/services/crm_service/contact/hubspot.rb'
+    - 'app/services/crm_service/note/hubspot.rb'
+    - 'app/services/dial_in_service/nexmo/actions/stop_conversation.rb'
+    - 'app/services/integrations_service/crm/hubspot/pipelines.rb'
+    - 'app/services/integrations_service/crm/hubspot/rules_validation.rb'
+    - 'app/services/sync_metadata_service/event_types_identity.rb'
+    - 'app/uploaders/avatar_uploader.rb'
+    - 'app/uploaders/cover_uploader.rb'
+    - 'app/uploaders/logo_uploader.rb'
+    - 'app/uploaders/pdf_media_uploader.rb'
+    - 'app/uploaders/pdf_uploader.rb'
+    - 'app/uploaders/replay_uploader.rb'
+    - 'app/validators/url_validator.rb'
+    - 'app/workers/cleans/redis_counter_cache/fix_existing_worker.rb'
+    - 'app/workers/cron/voxeet/catch_up_failed_records_worker.rb'
+    - 'app/workers/redis_counter_cache_event_checkpoint_worker.rb'
+    - 'app/workers/reset_counters_worker.rb'
+    - 'spec/features/room/autoreconnect_spec.rb'
+    - 'spec/workers/redis_counter_cache_event_checkpoint_worker_spec.rb'
+
+# Offense count: 29
+# Cop supports --auto-correct.
+# Configuration parameters: ConvertCodeThatCanStartToReturnNil, AllowedMethods.
+# AllowedMethods: present?, blank?, presence, try, try!
+Style/SafeNavigation:
+  Exclude:
+    - 'app/controllers/api/v1/auth/strong/passwords_controller.rb'
+    - 'app/controllers/concerns/authorization_concern.rb'
+    - 'app/controllers/concerns/current_resources_concern.rb'
+    - 'app/controllers/concerns/segment_analytics_concern.rb'
+    - 'app/controllers/pages_controller.rb'
+    - 'app/models/concerns/counters/choice_votes_count_concern.rb'
+    - 'app/models/concerns/counters/event_types_identity_votes_count_concern.rb'
+    - 'app/models/concerns/counters/poll_votes_count_concern.rb'
+    - 'app/models/event_types_identity.rb'
+    - 'app/presenters/emails_presenter/pregenerated/base.rb'
+    - 'app/serializers/application_serializer.rb'
+    - 'app/serializers/identity/base.rb'
+    - 'app/services/auth_service/token_revoker.rb'
+    - 'app/services/export_list_service/builders/spreadsheets.rb'
+    - 'app/services/has_webrtc_service.rb'
+    - 'app/services/period_service/reset.rb'
+    - 'app/services/update_email_service/confirm_change.rb'
+    - 'app/workers/automated_action/destroy_worker.rb'
+    - 'app/workers/cleans/data_view/event/restore_team_member_ids/apply_worker.rb'
+    - 'app/workers/cleans/sidekiq/new_queue_for_automated_actions_worker.rb'
+    - 'lib/monkey_patch/omni_auth/strategies/o_auth2.rb'
+    - 'lib/seeders/rpc/hash_with_records.rb'
+    - 'spec/capybara_helper.rb'
+
+# Offense count: 2
+# Cop supports --auto-correct.
+Style/SelfAssignment:
+  Exclude:
+    - 'app/services/find_webinars_service.rb'
+
+# Offense count: 19
+# Cop supports --auto-correct.
+# Configuration parameters: AllowAsExpressionSeparator.
+Style/Semicolon:
+  Exclude:
+    - 'app/services/find_periods_service.rb'
+    - 'spec/controllers/api/graphql/emails/event_types_controller_spec.rb'
+    - 'spec/controllers/api/v1/identities_controller_spec.rb'
+    - 'spec/controllers/api/v1/subscriptions_controller_spec.rb'
+    - 'spec/features/room/screen_sharing_spec.rb'
+
+# Offense count: 24
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: only_raise, only_fail, semantic
+Style/SignalException:
+  Exclude:
+    - 'app/controllers/public_api/paginators/public_api_paginator.rb'
+    - 'app/resources/public_api/v1/resource_subscription_resource.rb'
+    - 'app/serializers/custom_pagination_links.rb'
+    - 'spec/e2e/features/dashboard/access/sign_up_spec.rb'
+    - 'spec/e2e/features/room/access/authentication_spec.rb'
+    - 'spec/e2e/features/room/access/participant_spec.rb'
+    - 'spec/e2e/features/room/access/sign_in_spec.rb'
+    - 'spec/e2e/features/room/sharing/call_to_action_spec.rb'
+    - 'spec/e2e/features/room/sharing/slides_participant_spec.rb'
+    - 'spec/e2e/features/room/sharing/youtube/live_period_spec.rb'
+    - 'spec/e2e/features/room/sharing/youtube/upcoming_period_after_attendees_spec.rb'
+    - 'spec/e2e/features/room/sharing/youtube/upcoming_period_spec.rb'
+    - 'spec/e2e/features/room/sidebar/chat_spec.rb'
+    - 'spec/e2e/features/room/sidebar/people_connection_status_spec.rb'
+    - 'spec/e2e/features/room/sidebar/private_chat_spec.rb'
+    - 'spec/features/room/autoreconnect_spec.rb'
+
+# Offense count: 20
+# Cop supports --auto-correct.
+# Configuration parameters: AllowIfMethodIsEmpty.
+Style/SingleLineMethods:
+  Exclude:
+    - 'app/models/concerns/emails_config_concern.rb'
+    - 'app/models/emails/template.rb'
+    - 'app/models/invite.rb'
+    - 'app/presenters/emails_presenter/pregenerated/base.rb'
+    - 'app/services/find_periods_service.rb'
+
+# Offense count: 16
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: single_quotes, double_quotes
+Style/StringLiteralsInInterpolation:
+  Exclude:
+    - 'app/builders/organization_builder/event_type/base.rb'
+    - 'app/services/calendly_service/hook/utils/synchronize_team_members.rb'
+    - 'app/uploaders/pdf_uploader.rb'
+    - 'app/workers/media_pdf_worker.rb'
+    - 'spec/controllers/api/v1/event_types_controller_spec.rb'
+    - 'spec/controllers/api/v1/webinars_controller_spec.rb'
+    - 'spec/factories/identity_factory.rb'
+    - 'spec/factories/user_factory.rb'
+
+# Style/StringLiterals:
+#   Exclude:
+#     - 'lib/cool_program.rb'
+
+# Offense count: 33
+# Cop supports --auto-correct.
+Style/SymbolLiteral:
+  Exclude:
+    - 'lib/monkey_patch/rswag/add_headers.rb'
+    - 'spec/controllers/public_api/v1/periods_identities_controller/get_related_resources_with_sort_spec.rb'
+    - 'spec/requests/public_api/v1/auth_spec.rb'
+    - 'spec/requests/public_api/v1/events_spec.rb'
+    - 'spec/requests/public_api/v1/people_spec.rb'
+    - 'spec/requests/public_api/v1/sessions_spec.rb'
+    - 'spec/requests/public_api/v1/webhooks_spec.rb'
+    - 'spec/services/auth_service/register_team_member_spec.rb'
+
+# Offense count: 76
+# Cop supports --auto-correct.
+# Configuration parameters: IgnoredMethods.
+# IgnoredMethods: respond_to, define_method
+Style/SymbolProc:
+  Exclude:
+    - 'app/admin/event_type.rb'
+    - 'app/admin/event_types_identity.rb'
+    - 'app/admin/invite.rb'
+    - 'app/admin/media.rb'
+    - 'app/admin/organization.rb'
+    - 'app/admin/period.rb'
+    - 'app/admin/periods_identity.rb'
+    - 'app/admin/user.rb'
+    - 'app/builders/identity_builder/for_event_type/create_registrant_from_zapier.rb'
+    - 'app/controllers/api/v1/invoices_controller.rb'
+    - 'app/mailers/template_mailer.rb'
+    - 'app/models/concerns/fields_concern.rb'
+    - 'app/models/data_view/base.rb'
+    - 'app/models/organization.rb'
+    - 'app/services/integrations_service/crm/hubspot/rules_validation.rb'
+    - 'app/services/integrations_service/crm/salesforce/core_objects/fetch.rb'
+    - 'app/services/redis_counter_cache_service/compute_change.rb'
+    - 'app/services/sync_metadata_service/base.rb'
+    - 'app/services/utils_service/clearbit.rb'
+    - 'app/workers/destroy_organization/delete_room_interactions_worker.rb'
+    - 'app/workers/destroy_organization/destroy_event_types_identities_worker.rb'
+    - 'app/workers/destroy_organization/destroy_periods_identities_worker.rb'
+    - 'spec/factories/emails_template_factory.rb'
+    - 'spec/models/data_view/shareds/unique_root_handler_spec.rb'
+    - 'spec/serializers/billing/invoice_serializer_spec.rb'
+    - 'spec/services/emails_template_service/mailer_spec/custom_template_spec.rb'
+    - 'spec/services/emails_template_service/render_spec/custom_template_spec.rb'
+    - 'spec/services/emails_template_service/send_spec/custom_template_spec.rb'
+
+# Offense count: 2
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, AllowSafeAssignment.
+# SupportedStyles: require_parentheses, require_no_parentheses, require_parentheses_when_complex
+Style/TernaryParentheses:
+  Exclude:
+    - 'app/models/period.rb'
+    - 'app/services/charts_service/attendes_connected.rb'
+
+# Offense count: 626
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyleForMultiline.
+# SupportedStylesForMultiline: comma, consistent_comma, no_comma
+Style/TrailingCommaInArrayLiteral:
+  Exclude:
+    - 'app/admin/user.rb'
+    - 'app/builders/identity_builder/for_event_type/assign_team_member.rb'
+    - 'app/builders/identity_builder/for_event_type/create_guest_speaker.rb'
+    - 'app/builders/identity_builder/for_event_type/create_registrant_from_zapier.rb'
+    - 'app/builders/identity_builder/utils/params_from.rb'
+    - 'app/builders/identity_builder/utils/params_to.rb'
+    - 'app/builders/period_builder/assign_guest_speaker.rb'
+    - 'app/channels/application_cable/concerns/instances.rb'
+    - 'app/controllers/api/graphql/data_view/field_configs_controller.rb'
+    - 'app/controllers/api/graphql/data_view/segments_controller.rb'
+    - 'app/controllers/api/graphql/event_types/registrants_controller.rb'
+    - 'app/controllers/api/graphql/integrations_controller.rb'
+    - 'app/controllers/api/graphql/periods/guest_speakers_controller.rb'
+    - 'app/controllers/api/graphql/webinars/guest_speakers_controller.rb'
+    - 'app/controllers/api/v1/event_types_controller.rb'
+    - 'app/controllers/api/v1/event_types_identities_controller.rb'
+    - 'app/controllers/api/v1/identities_controller.rb'
+    - 'app/controllers/api/v1/mailers_controller.rb'
+    - 'app/controllers/api/v1/messages_controller.rb'
+    - 'app/controllers/api/v1/opentok/api/rest/broadcasts_controller.rb'
+    - 'app/controllers/api/v1/organizations_controller.rb'
+    - 'app/controllers/api/v1/periods_controller.rb'
+    - 'app/controllers/api/v1/periods_identities_controller.rb'
+    - 'app/controllers/api/v1/questions_controller.rb'
+    - 'app/controllers/api/v1/subscriptions_controller.rb'
+    - 'app/controllers/api/v1/team_members_controller.rb'
+    - 'app/controllers/api/v1/webhooks/chargebee_controller.rb'
+    - 'app/controllers/api/v1/webinars_controller.rb'
+    - 'app/controllers/concerns/current_resources_concern.rb'
+    - 'app/controllers/concerns/permitted_parameters_concern.rb'
+    - 'app/controllers/public_api/v1/event_types_controller.rb'
+    - 'app/controllers/public_api/v1/identities_controller.rb'
+    - 'app/controllers/public_api/v1/periods_controller.rb'
+    - 'app/helpers/billing_helper.rb'
+    - 'app/helpers/event_type_helper.rb'
+    - 'app/mailers/unsubscribe_mailer.rb'
+    - 'app/models/concerns/blob_concern.rb'
+    - 'app/models/concerns/event_types/fields_concern.rb'
+    - 'app/models/concerns/integrations/for_organization.rb'
+    - 'app/models/emails/template.rb'
+    - 'app/models/emails/tracking/resolvers/mapping.rb'
+    - 'app/models/identity.rb'
+    - 'app/models/organization.rb'
+    - 'app/models/period.rb'
+    - 'app/serializers/event_type_settings_serializer.rb'
+    - 'app/serializers/event_types_identity/index_serializer.rb'
+    - 'app/serializers/event_types_identity/show_serializer.rb'
+    - 'app/serializers/identity/show_serializer.rb'
+    - 'app/serializers/identity_settings_serializer.rb'
+    - 'app/serializers/media/columns_medias_serializer.rb'
+    - 'app/serializers/participant_zapier_serializer.rb'
+    - 'app/serializers/periods_identity/show_serializer.rb'
+    - 'app/services/artillery_service/public_api/api_keys/csv_export.rb'
+    - 'app/services/artillery_service/zapier/create_participant.rb'
+    - 'app/services/auth_service/register_participant/synthetic_params.rb'
+    - 'app/services/charts_service/attendes_connected.rb'
+    - 'app/services/charts_service/attendes_engagements.rb'
+    - 'app/services/charts_service/registered.rb'
+    - 'app/services/charts_service/webinar_visited_registered.rb'
+    - 'app/services/compatibility_check_service.rb'
+    - 'app/services/cookies_service.rb'
+    - 'app/services/crm_service/company/base.rb'
+    - 'app/services/crm_service/company/hubspot.rb'
+    - 'app/services/crm_service/contact/base.rb'
+    - 'app/services/crm_service/contact/hubspot.rb'
+    - 'app/services/crm_service/deal/hubspot.rb'
+    - 'app/services/dial_in_service/nexmo/actions/concerns/ask_pin_code.rb'
+    - 'app/services/emails_template_service/utils/parameters/decorator.rb'
+    - 'app/services/find_webinars_service.rb'
+    - 'app/services/flood_io_service/base_data.rb'
+    - 'app/services/flood_io_service/go_to_dashboard/data.rb'
+    - 'app/services/flood_io_service/go_to_room/create_period.rb'
+    - 'app/services/flood_io_service/go_to_room/data.rb'
+    - 'app/services/flood_io_service/go_to_room/update_seeds.rb'
+    - 'app/services/jsonapi_resource_service/v1/identity/utils/builder_params.rb'
+    - 'app/services/jsonapi_resource_service/v1/utils/serializers/supplying_attribute_fields.rb'
+    - 'app/services/media_convert_service.rb'
+    - 'app/services/partnerstack_service.rb'
+    - 'app/services/redis_cache_service/period/webrtc_count.rb'
+    - 'app/services/room_serializer_service/fast_list.rb'
+    - 'app/services/room_serializer_service/fast_polls.rb'
+    - 'app/services/transfer_to_identity_service.rb'
+    - 'app/services/transfer_to_team_member_service.rb'
+    - 'app/services/utils_service/clearbit.rb'
+    - 'app/validators/forbid_emojis_validator.rb'
+    - 'app/workers/cleans/migrate_deprecated_email_variable_names_worker.rb'
+    - 'app/workers/migrations/fix_identities_null_firstname_lastname_worker.rb'
+    - 'lib/monkey_patch/rswag/add_headers.rb'
+    - 'lib/scripts/glockapp_spam_test.rb'
+    - 'lib/scripts/hubspot_collisions.rb'
+    - 'lib/seeders/organization.rb'
+    - 'spec/builders/event_type_builder/build_for_dashboard/create_webinar_spec.rb'
+    - 'spec/builders/event_type_builder/create_multiple_periods_spec.rb'
+    - 'spec/builders/event_type_builder_spec.rb'
+    - 'spec/builders/integration_builder/update_spec.rb'
+    - 'spec/builders/organization_builder/event_type/build_scheduled_meeting_spec.rb'
+    - 'spec/builders/organization_builder/event_type/build_webinar_spec.rb'
+    - 'spec/builders/period_builder/build_for_dashboard/create_period_spec.rb'
+    - 'spec/builders/period_builder/build_for_dashboard/update_period_spec.rb'
+    - 'spec/builders/period_builder/update_or_assign_identities_spec.rb'
+    - 'spec/capybara_helper.rb'
+    - 'spec/controllers/api/graphql/data_view/field_configs_controller_spec.rb'
+    - 'spec/controllers/api/graphql/data_view/segments_controller_spec.rb'
+    - 'spec/controllers/api/graphql/event_types/periods_controller_spec.rb'
+    - 'spec/controllers/api/graphql/integrations_controller/update_spec.rb'
+    - 'spec/controllers/api/v1/event_types_controller_spec.rb'
+    - 'spec/controllers/api/v1/mailers_controller_spec.rb'
+    - 'spec/controllers/api/v1/medias_controller_spec.rb'
+    - 'spec/controllers/api/v1/opentok/api/rest/broadcasts_controller_spec.rb'
+    - 'spec/controllers/api/v1/organizations_controller/pipedrive_spec.rb'
+    - 'spec/controllers/api/v1/organizations_controller/update_spec.rb'
+    - 'spec/controllers/api/v1/periods_controller_spec.rb'
+    - 'spec/controllers/api/v1/utils_controller_spec.rb'
+    - 'spec/controllers/api/v1/webhooks/chargebee_controller_spec.rb'
+    - 'spec/controllers/api/v1/webhooks/media_convert_controller_spec.rb'
+    - 'spec/controllers/api/v1/webhooks/nexmo_controller_spec.rb'
+    - 'spec/controllers/api/v1/webhooks/sendgrid_controller_spec.rb'
+    - 'spec/controllers/api/v1/webhooks/voxeet_controller_spec.rb'
+    - 'spec/controllers/api/v1/webinars_controller_spec.rb'
+    - 'spec/controllers/api/v1/zapier_controller_spec.rb'
+    - 'spec/controllers/public_api/v1/event_types_controller/create_spec.rb'
+    - 'spec/controllers/public_api/v1/event_types_controller/show_spec.rb'
+    - 'spec/controllers/public_api/v1/event_types_identities_controller/show_with_event_type_spec.rb'
+    - 'spec/controllers/public_api/v1/identities_controller/create_with_period_spec.rb'
+    - 'spec/controllers/public_api/v1/periods_controller/create_session_spec.rb'
+    - 'spec/controllers/public_api/v1/periods_controller/index_spec.rb'
+    - 'spec/controllers/public_api/v1/periods_identities_controller/show_with_period_spec.rb'
+    - 'spec/e2e/features/room/sidebar/polls_previous_spec.rb'
+    - 'spec/factories/event_types_identity_factory.rb'
+    - 'spec/factories/organization_factory.rb'
+    - 'spec/factories/participant_factory.rb'
+    - 'spec/factories/period_factory.rb'
+    - 'spec/factories/slides_media_factory.rb'
+    - 'spec/features/admin/periods_spec.rb'
+    - 'spec/features/connectivity_test_spec.rb'
+    - 'spec/features/dashboard/meeting_list_spec.rb'
+    - 'spec/features/dashboard/people_list_spec.rb'
+    - 'spec/features/registration/form_spec.rb'
+    - 'spec/features/registration/form_upcoming_sessions_spec.rb'
+    - 'spec/features/registration/webinar_page_spec.rb'
+    - 'spec/helpers/asset_helper_spec.rb'
+    - 'spec/helpers/pages_helper_spec.rb'
+    - 'spec/lib/monkey_patch/rswag/add_headers_spec.rb'
+    - 'spec/lib/monkey_patch/rswag/expand_parameters_spec.rb'
+    - 'spec/lib/monkey_patch/rswag/specs/livestorm_swagger_formatter_spec.rb'
+    - 'spec/lib/seeders/rpc_spec.rb'
+    - 'spec/models/data_view/event_type_analytics_spec.rb'
+    - 'spec/models/emails/tracking/tracker_spec.rb'
+    - 'spec/models/event_type_spec.rb'
+    - 'spec/models/tracking_spec.rb'
+    - 'spec/models/validations/integrations/data/crm_spec.rb'
+    - 'spec/models/validations/integrations_validation/hubspot_spec.rb'
+    - 'spec/models/validations/integrations_validation/pipedrive_spec.rb'
+    - 'spec/rails_helper.rb'
+    - 'spec/requests/public_api/v1/events_spec.rb'
+    - 'spec/requests/public_api/v1/people_spec.rb'
+    - 'spec/requests/public_api/v1/sessions_spec.rb'
+    - 'spec/requests/public_api/v1/webhooks_spec.rb'
+    - 'spec/serializers/custom_pagination_links_spec.rb'
+    - 'spec/serializers/event_type/show_serializer_spec.rb'
+    - 'spec/serializers/event_type_settings_serializer_spec.rb'
+    - 'spec/serializers/event_types_identity/index_serializer_spec.rb'
+    - 'spec/serializers/event_types_identity/show_serializer_spec.rb'
+    - 'spec/serializers/identity/show_serializer_spec.rb'
+    - 'spec/serializers/identity_settings_serializer_spec.rb'
+    - 'spec/serializers/participant_full_serializer_spec.rb'
+    - 'spec/serializers/participant_zapier_serializer_spec.rb'
+    - 'spec/serializers/period_full_serializer_spec.rb'
+    - 'spec/serializers/periods_identity/show_serializer_spec.rb'
+    - 'spec/serializers/periods_identity_serializer_spec.rb'
+    - 'spec/serializers/poll/index_serializer_spec.rb'
+    - 'spec/serializers/poll/socket_serializer_spec.rb'
+    - 'spec/serializers/user_serializer_spec.rb'
+    - 'spec/services/asset_service/file_urls_spec.rb'
+    - 'spec/services/calendly_service/api/v1/user_event_types_spec.rb'
+    - 'spec/services/charts_service/attendes_engagements_spec.rb'
+    - 'spec/services/charts_service/webinar_visited_registered_spec.rb'
+    - 'spec/services/crm_service/deal/hubspot_spec.rb'
+    - 'spec/services/crm_service/note/hubspot_spec.rb'
+    - 'spec/services/crm_service/settings/hubspot_spec.rb'
+    - 'spec/services/crm_service/timeline/hubspot_spec.rb'
+    - 'spec/services/crm_service/timeline/timeline_event_attributes_spec.rb'
+    - 'spec/services/dial_in_service/nexmo/actions/get_pin_spec.rb'
+    - 'spec/services/dial_in_service/nexmo/actions/opentok_join_conversation_spec.rb'
+    - 'spec/services/dial_in_service/nexmo/actions/user_join_conversation_spec.rb'
+    - 'spec/services/fields_adapter_service_spec.rb'
+    - 'spec/services/integrations_service/crm/hubspot/rules_validation_spec.rb'
+    - 'spec/services/integrations_service/crm/pipedrive/rules_validation_spec.rb'
+    - 'spec/services/integrations_service/pipedrive_service_spec.rb'
+    - 'spec/services/integrations_service/v2_compatibility/update_organization/hubspot_spec.rb'
+    - 'spec/services/integrations_service/v2_compatibility/update_organization/pipedrive_spec.rb'
+    - 'spec/services/integrations_service/versions/change_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/event_type/attributes/fields_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/event_type/create_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/identity/create_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/identity/utils/builder_params_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/identity/validators/params_validator_spec.rb'
+    - 'spec/services/jsonapi_resource_service/v1/period/utils/builder_params_spec.rb'
+    - 'spec/services/migrations_service/integrations/move_data_from_organization_spec.rb'
+    - 'spec/services/notification_service/public_api_body_spec.rb'
+    - 'spec/services/omniauth_service/callbacks/create_or_update_oauth/hubspot_spec.rb'
+    - 'spec/services/opentok_service/instant_meeting_spec.rb'
+    - 'spec/services/opentok_service/room_spec.rb'
+    - 'spec/services/postgresql_services/wal_file_watcher_spec.rb'
+    - 'spec/services/sidekiq_service/scheduled/recreate_all_spec.rb'
+    - 'spec/services/sockets_service/polls/create_spec.rb'
+    - 'spec/swagger_helper.rb'
+    - 'spec/workers/clean_sidekiq_retries_worker_spec.rb'
+    - 'spec/workers/cleans/data_view/field_config/update_all_webinars_and_scheduled_meetings_to_events_worker_spec.rb'
+    - 'spec/workers/integrations/crm/create_hubspot_timeline_templates_worker_spec.rb'
+    - 'spec/workers/notification_worker/event_published_spec.rb'
+    - 'spec/workers/notification_worker/people_attended_spec.rb'
+    - 'spec/workers/notification_worker/people_not_attended_spec.rb'
+    - 'spec/workers/notification_worker/people_registered_spec.rb'
+    - 'spec/workers/notification_worker/session_ended_spec.rb'
+
+# Offense count: 2087
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyleForMultiline.
+# SupportedStylesForMultiline: comma, consistent_comma, no_comma
+Style/TrailingCommaInHashLiteral:
+  Enabled: false
+
+# Offense count: 1
+# Cop supports --auto-correct.
+# Configuration parameters: ExactNameMatch, AllowPredicates, AllowDSLWriters, IgnoreClassMethods, AllowedMethods.
+# AllowedMethods: to_ary, to_a, to_c, to_enum, to_h, to_hash, to_i, to_int, to_io, to_open, to_path, to_proc, to_r, to_regexp, to_str, to_s, to_sym
+Style/TrivialAccessors:
+  Exclude:
+    - 'app/models/participant.rb'
+
+# Offense count: 6
+# Cop supports --auto-correct.
+Style/WhileUntilDo:
+  Exclude:
+    - 'app/services/full_name_splitter_service/splitter.rb'
+    - 'app/workers/media_pdf_worker.rb'
+    - 'spec/e2e/components/room/sidebar/poll/poll_form_component.rb'
+    - 'spec/e2e/components/room/sidebar/poll/poll_items_component.rb'
+    - 'spec/e2e/helpers/polls_helpers.rb'
+
+# Offense count: 3
+# Cop supports --auto-correct.
+Style/WhileUntilModifier:
+  Exclude:
+    - 'app/workers/media_pdf_worker.rb'
+    - 'spec/e2e/components/room/sidebar/poll/poll_form_component.rb'
+    - 'spec/e2e/components/room/sidebar/poll/poll_items_component.rb'
+
+# Offense count: 7
+# Cop supports --auto-correct.
+Style/ZeroLengthPredicate:
+  Exclude:
+    - 'app/admin/period.rb'
+    - 'app/models/event_types_identity.rb'
+    - 'app/models/identity.rb'
+    - 'app/models/periods_identity.rb'
+    - 'app/services/charts_service/webinar_visited_registered.rb'
+    - 'app/services/period_service/cancel.rb'
+    - 'lib/monkey_patch/jsonapi/resource_serializer.rb'

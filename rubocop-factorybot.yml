@@ -1,0 +1,13 @@
+# Department FactoryBot
+
+# Always declare attribute values as blocks.
+RSpec/FactoryBot/AttributeDefinedStatically:
+  Enabled: true
+
+# Checks for create_list usage.
+RSpec/FactoryBot/CreateList:
+  Enabled: true
+
+# Use string value when setting the class attribute explicitly.
+RSpec/FactoryBot/FactoryClassName:
+  Enabled: true
