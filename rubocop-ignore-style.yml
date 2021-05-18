@@ -3250,9 +3250,9 @@ Style/StringLiteralsInInterpolation:
     - 'spec/factories/identity_factory.rb'
     - 'spec/factories/user_factory.rb'
 
-# Style/StringLiterals:
-#   Exclude:
-#     - 'lib/cool_program.rb'
+Style/StringLiterals:
+  Exclude:
+    - 'lib/cool_program.rb'
 
 # Offense count: 33
 # Cop supports --auto-correct.
