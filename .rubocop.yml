@@ -11,3 +11,38 @@ inherit_from:
   - rubocop-ignore-lint.yml
   - rubocop-ignore-style.yml
   - rubocop-rspec.yml
+
+AllCops:
+  SuggestExtensions: false
+  TargetRubyVersion: 2.7
+  DisabledByDefault: true
+  Exclude:
+    - 'lib/resources/*'
+    - 'lib/flood_io/**/*'
+    - '**/*.yml'
+    - '**/*.csv'
+    - '**/templates/**/*'
+    - '**/vendor/**/*'
+    - 'db/**/*'
+    - 'tmp/**/*'
+    - 'vendor/**/*'
+    - 'bin/**/*'
+    - 'log/**/*'
+    - 'script/**/*'
+    - 'app/views/**/*'
+    - 'app/assets/**/*'
+    - 'test/**/*'
+    - 'lib/assets/**/*'
+    - 'spec/support/emails_template/**/*' # Ignore all medias used in specs
+    - 'spec/support/medias/**/*' # Ignore all medias used in specs
+    - 'spec/support/geocoder_helpers/responses/failure.json' # Ignore json for geocoder
+    - 'spec/support/geocoder_helpers/responses/success.json' # Ignore json for geocoder
+    - 'spec/support/webhooks/sendgrid_events.json' # Ignore json for sendgrid emails
+    - 'spec/support/webhooks/esp_events/**/*.json' # Ignore json for sendgrid emails
+    - 'spec/support/stub/**/*.json' # Ignore stubs
+    - 'spec/support/**/*.rb' # Ignore support TODO remove
+
+  Include:
+    - 'app/**/*'
+    - 'spec/**/*'
+    - 'lib/**/*'
