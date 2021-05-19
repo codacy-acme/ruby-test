@@ -3253,6 +3253,7 @@ Style/StringLiteralsInInterpolation:
 Style/StringLiterals:
   Exclude:
     - 'lib/cool_program.rb'
+    - 'Gemfile'
 
 # Offense count: 33
 # Cop supports --auto-correct.
